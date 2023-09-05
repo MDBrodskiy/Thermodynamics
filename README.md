@@ -30,7 +30,7 @@
 -->
 
 
-An assortment of lecture notes and exams from Northeastern University's EECE2530/2531 (Fall 2023)
+An assortment of lecture notes and exams from Northeastern University's PHYS4305 (Fall 2023)
 <br/> <br/> 
 Open sourced **LaTeX** Templates [here](https://www.latextemplates.com/).
 <br/>
