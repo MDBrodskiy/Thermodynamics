@@ -1,0 +1,175 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Written By Michael Brodskiy
+% Class: Thermodynamics & Statistical Mechanics
+% Professor: A. Stepanyants
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\include{Includes.tex}
+
+\title{States of a Model System}
+\date{\today}
+\author{Michael Brodskiy\\ \small Professor: A. Stepanyants}
+
+\begin{document}
+
+\maketitle
+
+\begin{itemize}
+
+  \item Consider a system of $N$ quantum particles in a stationary quantum state ($U$, $V$, $N$\ldots are independent of time)
+
+  \item Multiplicity of degeneracy of an energy level $\varepsilon_n$ is the number of quantum states, $g_n$, corresponding to $\varepsilon_n$
+
+  \item Hydrogen Atom:
+
+    \begin{itemize}
+
+      \item One proton, one electron
+
+      \item $\varepsilon_n=-\dfrac{13.6[\si{\eV}]}{n^2}$
+
+      \item $\psi_{n,l,m,s}=R_{n,l}(r)\Theta_{l,m}(\theta)\Phi_m(\phi)(s)$
+
+        \begin{itemize}
+
+          \item $n,l,m,s$ are quantum numbers
+
+          \item $n$ is called the principle quantum number
+
+          \item $l$ is the angular momentum quantum number
+
+            \begin{itemize}
+
+              \item $0\leq l\leq n-1$
+
+            \end{itemize}
+
+          \item $m$ is the magnetic quantum number
+
+            \begin{itemize}
+
+              \item $-l\leq m\leq l$
+
+            \end{itemize}
+
+          \item $s$ is the spin-magnetic quantum number
+
+            \begin{itemize}
+
+              \item $s=\pm\frac{1}{2}$
+
+            \end{itemize}
+
+          \item $g_n=2n^2$
+
+        \end{itemize}
+
+    \end{itemize}
+
+  \item Quantum Particle in a Box ($L\times L\times L$)
+
+    \begin{itemize}
+
+      \item We find $\varepsilon_{n_x,n_y,n_z}=\frac{\hbar^2\pi^2}{2mL^2}(n_x^2+n_y^2+n_z^2)$
+
+      \item $\psi_{n_x,n_y,n_z}(x,y,z)=\ldots$
+
+      \item $1\leq n_x,n_y,n_z\leq \infty$
+
+        \begin{center}
+          \begin{tabular}[h]{c | c | c | c}
+            $n_x$ & $n_y$ & $n_z$ & $\varepsilon_{n_x,n_y,n_z}/A$\\
+            \hline
+            1 & 1 & 1 & 3\\
+            \hline
+            2 & 1 & 1 & 6\\
+            1 & 2 & 1 & 6\\
+            1 & 1 & 2 & 6\\
+            \hline
+            2 & 2 & 1 & 9\\
+            2 & 1 & 2 & 9\\
+            1 & 2 & 2 & 9\\
+            \hline
+          \end{tabular}
+        \end{center}
+
+      \item We can see that the ``6'' energy level is degenerate, with a multiplicity of $3$, just like ``9''
+
+    \end{itemize}
+
+  \item Binary Model System
+
+    \begin{itemize}
+
+      \item Energy of the system, $\varepsilon=-MB$
+
+        \begin{itemize}
+
+            \item $M$ is total magnetic moment: $M=$ (spins up - spins down)$m\rightarrow M=\left( N_{\uparrow}-N_{\downarrow} \right)m$
+
+            \item $(N_{\uparrow}-N_{\downarrow})=2s$ — spin excess
+
+            \item Thus, $\varepsilon=-2mBs$, meaning it is dependent on spin excess
+
+            \item $N=3$ example:
+
+              \begin{itemize}
+
+                \item $\uparrow\uparrow\uparrow$ — $2s=N_{\uparrow}-N_{\downarrow}=3\Rightarrow g=1$
+
+                \item $\uparrow\uparrow\downarrow$, $\uparrow\downarrow\uparrow$, $\downarrow\uparrow\uparrow$ — $2s=N_{\uparrow}-N_{\downarrow}=1\Rightarrow g=3$
+
+                \item $\uparrow\downarrow\downarrow$, $\downarrow\downarrow\uparrow$, $\downarrow\uparrow\downarrow$ — $2s=N_{\uparrow}-N_{\downarrow}=-1\Rightarrow g=3$
+
+                \item $\downarrow\downarrow\downarrow$ — $2s=N_{\uparrow}-N_{\downarrow}=-3\Rightarrow g=1$
+
+              \end{itemize}
+
+            \item In general, there are $N+1$ values of $2s$ (or $M$ or $\varepsilon$) and $2^N$ states of the system in total $\Rightarrow$ same energy levels have very high multiplicity
+
+        \end{itemize}
+
+      \item Calculation of $g(N,s)$
+
+        $$\left\{\begin{array}{l} N_{\uparrow}-N_{\downarrow}=2s\\N_{\uparrow}+N_{\downarrow}=N\end{array}\quad\quad\left\{\begin{array}{l} N_{\uparrow}=\frac{N}{2}+s\\N_{\downarrow}=\frac{N}{2}-s\end{array}$$
+
+          \item $g(N,s)=\dfrac{N!}{N_{\uparrow}!N_{\downarrow}!}$
+
+          \item Drawing from combinatorics below, an approximation of $g(N,s)$ for $N>>1$ and $s<<N$, we can use the Stirling formula:
+
+            $$N!\approx\sqrt{2\pi N}\left( \frac{N}{e} \right)^N$$
+
+          \item $\ln(N!)\approx N\ln(N)-N+\frac{1}{2}\ln(N)+\frac{1}{2}\ln(2\pi)+0\left( \frac{1}{N} \right)$
+
+          \item $\ln(1+x)\approx x-\frac{1}{2}x^2+0x^3,\quad -1\leq x\leq 1$
+
+          \item Thus, $g(N,s)\approx 2^N\sqrt{\frac{2}{\pi N}}e^{-\frac{2s^2}{N}}$
+
+    \end{itemize}
+
+  \item Important Combinatorics
+
+    \begin{itemize}
+
+      \item $(x+y^n)=\displaystyle\sum_{k=0}^n \left( ^n_k \right)x^ky^{n-k}$ — Binomial Expansion
+
+      \item \large$\left( ^n_k \right)=\frac{n!}{k!(n-k!)}$ \normalsize — Binomial Coefficient
+
+    \end{itemize}
+
+  \item Gaussian Probability Density Function (PDF)
+
+    $$G(x)=\frac{1}{\sqrt{2\pi}\sigma}e^{-\frac{x^2}{2\sigma^2}}$$
+
+    \begin{itemize}
+
+      \item $\sigma$ represents the standard deviation of $G$
+
+    \end{itemize}
+
+  \item Macroscopic properties of a large system are well defined (\textit{i}.\textit{e}.\ fluctuations about the mean values are small $\approx O(\sqrt{N})$)
+
+\end{itemize}
+
+\end{document}
+
