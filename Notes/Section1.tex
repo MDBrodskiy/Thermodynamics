@@ -169,6 +169,85 @@
 
   \item Macroscopic properties of a large system are well defined (\textit{i}.\textit{e}.\ fluctuations about the mean values are small $\approx O(\sqrt{N})$)
 
+  \item Some Important Definitions:
+
+    \begin{itemize}
+
+      \item ``Closed System'' — A system is said to be closed if it has constant energy, $U$, number of particles, $N$, volume, $V$, and other physical properties; a closed system can interact with constant external fields
+
+      \item ``Accessible Quantum State'' — A quantum state is accessible to a system if it is compatible with all physical constraints on the system
+
+      \item Fundamental assumption of thermodynamics — A closed system is equally likely to be in any quantum state accessible to it
+
+    \end{itemize}
+
+  \item Probabilities
+
+    \begin{itemize}
+
+      \item If the \# of accessible quantum states is $g$, then the probability to find the system in a given state is:
+
+        $$P(s)=\left\{\begin{array}{l} 0,\,\quad\text{if $s$ is not accessible}\\\displaystyle\frac{1}{g},\,\quad\text{if $s$ is accessible}\end{array}$$
+
+          We also know:
+
+          $$\underbrace{\sum P(s)}_{\text{all quantum states}}=\underbrace{\sum_{i=1}^g\frac{1}{g}}_{\text{accessible only}}=1$$
+
+        \item The average of an observable property of the system, $X$:
+
+          $$\langle X\rangle=\underbrace{\sum X(s)P(s)}_{\text{all quantum $s$}}=\underbrace{\sum_{i=1}^g X(s)\frac{1}{g}}_{\text{accessible $s$}}=\frac{1}{g}\sum_{i=1}^g X(s)$$
+
+        \item $\langle\rangle$ defines the average over all quantum states on ensemble average
+
+          \begin{itemize}
+
+            \item An ensemble is a set of replicas of the original system, each replica is in one of the quantum states accessible to the system
+
+              $$\boxed{\uparrow\uparrow\downarrow}\quad\boxed{\uparrow\downarrow\uparrow}\quad\boxed{\downarrow\uparrow\uparrow}$$
+
+              shows an ensemble of states of a binary model system with $N=3,\,2s=1$
+
+          \end{itemize}
+
+    \end{itemize}
+
+  \item Logarithmic Derivatives
+
+    $$\frac{1}{y(x)}\frac{d\,y(x)}{dx}=\frac{d\,\ln(y(x))}{x}$$
+
+    \begin{itemize}
+
+      \item The most likely configuration of two binary model systems in thermal contact thus can be found with:
+
+        $$\frac{\partial\,\ln(g(N_1,s_1))}{\partial s_1}=\frac{\partial\,\ln(g(N_2,s_2))}{\partial s_2}$$
+
+      \item Using the definition of $g$ from above, we get:
+
+        $$\ln\left(2^N\sqrt{\frac{2}{\pi N}}\right)\left( -\frac{2s^2}{N} \right)$$
+        $$-\frac{4s_1}{N_1}=-\frac{4s_2}{N_2}$$
+        $$\boxed{\frac{\hat{s_1}}{N_1}=\frac{\hat{s_2}}{N_2}}$$
+
+      \item Using $\hat{s_1}+\hat{s_2}=s$, we obtain:
+
+        $$\hat{s_1}+\hat{s_2}=s\Rightarrow\left\{\begin{array}{l} \hat{s_1}=\displaystyle\frac{sN_1}{N_1+N_2}\\\\\hat{s_2}=\displaystyle\frac{sN_2}{N_1+N_2}\end{array}$$
+
+    \end{itemize}
+
+  \item How sharp is the maximum ($\hat{s_1}\hat{s_2}$)?
+
+    $$\underbrace{g(N_1,\hat{s_1}+s)g(N_2,\hat{s_2}-s)}_{\text{\# of q-states in perturbed config}}=\underbrace{g(N_1,\hat{s_1})g(N_2,\hat{s_2})e^{-2s^2\left( \frac{1}{N_1}+\frac{1}{N_2} \right)}}_{\text{\# of q-states in most likely config}}$$
+
+    \begin{itemize}
+
+      \item Ex. Consider $N_1=N_2=10^{22}$, and $s=10^{12}$
+
+
+        $$e^{-2s\left( \frac{1}{N_1}+\frac{1}{N_2} \right)}=e^{-400}\approx 10^{-174}<<<< 1$$
+
+      \item In summary, the fluctuations of physical properties of large systems about those observed for the most likely configuration are small; average properties of systems in thermal contact are accurately observed by the most likely (thermal equilibrium) configuration
+
+    \end{itemize}
+
 \end{itemize}
 
 \end{document}
