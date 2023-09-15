@@ -1,0 +1,159 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Written By Michael Brodskiy
+% Class: Thermodynamics & Statistical Mechanics
+% Professor: A. Stepanyants
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\include{Includes.tex}
+
+\title{Homework 1}
+\date{\today}
+\author{Michael Brodskiy\\ \small Professor: A. Stepanyants}
+
+\begin{document}
+
+\maketitle
+
+\begin{enumerate}
+
+  \item
+
+    \begin{enumerate}
+
+      \item 
+
+        We are given the following:
+
+        $$g(U)=CU^{\frac{3}{2}N}$$
+
+        We know, by definition, that $\sigma(U)=\ln(g(U))$. Thus, we may write:
+
+        $$\sigma(U)=\ln(CU^{\frac{3}{2}N})$$
+
+        By properties of logarithms, we may expand this to:
+
+        $$\sigma(U)=\ln(C)+\frac{3N}{2}\ln(U)$$
+
+        Furthermore, by definition of the fundamental temperature, we know that $\displaystyle\frac{\partial\sigma(U)}{\partial U}=\frac{1}{\tau}$. As such, we obtain:
+
+        $$\frac{\partial \sigma(U)}{\partial U}=\frac{3N}{2U}$$
+
+        Substituting and rearranging, we get:
+
+        $$\frac{1}{\tau}=\frac{3N}{2U}$$
+        $$\boxed{U=\frac{3N}{2}\tau}$$
+
+      \item 
+
+        If we return to the step before converting $\displaystyle\frac{\partial\sigma(U)}{\partial U}$ to $\frac{1}{\tau}$, we can differentiate once more:
+
+        $$\frac{\partial \sigma(U)}{\partial U}=\frac{3N}{2U}$$
+        $$\left(\frac{\partial^2\sigma(U)}{\partial U^2}\right)_N=\frac{3N}{2}\frac{\partial}{\partial U}\left( \frac{1}{U} \right)$$
+        $$\boxed{\left(\frac{\partial^2\sigma(U)}{\partial U^2}\right)_N=-\frac{3N}{U^2}}$$
+
+        Thus, we see this results in a function with a negative coefficient. Furthermore, because we know the quantity of particles can not be negative, and the square of a number can not be negative, the second order partial derivative must always be negative.
+
+    \end{enumerate}
+
+  \item
+    
+  \item
+
+    \begin{enumerate}
+
+      \item 
+
+        From 1.55, we know:
+
+        $$g(N,n)=\frac{(N+n-1)!}{n!(N-1)!}$$
+
+        Thus, by definition of entropy, we know:
+
+        $$\sigma(N,n)=\ln\left( \frac{(N+n-1)!}{n!(N-1)!} \right)\rightarrow\ln( (N+n-1)!)-\ln(n!)-\ln ((N-1)!)$$
+
+        Replacing $N-1$ with $N$, we get:
+
+        $$\ln( (N+n)!)-\ln(n!)-\ln(N!)$$
+
+        Through the Stirling approximation, we get:
+
+        $$(N+n)\ln(N+n)-(N+n)-n\ln(n)+n-N\ln(N)+N$$
+
+        This can be simplified to:
+
+        $$\boxed{\sigma(N,n)=(N+n)\ln(N+n)-n\ln(n)-N\ln(N)}$$
+
+      \item 
+
+        We are given $U=n\hbar\omega$, which means $n=\frac{U}{\hbar\omega}$. Thus, we substitute to get:
+
+        $$\sigma\left(N,\frac{U}{\hbar\omega}\right)=\left(N+\frac{U}{\hbar\omega}\right)\ln\left( N+\frac{U}{\hbar\omega} \right)-\frac{U}{\hbar\omega}\ln\left( \frac{U}{\hbar\omega} \right)-N\ln(N)$$
+
+        By definition of the fundamental temperature, we get:
+
+        $$\frac{1}{\tau}=\frac{\partial}{\partial U}\left(  \left(N+\frac{U}{\hbar\omega}\right)\ln\left( N+\frac{U}{\hbar\omega} \right)-\frac{U}{\hbar\omega}\ln\left( \frac{U}{\hbar\omega} \right)-N\ln(N)\right)$$
+        $$\frac{1}{\tau}=\left( \frac{1}{\hbar\omega}\right)\ln\left( N+\frac{U}{\hbar\omega} \right)-\frac{1}{\hbar\omega}\ln\left( \frac{U}{\hbar\omega} \right)$$
+        $$\frac{1}{\tau}=\frac{1}{\hbar\omega}\ln\left( \frac{N\hbar\omega}{U}+1 \right)$$
+
+        Rearranging for $U$, we get:
+
+        $$e^{\frac{\hbar\omega}{\tau}}-1=\frac{N\hbar\omega}{U}$$
+
+        And finally:
+
+        $$\boxed{U=\frac{N\hbar\omega}{e^{\frac{\hbar\omega}{\tau}}-1}}$$
+
+    \end{enumerate}
+    
+  \item
+
+    \begin{enumerate}
+
+      \item 
+
+        Given that there is only one correct key out of the 44 possibilities per press, we know that the possibility of a single key being correct is:
+
+        $$\frac{1}{44}\approx.0227$$
+
+        Upon repeating this for a sequence of $10^5$ characters, this probability becomes:
+
+        $$\left( \frac{1}{44} \right)^{100,000}\approx 10^{-164,345}$$
+
+      \item 
+
+        From the given values, we know the typing speed is 10 keys per second, and the age of the universe is $10^{18}$ seconds. Thus, we get:
+
+        $$10^{18}(10)=10^{19}[\text{keys}]$$
+
+        Given that there are $10^{10}$ monkeys, we can multiply the numbers out to produce the total keys pressed:
+
+        $$\left(10^{19}\right)\left( 10^{10} \right)=10^{29}[\text{keys total}]$$
+
+        Then, we also know that, per one hamlet, there are $10^5$ characters. This yields:
+
+        $$10^{29}\left( \frac{1}{10^5} \right)=10^{24}[\text{monkey-Hamlets}]$$
+
+        Finally, given are probability from above, we obtain:
+
+        $$\left(10^{24}\right)\left( 10^{-164,345} \right)=10^{-164,316}[\text{probability of Hamlet in given time}]$$
+
+    \end{enumerate}
+    
+  \item
+
+    \begin{enumerate}
+
+      \item
+
+      \item 
+
+      \item 
+
+    \end{enumerate}
+    
+  \item
+    
+\end{enumerate}
+
+\end{document}
+
