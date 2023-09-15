@@ -248,6 +248,111 @@
 
     \end{itemize}
 
+  \item Thermal equilibrium (most likely) configuration of 2 systems in contact
+
+    \begin{itemize}
+
+      \item Given two systems, one with $N_1$ and $U_{1_o}$, and another with $N_2$ and $U_{2_o}$, the two are put into thermal contact. The energies convert to $U_1$ and $U_2$, respectively. This yields a system with $N_1+N_2=N$ and $U_1+U_2=U_{1_o}+U_{2_o}=U$
+
+      \item The multiplicity (or number of quantum states) of 1 and 2 combined generates:
+
+        $$g(N,U)=\sum_{U_1}g(N_1,U_1)g(N_2,U-U_1)$$
+
+      \item To find the most likely configuration $(U_1)$, we need to find the largest term of the sum:
+
+        $$\frac{\partial}{\partial U_1}\left( g(N_1,U_1)g(N_2,U-U_1) \right)\Rightarrow$$
+        $$\frac{\partial g(N_1,U_1)}{\partial U_1}g(N_2,U-U_1)+g(N_1,U_1)\frac{\partial g(N_2,U-U_1)}{U_2}(-1)=0$$
+        $$\frac{1}{g(N_1,U_1)}\frac{\partial g(N_1,U_1)}{\partial U_1}=\frac{1}{g(N_2,U_2)}\frac{\partial g(N_2,U_2)}{\partial U_2}$$
+        $$\frac{\partial \ln(g(N_1,U_1))}{\partial U_1}=\frac{\partial \ln(g(N_2,U_2))}{\partial U_2}$$
+
+      \item Entropy, $\sigma$, is denoted by: $\sigma(N,U)\equiv\ln(g(N,U))$
+
+      \item Fundamental Temperature, $\tau$, is denoted by: $\frac{1}{\tau}\equiv\frac{\partial \sigma(N,U)}{\partial U}\equiv\left( \frac{\partial \sigma(N,U)}{\partial U}\right)_N$\footnote{The $N$ subscript is used to denote constant, invariable quantities}
+
+      \item Thus, we can simplify the above to:
+
+        $$\frac{1}{\tau_1}=\frac{1}{\tau_2}$$
+
+      \item When systems 1 and 2, together, are in the most likely configuration, $\tau_1=\tau_2$, then it is said that $1+2$ is in thermal equilibrium
+
+        $$\boxed{T=\frac{\tau}{k_B},\quad\quad\text{Kelvin (absolute) temperature}}$$
+        $$\boxed{S=k_B\sigma,\quad\quad\text{Conventional entropy}}$$
+        $$\boxed{k_B=1.381\cdot10^{-23}\left[ \frac{\si{\joule}}{\si{\kelvin}} \right],\quad\quad\text{Boltzmann constant}}$$
+
+    \end{itemize}
+
+  \item Second Law of Thermodynamics (Law of Increase of Entropy):
+
+    \begin{itemize}
+
+      \item The final entropy will always be greater than or equal to the intial entropy ($\sigma_f\geq\sigma_i$)
+
+      \item The entropy of a closed system tends to increase or remain constant when the constraint internal to the system is removed
+
+      \item Entropy increase is an irreversible process
+
+    \end{itemize}
+
+  \item The \nth{0} Law of Thermodynamics:
+
+    \begin{itemize}
+
+      \item If system 1 is in thermal equilibrium with system 3, and 2 is in thermal equilibrium with system 3, then 1 is in thermal equilibrium with 2; that is:
+
+        $$\tau_1=\tau_3\text{ and }\tau_2=\tau_3\Rightarrow \tau_1=\tau_2$$
+
+    \end{itemize}
+
+  \item The \nth{1} Law of Thermodynamics:
+
+    \begin{itemize}
+
+      \item Represents conservation of energy — $\delta Q$ is the heat added to the system, $dU$ is the change in a systems internal energy, and $\delta W$ is the work done by the system
+
+        $$\delta Q=dU+\delta W$$
+
+    \end{itemize}
+
+  \item The \nth{2} Law of Thermodynamics:
+
+    \begin{itemize}
+
+      \item Law of increase of entropy
+
+    \end{itemize}
+
+  \item The \nth{3} Law of Thermodynamics:
+
+    \begin{itemize}
+
+      \item As the temperature goes to zero, the entropy goes to a constant ($U_g$ represents the ground state energy)
+
+        $$\tau\to0\Rightarrow\sigma\to C$$
+        $$\sigma=\ln(g(N,U_g))$$
+
+    \end{itemize}
+
+  \item Flow of energy for 2 systems in thermal contact
+
+    \begin{itemize}
+
+      \item Given two systems with $N_1$, $U_1$ and $N_2$, $U_2$, respectively, we find:
+
+        $$\sigma=\sigma_1+\sigma_2$$
+        $$\Delta \sigma=\Delta\sigma_1+\Delta\sigma_2=\frac{\partial\sigma_1}{\partial U_1}\Delta U_1+\frac{\partial\sigma_2}{\partial U_2}\Delta U_2\Rightarrow$$
+        $$\frac{1}{\tau_1}\Delta U_1+\frac{1}{\tau_2}\Delta U_2=\frac{1}{\tau_1}(-\Delta U)+\frac{1}{\tau_2}\Delta U\Rightarrow$$
+        $$\Delta U\left( \frac{1}{\tau_2}-\frac{1}{\tau_1} \right)\geq 0$$
+
+        \begin{itemize}
+
+          \item Thus, we expect $\tau_1\geq\tau_2\Rightarrow\Delta U\geq0$
+
+        \end{itemize}
+
+      \item Energy flows from hot (high energy) to cold (low energy)
+
+    \end{itemize}
+
 \end{itemize}
 
 \end{document}
