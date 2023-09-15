@@ -22,6 +22,7 @@
 * [**Notes**](https://github.com/MDBrodskiy/Thermodynamics/tree/master/Notes/)
   * [**States of a Model System**](https://github.com/MDBrodskiy/Thermodynamics/tree/master/Notes/Section1.pdf)
 * [**Homework**](https://github.com/MDBrodskiy/Thermodynamics/tree/master/Homework/)
+  * [**Homework 1**](https://github.com/MDBrodskiy/Thermodynamics/tree/master/Homework/Homework1.pdf)
 * [**Exams**](https://github.com/MDBrodskiy/Thermodynamics/tree/master/Exams/)
 
 <!--
