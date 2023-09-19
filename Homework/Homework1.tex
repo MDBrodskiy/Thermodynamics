@@ -56,6 +56,39 @@
     \end{enumerate}
 
   \item
+
+    We know, by definition:
+
+    $$U=-(2s)mB$$
+
+    Rearranging, we see that:
+
+    $$s=-\frac{U}{2mB}$$
+
+    We also know that:
+
+    $$g(N,s)=\undebrace{2^N\sqrt{\frac{2}{\pi N}}}_{g(N,0)}e^{-\frac{2s^2}{N}}$$
+
+    Substituting the value of $s$ above, we get:
+
+    $$g(N,s)=\underbrace{2^N\sqrt{\frac{2}{\pi N}}}_{g(N,0)}e^{-\frac{U^2}{2m^2B^2N}}$$
+
+    Finding the entropy, the resulting function looks as follows:
+
+    $$\sigma(N,s)=\left( -\frac{U^2}{2m^2B^2N} \right)+\underbrace{\ln\left(2^N\sqrt{\frac{2}{\pi N}}\right)}_{\sigma_o}$$
+
+    Now finding the fundamental temperature, we differentiate with respect to $U$:
+
+    $$\frac{\partial \sigma(N,s)}{\partial U}=\left(\left( -\frac{U^2}{2m^2B^2N} \right)+\underbrace{\ln\left(2^N\sqrt{\frac{2}{\pi N}}}_{\sigma_o}\right)\right)_{N,s}=-\frac{U}{m^2B^2N}$$
+
+    Now assuming that $U$ is the average thermal energy, we get:
+
+    $$U=-2mB\langle s\rangle$$
+
+    We then return this to our function:
+
+    $$\frac{1}{\tau}=\frac{2\langle s\rangle}{mBN}$$
+    $$\tau=\frac{mBN}{2\langle s\rangle}$$
     
   \item
 
