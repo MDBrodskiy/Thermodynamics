@@ -1,0 +1,96 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Written By Michael Brodskiy
+% Class: Thermodynamics & Statistical Mechanics
+% Professor: A. Stepanyants
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\include{Includes.tex}
+
+\title{Boltzmann Distribution and Helmholtz Free Energy}
+\date{\today}
+\author{Michael Brodskiy\\ \small Professor: A. Stepanyants}
+
+\begin{document}
+
+\maketitle
+
+\begin{itemize}
+
+  \item For a system ($S$) in reservoir ($\mathcal{R}$), we can assume:
+
+    \begin{itemize}
+
+      \item $S+\mathcal{R}$ is closed
+
+      \item $S$ and $\mathcal{R}$ are in thermal equilibrium; that is:
+
+        $$\tau_S=\tau_{\mathcal{R}}\congruent \tau$$
+
+      \item $U_s+U_{\mathcal{R}}\congruent U_o$ (the total energy)
+
+      \item $U_s << U_{\mathcal{R}}, U_o$
+
+      \item $S$ is in a quantum state, $s$, of energy $\varepsilon_s$
+
+        $$U_{\mathcal{R}}=\langle \varepsilon_s\rangle$$
+
+      \item The probability $P(\varepsilon_s)$ to observe $S$ in a quantum state $s$ is:
+
+        $$g_{\mathcal{R}+S}=\sum_{\varepsilon_s}g_{\mathcal{R}}(U_o-\varepsilon_s,V_{\mathcal{R}})g_S(\varepsilon_s,V_s)=g_{\mathcal{R}}(U_o-\varepsilon_s,V_R)$$
+        $$P(\varepsilon_s)\approx g_R(U_o-\varepsilon_s)=e^{\ln(g_{\mathcal{R}}(U_o-\varepsilon_s))}=e^{\sigma_{\mathcal{R}}(U_o-\varepsilon_s)}$$
+
+        Using expansion we can transform this to:
+
+        $$e^{\sigma_{\mathcal{R}}(U_o-\varepsilon_s)}\approx e^{\overbrace{\sigma_{\mathcal{R}}(U_o)}^{\text{constant}}-\frac{\partial \sigma_{\mathcal{R}}}{\partial U_{\mathcal{R}}}\varepsilon_s}\approx e^{-\frac{\partial \sigma_{\mathcal{R}}}{\partial U_{\mathcal{R}}}\varepsilon_s}=e^{-\frac{\varepsilon_s}{\tau}}$$
+        $$\boxed{P(\varepsilon_s)\approx e^{-\frac{\varepsilon_s}{\tau}}}$$
+        $$\boxed{P(\varepsilon_s)= \frac{1}{z}e^{-\frac{\varepsilon_s}{\tau}}}$$
+
+        This is known as the Boltzmann factor; the $z$ is known as the partition function. Given statistical definitions, we know:
+
+        $$\sum_s P(\varepsilon_s)=\frac{1}{z}\sum_s e^{-\frac{\varepsilon_s}{\tau}}=1$$
+
+        This gets us:
+
+        $$\boxed{z=\sum_se^{-\frac{\varepsilon_s}{\tau}}}$$
+
+      \item Ensemble or thermal average energy of $S$, $U$:
+
+        $$U=\langle \varepsilon_s\rangle=\sum_s\varepsilon_sP(\varepsilon_s)=\sum_s \varepsilon_s\frac{e^{-\frac{\varepsilon_s}{\tau}}}{z}$$
+        $$\frac{1}{z}\frac{\partial z}{\partial \tau}=\frac{\partial \ln(z)}{\partial \tau}=\frac{1}{\tau^2}\sum_s\varepsilon_s\frac{e^{-\frac{\varepsilon_s}{\tau}}}{z}\rightarrow U=\tau^2\frac{\partial \ln(z)}{\partial \tau}$$
+
+        Thus, the formula is finalized to:
+
+        $$\boxed{U(\tau, V)=\tau^2\left( \frac{\partial \ln(z(\tau,V))}{\partial \tau} \right)_V}$$
+
+    \end{itemize}
+    
+  \item Pressure
+
+    \begin{itemize}
+
+      \item Consider once more a similar configuration of a reservoir and system
+
+      \item We can change the volume such that $S:\, V\to V-\Delta V$; compression is done slowly, and $S$ remains in the same quantum state, $s$; therefore, $\sigma(\varepsilon_s)$ remains unchanged. This means it is an isentropic, reversible process
+
+      \item The work done on $S$:
+
+        $$W=\underbrace{P}_{\text{pressure}}\cdot \underbrace{A}_{\text{area}}\cdot \underbrace{\Delta x}_{\text{displacement}}=P\Delta V$$
+
+        From conservation of energy:
+
+        $$W_{on}=U(V-\Delta V)-U(V)$$
+        $$P\Delta V=-\frac{\partial U}{\partial V}\Delta V$$
+        $$P=-\left( \frac{\partial U}{\partial V} \right)_{\sigma}$$
+
+    \end{itemize}
+
+  \item Thermodynamic Identity
+
+    $$\sigma=\sigma(U,V)$$
+    $$d\sigma=\frac{\partial \sigma}{\partial U}dU+\frac{\partial \sigma}{\partial V}dV$$
+    $$\text{If }d\sigma=0\text{ (isentropic) }\to\left(\frac{\partial U}{\partial V}\right)_{\sigma}=-\frac{\frac{\partial \sigma}{\partial V}}{\frac{\partial \sigma}{\partial U}}$$
+
+\end{itemize}
+
+\end{document}
+
