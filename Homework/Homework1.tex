@@ -178,6 +178,19 @@
 
       \item
 
+        From equation (17) we know:
+
+        $$g_1(N_1,\hat{s}_1+\delta)g_2(N_2,\hat{s}_1-\delta)=(g_1,g_2)_{max}e^{-\left( \frac{2\delta^2}{N_1}+\frac{2\delta^2}{N_2} \right)}$$
+
+        We can rearrange this formula to write:
+
+        $$\frac{g_1(N_1,\hat{s}_1+\delta)g_2(N_2,\hat{s}_1-\delta)}{(g_1,g_2)_{max}}=e^{-\left( \frac{2\delta^2}{N_1}+\frac{2\delta^2}{N_2} \right)}$$
+
+        Thus, we find that:
+
+        $$\frac{g_1g_2}{(g_1,g_2)_{max}}=e^{-\left( \frac{4(10^{11})^2}{10^{22} \right)}\Rightarrow$$
+          $$\frac{g_1g_2}{(g_1,g_2)_{max}}=e^{-4}\approx .01832$$
+
       \item 
 
       \item 
@@ -185,7 +198,40 @@
     \end{enumerate}
     
   \item
-    
+
+    From equation (17) we know:
+
+        $$g_1(N_1,\hat{s}_1+\delta)g_2(N_2,\hat{s}_1-\delta)=(g_1,g_2)_{max}e^{-\left( \frac{2\delta^2}{N_1}+\frac{2\delta^2}{N_2} \right)}$$
+
+    Since $N_1=N_2$, we replace both with $N$:
+
+        $$g_1(N,\hat{s}_1+\delta)g_2(N,\hat{s}_1-\delta)=(g_1,g_2)_{max}e^{-\frac{4\delta^2}{N}}$$
+
+        The total number of states, given $x=\frac{\delta}{N}$ can be expressed as:
+
+        $$\text{states} = (g_1,g_2)_{max}N\int_{-\infty}^{\infty}e^{-4Nx^2}\,dx$$
+
+        For the case larger than or equal to $10^{-10}$:
+
+        $$\text{states} = (g_1,g_2)_{max}N\int_{10^{-10}}^{\infty}e^{-4Nx^2}\,dx$$
+
+        To rewrite this in an easily calculable form, we can take $a=2\sqrt{N}x$:
+
+        $$da=2\sqrt{N}dx$$
+        $$a=2\sqrt{N}x=\frac{2\delta}{\sqrt{N}}\to \frac{\delta}{N}\geq 10^{-10}\to a\geq 20$$
+        $$\text{states} = (g_1,g_2)_{max}\frac{\sqrt{N}}{2}\int_{20}^{\infty}e^{-a^2}\,da$$
+
+        Then, using the complementary error function, we get: 
+
+        $$\frac{\sqrt{N}}{2}\frac{e^{-400}}{40}(1+e)$$
+
+        Finding a ratio, we obtain:
+
+        $$r=\frac{\frac{\sqrt{N}}{2}\frac{e^{-400}}{40}(1+e)}{\frac{\sqrt{\pi N}}{2}}=\frac{e^{-400}}{40\sqrt{\pi}}(1+e)$$
+        $$r=2.7\cdot10^{-176}$$
+
+        Thus, it is quite improbable.
+
 \end{enumerate}
 
 \end{document}
