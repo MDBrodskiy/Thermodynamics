@@ -150,7 +150,7 @@
 
         Upon repeating this for a sequence of $10^5$ characters, this probability becomes:
 
-        $$\left( \frac{1}{44} \right)^{100,000}\approx 10^{-164,345}$$
+        $$\boxed{\left( \frac{1}{44} \right)^{100,000}\approx 10^{-164,345}}$$
 
       \item 
 
@@ -168,7 +168,7 @@
 
         Finally, given are probability from above, we obtain:
 
-        $$\left(10^{24}\right)\left( 10^{-164,345} \right)=10^{-164,316}[\text{probability of Hamlet in given time}]$$
+        $$\boxed{\left(10^{24}\right)\left( 10^{-164,345} \right)=10^{-164,316}[\text{probability of Hamlet in given time}]}$$
 
     \end{enumerate}
     
@@ -189,11 +189,59 @@
         Thus, we find that:
 
         $$\frac{g_1g_2}{(g_1,g_2)_{max}}=e^{-\left( \frac{4(10^{11})^2}{10^{22} \right)}\Rightarrow$$
-          $$\frac{g_1g_2}{(g_1,g_2)_{max}}=e^{-4}\approx .01832$$
+          $$\boxed{\frac{g_1g_2}{(g_1,g_2)_{max}}=e^{-4}\approx .01832}$$
 
       \item 
 
+        From the problem above, we know:
+
+        $$g_1(N_1,\hat{s}_1+\delta)g_2(N_2,\hat{s}_1-\delta)=(g_1,g_2)_{max}e^{-\left( \frac{2\delta^2}{N_1}+\frac{2\delta^2}{N_2} \right)}$$
+
+        This also gives us:
+
+        $$\sum_{s_1}g_1(N_1,s_1)g_2(N_2,s-s_1)=(g_1,g_2)_{max}\sum_{\delta}e^{-\left( \frac{2\delta^2}{N_1}+\frac{2\delta^2}{N_2} \right)}$$
+
+        This means that the multiplication factor, $\mathbb{F}=\displaystyle\sum_{\delta}e^{-\left( \frac{2\delta^2}{N_1}+\frac{2\delta^2}{N_2} \right)}$
+
+        Using $N=N_1=N_2$, and converting to an integral expression, we obtain:
+
+        $$\int_{-\infty}^{\infty}e^{-\frac{4\delta^2}{N}}\,d\delta$$
+
+        As this is a Gaussian integral, we can approximate it to:
+
+        $$\boxed{\mathbb{F}=\sqrt{\frac{\pi N}{4}}=8.862\cdot10^{10}}$$
+
       \item 
+
+        The definition of such error may be written as:
+
+        $$\frac{\sigma_f-\sigma_i}{\sigma_f}$$
+
+        where $\sigma_f$ is factorless and $\sigma_i$ includes the factor. This gives us two expressions for the entropy, defined as:
+
+        $$\left\{\begin{array}{l l l} \sigma_f & = & \ln\left( (g_1,g_2)_{max}\mathbb{F} \right)\\ \sigma_i & = & \ln\left( g_1,g_2 \right)_{max}\end{array}$$
+
+          By the properties of logarithms, combined with the above expression for error, we get:
+
+          $$\frac{\ln(\mathbb{F})}{\ln\left( (g_1,g_2)_{max}\mathbb{F} \right)}$$
+
+          We know that $(g_1,g_2)_{max}$ may be expressed as follows:
+
+          $$(g_1,g_2)_{max}=g_1(N,0)g_2(N,0)e^{-\frac{s^2}{N}}$$
+
+          This manipulates the logarithm in the denominator into:
+
+          $$\frac{\ln(\mathbb{F})}{-\frac{s^2}{N}+\ln\left( g_1(N,0)g_2(N,0)\mathbb{F} \right)}$$
+
+          Finally, we also know that:
+
+          $$g_1(N,0)=g_2(N,0)=\sqrt{\frac{2}{\pi N}}2^N$$
+        
+          Using the information that $N=10^{22}$ and $s=10^{20}$, we can finally solve:
+
+          $$\boxed{\text{error}=\frac{\ln(8.862\cdot10^{10})}{\ln((8.862\cdot10^{10})(\frac{2}{\pi (10^{22})}2^{10^{23}}))-10^{18}}=1.818\cdot10^{-21}}$$
+
+          Thus, the factor doesn't carry much influence.
 
     \end{enumerate}
     
@@ -228,7 +276,7 @@
         Finding a ratio, we obtain:
 
         $$r=\frac{\frac{\sqrt{N}}{2}\frac{e^{-400}}{40}(1+e)}{\frac{\sqrt{\pi N}}{2}}=\frac{e^{-400}}{40\sqrt{\pi}}(1+e)$$
-        $$r=2.7\cdot10^{-176}$$
+        $$\boxed{r=2.7\cdot10^{-176}}$$
 
         Thus, it is quite improbable.
 
