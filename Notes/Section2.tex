@@ -90,6 +90,179 @@
     $$d\sigma=\frac{\partial \sigma}{\partial U}dU+\frac{\partial \sigma}{\partial V}dV$$
     $$\text{If }d\sigma=0\text{ (isentropic) }\to\left(\frac{\partial U}{\partial V}\right)_{\sigma}=-\frac{\frac{\partial \sigma}{\partial V}}{\frac{\partial \sigma}{\partial U}}$$
 
+  \item Reviewing some important formulas:
+
+    \begin{itemize}
+
+      \item Entropy:
+
+        $$\sigma(u,v)=\ln(g(u,v))$$
+
+      \item Fundamental Temperature:
+
+        $$\frac{1}{\tau}=\left( \frac{\partial \sigma}{\partial U} \right)_V$$
+
+      \item Probability:
+
+        $$P(\varepsilon_s)=\frac{e^{-\frac{\varepsilon_s}{\tau}}}{z}$$
+
+      \item Partition Function:
+
+        $$z(\tau,V)=\sum_s e^{-\frac{\varepsilon_s}{\tau}}$$
+
+      \item Energy:
+
+        $$\tau^2\left( \frac{\partial\ln(z)}{\partial\tau} \right)_V$$
+
+      \item Pressure:
+
+        $$P=-\left( \frac{\partial U}{\partial V} \right)_{\sigma}$$
+
+      \item Note: there may be other ways to derive some of these quantities; however, these are the critical functions we have learned so far.
+
+    \end{itemize}
+
+  \item Back to the total differential, we get:
+
+    $$d\sigma=\frac{\partial \sigma}{\partial U}dU+\frac{\partial \sigma}{\partial V}dV$$
+
+    \begin{itemize}
+
+      \item For $\sigma=c$, a constant, $d\sigma=0$, known as an isentropic process
+
+        $$\frac{\partial U}{\partial V}_{\sigma}=-\frac{\left(\frac{\partial \sigma\right)_U}{\partial V}}{\left(\frac{\partial\sigma}{\partial U}\right)_V}=-\tau\left( \frac{\partial \sigma}{\partial V} \right)_U$$
+
+        Thus, we see:
+
+        $$P=\tau\left( \frac{\partial \sigma}{\partial V} \right)_U\footnote{Note: the negative sign is dropped because entropy can only increase, and pressure is always positive}$$
+
+    \end{itemize}
+
+  \item Thermodynamic Identity
+        
+    $$d\sigma=\frac{1}{\tau}dU+\frac{P}{\tau}dV$$
+    $$\boxed{\underbrace{\tau}_{\text{heat added\footnote{to $S$ in a reversible process}}}\hspace{-12pt}d\sigma=\hspace{-12pt}\underbrace{dU}_{\Delta\text{internal energy}}\hspace{-6pt}+P\hspace{-10pt}\underbrace{dV}_{\text{work done by gas}}}$$
+    $$sQ=dU=sW$$
+
+    \begin{itemize}
+
+      \item This is the first law
+
+      \item Helmholtz Free Energy, $F(\tau,V)$
+
+        \begin{itemize}
+
+          \item For a Reservoir ($\mathcal{R}$) and System ($S$) placed in thermal contact:
+
+            $$U_{\mathcal{R}}+U_S=U_o$$
+            $$\sigma_{\mathcal{R}+S}=\sigma_{\mathcal{R}}\left( U_{\mathcal{R}} \right)+\sigma_S\left( U_S \right)$$
+            $$\sigma_{\mathcal{R}+S}=\sigma_{\mathcal{R}}\left( U_o -U_S \right)+\sigma_S\left( U_S \right)$$
+
+          \item Using Taylor Expansion:
+
+            $$\sigma_{\mathcal{R}}-\frac{1}{\tau_{\mathcal{R}}}\left( U_s-\tau_{\mathcal{R}}\cdot\sigma_S \right)$$
+
+          \item As $\sigma_{\mathcal{R}+s}$ increases,
+
+            $$F_S\equiv U_s-\tau_{\mathcal{R}}\sigma_S$$
+
+            decreases, assuming that $\tau_{\mathcal{R}},V_s,N_s$ are constant
+
+        \end{itemize}
+
+      \item To summarize this process, we can say: If $S$ is brought into thermal contact with $\mathcal{R}$ at $\tau_{\mathcal{R}},V_s,N_s$ constant, then $F_S$ will decrease and $S$ will come into a new equilibrium state in which $F_S$ is minimal, $F_S^{min}$
+
+        \begin{itemize}
+
+          \item $F_S-F_S^{min}$ — The maximum amount of work $S$ can perform
+
+          \item This is because, at the same time as the system is minimizing the free energy, it is also trying to maximize entropy (as seen in the subtracted term of the formula)
+
+        \end{itemize}
+
+      \item Identities Related to Helmholtz Free Energy
+
+        $$F(\tau,V)=U-\tau\sigma$$
+        $$dF=dU-\sigma d\tau-\tau d\sigma$$
+        $$=\cancel{\tau d\sigma}- PdV-\sigma d\tau-\cancel{\tau d\sigma}$$
+        $$=-\sigma d\tau-PdV$$
+
+        \begin{itemize}
+
+          \item This gives us:
+
+        \end{itemize}
+
+        $$\sigma=-\left( \frac{\partial F}{\partial \tau} \right)_v\quad\quad P=-\left( \frac{\partial F}{\partial V} \right)_{\tau}$$
+
+      \item Maxwell Relations
+
+        \begin{itemize}
+
+          \item Consider $f(x,y)$ which is twice continuously differentiable in $x$ and $y$
+
+            $$df=\left(\frac{\partial f}{\partial x}\right)_ydx+\left( \frac{\partial f}{\partial y} \right)_xdy$$
+            $$\frac{\partial}{\partial x}\left( \frac{\partial f}{\partial y} \right)_x=\frac{\partial}{\partial y}\left( \frac{\partial f}{\partial x} \right)_y$$
+
+          \item Applying this to the above, we get:
+
+            $$\frac{\partial}{\partial\tau}\left( \frac{\partial F}{\partial V} \right)=\frac{\partial}{\partial \tau}(-P)$$
+            $$\frac{\partial}{\partial V}\left( \frac{\partial F}{\partial \tau} \right)=\frac{\partial}{\partial V}(-\sigma)$$
+            $$\left( \frac{\partial P}{\partial \tau} \right)_V=\left(\frac{\partial\sigma}{\partial V}\right)_{\tau}$$
+
+        \end{itemize}
+
+      \item Calculation of $F$ from $z$:
+
+        $$F=-\tau\ln(z)$$
+        $$z=e^{-\frac{F}{\tau}}$$
+        $$P(\varepsilon_s)=e^{-\frac{F\varepsilon_s}{\tau}}$$
+
+      \item Ideal Gas:
+
+        \begin{itemize}
+
+          \item A gas of non-interacting quantum particles in a classical regime
+
+          \item Considering a single quantum particle in a box:
+
+            $$-\frac{\hbar^2}{2M}\left( \frac{\partial^2}{\partial x^2}+\frac{\partial^2}{\partial y^2}+\frac{\partial^2}{\partial z^2} \right)\psi(x,y,z)=\varepsilon\psi(x,y,z)$$
+            $$\varepsilon_{n_x,n_y,n_z}=\frac{\hbar^2\pi^2}{2ML^2}\left( n_x^2+n_y^2+n_z^2 \right),\quad n_x,n_y,n_z=1,2,3,\ldots$$
+            $$\psi_{n_x,n_y,n_z}(x,y,z)=A\sin\left(\frac{\pi n_x}{L}x\right)\sin\left(\frac{\pi n_y}{L}y\right)\sin\left(\frac{\pi n_z}{L}z\right)$$
+            $$z_1=\sum_{n_xn_yn_z=1}^{\infty}e^{-\frac{\hbar^2\pi^2}{2ML^2\tau}\left( n_x^2+n_y^2+n_z^2 \right)}$$
+            $$\iiint_0^{\infty}dn_xdn_ydn_z e^{-\alpha^2(n_x^2+n_y^2+n_z^2)}\quad\quad\alpha\equiv\sqrt{\frac{\hbar^2\pi^2}{2ML^2\tau}} << 1$$
+
+            \begin{itemize}
+
+              \item These become Gaussian integrals:
+
+                $$\int_{-\infty}^{\infty}e^{-x^2}\,dx\equiv\sqrt{\pi}$$
+                $$\int_{0}^{\infty}e^{-x^2}\,dx\equiv\frac{\sqrt{\pi}}{2}$$
+                $$\frac{1}{2}\int_{0}^{\infty}e^{-\alpha^2n_x^2}\,dn_x\equiv\frac{\sqrt{\pi}}{2\alpha}$$
+
+              \item Thus, we get:
+
+                $$z_1=\left(  \frac{\sqrt{\pi}}{2\alpha}\right)^3=\left( \frac{\sqrt{\pi}}{2\sqrt{\frac{\hbar^2\pi^2}{2ML^2\tau}}} \right)^3=\left(\frac{M\tau}{2\pi\hbar^2}\right)^\frac{3}{2}V$$
+
+              \item The following value is known as the quantum concentration
+
+                $$n_Q\equiv\left( \frac{M\tau}{2\pi\hbar^2} \right)^{\frac{3}{2}}$$
+                $$n_Q=\frac{1}{\lambda_D^3}$$
+
+                where $\lambda_D$ is the de Broglie wavelength
+
+              \item Finally, we are left with:
+
+                $$z_1=n_QV$$
+                $$n_Q<<n$$
+                $$\text{Classical regime:}\quad n_Q>>n=\frac{N}{V}$$
+
+            \end{itemize}
+
+        \end{itemize}
+
+    \end{itemize}
+
 \end{itemize}
 
 \end{document}
