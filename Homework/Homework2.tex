@@ -7,7 +7,7 @@
 \include{Includes.tex}
 
 \title{Homework 2}
-\date{September 28, 2023}
+\date{September 30, 2023}
 \author{Michael Brodskiy\\ \small Professor: A. Stepanyants}
 
 \begin{document}
@@ -22,7 +22,32 @@
 
       \item 
 
+        First, we know that:
+
+        $$z(\varepsilon)=e^{-\frac{\varepsilon}{\tau}}$$
+
+        Plugging in the respective values of $\varepsilon=0$ and $\varepsilon=\varepsilon_o$:
+
+        $$z=z(0)+z(\varepsilon_o)=1+e^{-\frac{\varepsilon_o}{\tau}}$$
+
+        Free energy can also be expressed in terms of $z$:
+
+        $$\boxed{F=-\tau\ln(z)\rightarrow-\tau\ln\left( 1+e^{\frac{-\varepsilon_o}{\tau}}\right)}$$
+
       \item 
+
+        We know the energy may be expressed as:
+
+        $$U=-\tau^2\frac{\partial}{\partial \tau}\left( \frac{F}{\tau} \right)$$
+        $$=\tau^2\frac{\partial}{\partial \tau}\left( \ln\left( 1+e^{-\frac{\varepsilon_o}{\tau}} \right) \right)$$
+        $$=\tau^2\left( \frac{ae^{-\frac{\varepsilon_o}{\tau}}}{\tau^2\left(1+e^{-\frac{\varepsilon_o}{\tau}}}\right) \right)$$
+        $$=\frac{\varepsilon_oe^{-\frac{\varepsilon_o}{\tau}}}{\left(1+e^{-\frac{\varepsilon_o}{\tau}}}\right)$$
+
+        Furthermore, entropy may be expressed as:
+
+        $$\sigma=-\frac{\partial F}{\partial \tau}$$
+        $$=\frac{\partial}{\partial \tau}\left( \tau\ln\left( 1+e^{-\frac{\varepsilon_o}{\tau}} \right) \right)$$
+        $$=\ln\left( 1+e^{-\frac{\varepsilon_o}{\tau}}\right) + \frac{\varepsilon_oe^{-\frac{\varepsilon_o}{\tau}}}{\tau\left(1+e^{-\frac{\varepsilon_o}{\tau}}}\right)$$
 
     \end{enumerate}
 
@@ -44,7 +69,29 @@
 
       \item 
 
+        We want to find the free energy over all values of $s$. Thus, we set up a sum:
+
+        $$z=\sum_0^{\infty}e^{-\frac{s\hbar\omega}{\tau}}$$
+
+        We can find by reversing the expansion:
+
+        $$\sum_0^{\infty}e^{-\frac{s\hbar\omega}{\tau}}=\frac{1}{1-e^{-\frac{\hbar\omega}{\tau}}}$$
+
+        Using the formula for free energy, we obtain:
+
+        $$\boxed{F=-\tau\ln\left(  z\right)=\tau\ln\left(  1-e^{-\frac{\hbar\omega}{\tau}}\right)}$$
+
       \item 
+
+        We know the following:
+
+        $$\sigma=-\frac{\partial F}{\partial\tau}$$
+
+        Taking the partial derivative with respect to $\tau$, we find:
+
+        $$-\frac{\partial F}{\partial\tau}=-\frac{\partial}{\partial\tau}\left( \tau\ln\left( 1-e^{-\frac{\hbar\omega}{\tau}} \right) \right)\Rightarrow$$
+        $$-\left(\ln\left( 1-e^{-\frac{\hbar\omega}{\tau}}\right) +\tau\frac{\partial}{\partial \tau}\left[\ln\left( 1-e^{-\frac{\hbar\omega}{\tau}} \right)\right]\right)=-\ln\left( 1-e^{-\frac{\hbar\omega}{\tau}}\right) -\tau\left[-\frac{\hbar\omega e^{-\frac{\hbar\omega}{\tau}}}{\tau^2\left(1-e^{-\frac{\hbar\omega}{\tau}}\right)}\right]\Rightarrow$$
+        $$\boxed{\sigma=\frac{\hbar\omega}{\tau\left(e^{\frac{\hbar\omega}{\tau}}+1\right)}-\ln\left( 1-e^{-\frac{\hbar\omega}{\tau}}\right)}$$
 
     \end{enumerate}
 
@@ -53,6 +100,33 @@
   \item
 
   \item
+
+    From quantum mechanics, we know the energy of such a particle, with a single $n$ (because it is unidimensional), may be expressed as:
+
+    $$\varepsilon=\frac{\hbar^2\pi^2n^2}{2mL^2}$$
+
+    Thus, we know:
+
+    $$z=\sum_{n=1}^{\infty} e^{-\frac{\varepsilon}{\tau}}$$
+
+    If we define some value $x=\dfrac{\hbar\pi}{L\sqrt{2m\tau}}$, we can write this as a Gaussian integral:
+
+    $$z=\int_0^{\infty} e^{-x^2n^2}\,dn=\frac{\sqrt{\pi}}{2x}$$
+
+    Using the formula for free energy, we can find:
+
+    $$-\tau\ln\left(z\right)\rightarrow N\tau\ln\left(\frac{2x}{\sqrt{\pi}}\right)=N\tau\ln\left( \frac{2\hbar\pi}{L\sqrt{2m\tau\pi}}\right)$$
+    
+    To simplify our calculations, we can take out the square root:
+
+    $$N\tau\ln\left( \frac{2\hbar\pi}{L\sqrt{2m\tau\pi}}\right)=\frac{1}{2}N\tau\ln\left( \frac{2\hbar^2\pi}{L^2m\tau}\right)$$
+
+    Now we take the partial derivative with respect to $\tau$ to find the entropy, using $y=\dfrac{2\hbar^2\pi}{L^2m}$ to simplify:
+
+    $$\sigma=-\frac{\partial}{\partial \tau}\left( \frac{1}{2}N\tau\ln\left( \frac{y}{\tau} \right) \right)$$
+    $$-\frac{N}{2}\ln\left( \frac{y}{\tau} \right)-\frac{N\tau}{2}\frac{\partial}{\partial\tau}\left[\ln\left( \frac{y}{\tau} \right)\right]=-\frac{N}{2}\ln\left( \frac{y}{\tau} \right)-\frac{N\tau^2}{2y}\frac{\partial}{\partial\tau}\left[ \frac{y}{\tau} \right]$$
+    $$-\frac{N}{2}\ln\left( \frac{y}{\tau} \right)-\frac{N\tau^2}{2y}\left(-\frac{y}{\tau^2}\right)=\frac{N}{2}\left( 1-\ln\left( \frac{y}{\tau} \right) \right)$$
+    $$\boxed{\sigma=\frac{N}{2}\left( 1-\ln\left( \frac{2\hbar^2\pi}{L^2m\tau} \right) \right)}$$
 
 \end{enumerate}
 
