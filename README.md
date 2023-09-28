@@ -24,6 +24,7 @@
   * [**Boltzmann Distribution and Helmholtz Free Energy**](https://github.com/MDBrodskiy/Thermodynamics/tree/master/Notes/Section2.pdf)
 * [**Homework**](https://github.com/MDBrodskiy/Thermodynamics/tree/master/Homework/)
   * [**Homework 1**](https://github.com/MDBrodskiy/Thermodynamics/tree/master/Homework/Homework1.pdf)
+  * [**Homework 2**](https://github.com/MDBrodskiy/Thermodynamics/tree/master/Homework/Homework2.pdf)
 * [**Exams**](https://github.com/MDBrodskiy/Thermodynamics/tree/master/Exams/)
 
 <!--
