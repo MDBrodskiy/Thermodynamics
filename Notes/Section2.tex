@@ -257,9 +257,143 @@
                 $$n_Q<<n$$
                 $$\text{Classical regime:}\quad n_Q>>n=\frac{N}{V}$$
 
+              \item We can predict the expected number of particles in state $s$, using:
+
+                $$\langle N_s\rangle=N\frac{e^{-\frac{\varepsilon_s}{\tau}}}{z_1}=\frac{N}{n_QV}=\frac{n}{n_Q}$$
+
             \end{itemize}
 
         \end{itemize}
+
+    \end{itemize}
+
+  \item Many particles in a box
+
+    \begin{itemize}
+
+      \item Particles are distinguishable because of different masses
+
+        \begin{itemize}
+
+          \item The $N$-particle partition function becomes:
+
+            $$z_N=z_1z_2\cdots Z_N$$
+
+          \item With two particles in two distinguishable quantum states, with the same mass:
+
+            \begin{itemize}
+
+              \item This gives us:
+
+                $$z_1=e^{-\frac{\varepsilon_1}{\tau}}+e^{-\frac{\varepsilon_2}{\tau}}$$
+                $$z_2=e^{-\frac{\varepsilon_1}{\tau}}+e^{-\frac{\varepsilon_2}{\tau}}$$
+
+              \item This means distinguishable particles of same mass give us:
+
+                $$z_N=z_1^N$$
+
+            \end{itemize}
+
+          \item For identical particles
+
+            $$z_N=\frac{z_1^N}{N!}$$
+
+            \begin{itemize}
+
+              \item This formula is correct only in the classical regime
+
+              \item Applying this to what we know:
+
+                $$F=-\tau\ln(z_N)=-\tau\ln\left( \frac{(n_QV)^N}{N!} \right)=-\tau\left( N\ln(n_QV)-\ln(N!) \right)$$
+
+              \item Using the Stirling approximation, we get:
+
+                $$F=-\tau\left( N\ln(n_QV)-N\ln(N)+N \right)$$
+                $$F=-\tau N\left( \ln\left(\frac{n_Q}{n}\right)+1 \right)$$
+
+              \item The Sackur-Tetrode formula is:
+
+                $$\sigma=-\left( \frac{\partial F}{\partial \tau}\right)_{V,N}=N\left( \ln\left( \frac{n_Q}{n}\right)+\frac{5}{2}  \right)$$
+
+              \item Obtaining energy, we find:
+
+                $$U=F+\tau\sigma=\frac{3}{2}\tau N\text{ or }\tau^2\left( \frac{\partial\ln(z_N)}{\partial\tau} \right)_{V,N}$$
+
+              \item If we derive with respect to volume:
+
+                $$P=-\left( \frac{\partial F}{\partial V} \right)_{\tau,N}=\frac{N\tau}{V}$$
+                $$PV=N\tau$$
+
+            \end{itemize}
+
+        \end{itemize}
+
+    \end{itemize}
+
+  \item Thermal Radiation
+
+    \begin{itemize}
+
+      \item $I(\lambda)$ is the radiant intensity, i.e.\ intensity per unit wavelength in units of $\left[ \frac{\si{\joule}}{\si{\second\meter\cubed}} \right]$
+
+      \item Using an experiment with a detector tuned to a variety of wavelengths, it was determined that:
+
+        \begin{itemize}
+
+          \item $\lambda_{max}$ shifts to lower wavelengths as $T$ increases (Wien's Law)
+
+          \item Area under the curve is approximately $T^4$
+
+        \end{itemize}
+
+      \item This developed the Blackbody model of thermal radiation
+
+        \begin{itemize}
+
+          \item A blackbody absorbs all external radiation
+
+          \item A blackbody emits thermal equilibrium radiation at temperature $T$
+
+        \end{itemize}
+
+        \newpage
+
+      \item Properties of a photon:
+
+        \begin{itemize}
+
+          \item The mass is negligible; that is, $m=0$
+
+          \item $s=1$ (spin)
+
+          \item $s_z=\pm1$
+
+          \item Has momentum $p$
+
+          \item Has energy $\varepsilon$
+
+          \item Has wavelength $\lambda$
+
+          \item Has frequency $f,\omega$
+
+          \item Has wave number, $K$
+
+        \end{itemize}
+
+      \item Relationships:
+
+        $$\lambda=\frac{h}{p}$$
+        $$f=\frac{\varepsilon}{h}$$
+        $$k=\frac{2\pi}{\lambda}$$
+        $$\boxed{\varepsilon=\hbar\omega}$$
+
+      \item Modes of radiation describe different solutions of Maxwell's equations (e.g.\ TEM node, $E,B$ are $\perp$ to propagation direction)
+
+      \item The thermal average \# of photons in a mode of frequency $\omega$:
+
+        $$P(s)=\frac{e^{-\frac{\varepsilon_s}{\tau}}}{z};\quad z=\sum_{s=0}^\infty e^{-\frac{\varepsilon_s}{\tau}}=\frac{1}{1-e^{-\frac{\hbar\omega}{\tau}}}$$
+        $$\langle s\rangle=\sum_{s=0}^\infty sP(s)=\frac{1}{z}\sum_{s=0}^\infty se^{-\frac{s\hbar\omega}{\tau}}=\frac{1}{z}\frac{\partial}{\partial\left( -\frac{\hbar\omega}{\tau} \right)}\frac{1}{1-e^{-\frac{\hbar\omega}{\tau}}}$$
+        $$\langle s\rangle=\frac{1}{e^{\frac{\hbar\omega}{\tau}}-1}$$
 
     \end{itemize}
 
