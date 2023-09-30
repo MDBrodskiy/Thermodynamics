@@ -40,14 +40,14 @@
 
         $$U=-\tau^2\frac{\partial}{\partial \tau}\left( \frac{F}{\tau} \right)$$
         $$=\tau^2\frac{\partial}{\partial \tau}\left( \ln\left( 1+e^{-\frac{\varepsilon_o}{\tau}} \right) \right)$$
-        $$=\tau^2\left( \frac{ae^{-\frac{\varepsilon_o}{\tau}}}{\tau^2\left(1+e^{-\frac{\varepsilon_o}{\tau}}}\right) \right)$$
+        $$=\tau^2\left( \frac{\varepsilon_oe^{-\frac{\varepsilon_o}{\tau}}}{\tau^2\left(1+e^{-\frac{\varepsilon_o}{\tau}}}\right) \right)$$
         $$=\frac{\varepsilon_oe^{-\frac{\varepsilon_o}{\tau}}}{\left(1+e^{-\frac{\varepsilon_o}{\tau}}}\right)$$
 
         Furthermore, entropy may be expressed as:
 
         $$\sigma=-\frac{\partial F}{\partial \tau}$$
         $$=\frac{\partial}{\partial \tau}\left( \tau\ln\left( 1+e^{-\frac{\varepsilon_o}{\tau}} \right) \right)$$
-        $$=\ln\left( 1+e^{-\frac{\varepsilon_o}{\tau}}\right) + \frac{\varepsilon_oe^{-\frac{\varepsilon_o}{\tau}}}{\tau\left(1+e^{-\frac{\varepsilon_o}{\tau}}}\right)$$
+        $$\boxed{=\ln\left( 1+e^{-\frac{\varepsilon_o}{\tau}}\right) + \frac{\varepsilon_oe^{-\frac{\varepsilon_o}{\tau}}}{\tau\left(1+e^{-\frac{\varepsilon_o}{\tau}}}\right)}$$
 
     \end{enumerate}
 
@@ -55,11 +55,82 @@
 
     \begin{enumerate}
 
-      \item 
+      \item
+
+        We need to calculate the multiplicity of the $N$-spin system. First and foremost, we know:
+
+        $$U=-2msB$$
+
+        We also know the $N$-spin system can be rewritten using:
+
+        $$2s=N_{\uparrow}-N_{\downarrow}=N_{\uparrow}-(N-N_{\uparrow})=2N_{\uparrow}-N$$
+
+        This yields:
+
+        $$U=(N-2N_{\uparrow})mB$$
+
+        We then need to form a sum to find the partition function. We can do this by knowing the boundaries of $s$:
+
+        $$-\frac{N}{2}\leq s\leq \frac{N}{2}$$
+
+        $$\sum_{s=-\frac{N}{2}}^{\frac{N}{2}}$$
+
+        We need to multiply the exponential term by $N$ choose $N_{\uparrow}:$
+
+        $$\sum_{s=-\frac{N}{2}}^{\frac{N}{2}}\left( ^N_{N_{\uparrow}} \right)e^{\frac{2smB}{\tau}}$$
+
+        Since we know $s$ can be expressed as $N_{\uparrow}-\frac{N}{2}$, $N_{\uparrow}$ can be expressed as $s+\frac{N}{2}$; furthermore, $N_{\downarrow}$ can be expressed as $\frac{N}{2}-s$, which gives us:
+
+        $$z=\sum_{s=-\frac{N}{2}}^{\frac{N}{2}}\frac{N!}{(\frac{N}{2}+s)!(\frac{N}{2}-s)!}e^{\frac{2smB}{\tau}}$$
+
+        To simplify, we can shift the boundaries by taking $s\to s-\frac{N}{2}$
+
+        $$z=\sum_{s=0}^{N}\frac{N!}{s!(N-s)!}e^{\frac{2mB}{\tau}\left( s-\frac{N}{2} \right)}$$
+        $$z=\sum_{s=0}^{N}\frac{N!}{s!(N-s)!}e^{\frac{2smB}{\tau}-\frac{NmB}{\tau} \right)}$$
+
+        We then use $\sum_j^N\left( ^N_j \right)x^j=(1+x)^N$, dropping $s=0$ because the term is extremely small:
+
+        $$e^{-\frac{NmB}{\tau}}(1+e^{\frac{2mB}{\tau}})^N=(e^{-\frac{mB}{\tau}}+e^{\frac{mB}{\tau}})^N=2^N\cosh^N\left( \frac{mB}{\tau} \right)$$
+
+        We then differentiate $z$ with respect to $\tau$ to get:
+
+        $$\frac{\partial z}{\partial \tau}=N2^N\cosh^{N-1}\left( \frac{mB}{\tau} \right)\left(-\frac{mB}{\tau^2}\right)\sinh\left( \frac{mB}{\tau} \right)$$
+
+        We can then express $M$ as:
+
+        $$M=-\tau^2\frac{\partial}{\partial\tau}\left( \ln(z) \right)\rightarrow Nm\tanh\left( \frac{mB}{\tau} \right)$$
+
+        And finally:
+
+        $$\boxed{\chi=\frac{\partial M}{\partial B}=\frac{Nm^2}{\tau}\sech^2\left( \frac{mB}{\tau} \right)}$$
 
       \item 
 
+        We know we can write the free energy as:
+
+        $$F=-\tau\ln(z)=-\tau\ln\left( 2^N\cosh^N\left( \frac{mB}{\tau} \right) \right)=-N\tau \ln\left( 2\cosh\left( \frac{mB}{\tau} \right) \right) $$
+
+        This can be rewritten as:
+
+        $$F=-N\tau \ln\left( \frac{2}{\sech\left( \frac{mB}{\tau} \right)} \right) $$
+
+        We know $\sech(t)=\sqrt{1-\tanh^2(t)}$, and, applying $x\rightarrow\frac{M}{Nm}$ we get $x=\tanh(t)$. Thus, we can write:
+
+        $$F=-N\tau \ln\left( \frac{2}{\sqrt{1-x^2}} \right) $$
+
+        Distributing the negative, we finally get:
+
+        $$\boxed{F=N\tau\ln\left( \frac{\sqrt{1-x^2}}{2} \right)}$$
+
       \item 
+
+        As $mB<<\tau$, the term inside the $\sech^2$ expression approaches zero. Thus, we can say:
+
+        $$\chi=\frac{Nm^2}{\tau}\sech^2\left( 0\right)$$
+
+        We know, at zero $\sech(0)=1$, so we can write:
+
+        $$\boxed{\chi=\frac{Nm^2}{\tau}}$$
 
     \end{enumerate}
 
@@ -97,7 +168,85 @@
 
   \item
 
+    First, let us define a variable related to $\tau$ to simplify calculations:
+
+    $$\alpha=\frac{1}{\tau}$$
+
+    Using the chain rule, this defines the partial with respect to $\tau$ as:
+
+    $$\frac{\partial}{\partial\tau}=\frac{\partial\alpha}{\partial\tau}\frac{\partial}{\partial\alpha}=-\frac{1}{\tau^2}\frac{\partial}{\partial\alpha}$$
+
+    We can then express the partition function and its differentials as:
+
+    $$z=\sum_s\left( e^{-\alpha\varepsilon_s} \right)$$
+    $$\frac{\partial}{\partial\alpha} z=\sum_s\left( -\varepsilon_se^{-\alpha\varepsilon_s} \right)$$
+    $$\frac{\partial^2}{\partial\alpha^2} z=\sum_s\left( \varepsilon_s^2e^{-\alpha\varepsilon_s} \right)$$
+
+    We then express the energy as:
+
+    $$U=-\frac{\partial}{\partial\alpha}\ln(z)$$
+
+    Which then becomes:
+
+    $$\frac{\partial U}{\partial\tau}=\frac{\partial\alpha}{\partial\tau}\frac{\partial U}{\partial\alpha}=-\frac{1}{\tau^2}\frac{\partial U}{\partial\alpha}$$
+
+    We then insert the expression for $U$:
+
+    $$\frac{1}{\tau^2}\left( \frac{\partial}{\partial\alpha}\left( \frac{\frac{\partial}{\partial\alpha}z}{z} \right) \right)=\frac{1}{\tau^2}\left( \frac{\frac{\partial^2z}{\partial\alpha^2}z-\left( \frac{\partial z}{\partial\alpha} \right)^2}{z^2} \right)=\frac{1}{\tau^2}\left( \frac{\frac{\partial^2z}{\partial\alpha^2}}{z}-\frac{\left( \frac{\partial z}{\partial\alpha} \right)^2}{z^2} \right)$$
+
+    Thus, we see that:
+
+    $$\langle\varepsilon^2\rangle=\frac{\frac{\partial^2z}{\partial\alpha^2}}{z}\quad\text{ and }\quad\langle\varepsilon\rangle^2=\frac{\left( \frac{\partial z}{\partial\alpha} \right)^2}{z}$$
+
+    Which gives us:
+
+    $$\frac{\partial U}{\partial \tau}=\frac{1}{\tau^2}\left( \langle\varepsilon^2\rangle-\langle\varepsilon\rangle^2 \right)$$
+
+    And finally:
+
+    $$\boxed{\tau^2\frac{\partial U}{\partial \tau}=\left( \langle\varepsilon^2\rangle-\langle\varepsilon\rangle^2 \right)}$$
+
+    \setcounter{enumi}{7}
+
   \item
+
+    First and foremost, for the ground orbital, we know $n_x,n_y,n_z=1$. We must then check $\psi$ for normalization:
+
+    $$\int_0^L\sin^2\left( \frac{n_x\pi x}{L} \right)\,dn_x=\left( n_x-\frac{n_x}{2}-\frac{L}{4\pi x}\sin\left( \frac{2n_x\pi x}{L} \right) \right)\Big|_0^L$$
+
+    Evaluating the integral, we are left with:
+
+    $$\left( L-\frac{L}{2}-0-(0-0-0) \right)=\frac{L}{2}$$
+
+    Which gives us:
+
+    $$\langle\psi|\psi\rangle=A^2=\frac{8}{L^3}$$
+
+    Then solving, we can apply the formula for kinetic energy in terms of momentum:
+
+    $$\frac{p^2}{2m}=\frac{3\pi^2}{2mL^2}$$
+
+    Since we know $n=\frac{1}{L^3}$, we can rewrite this as:
+
+    $$\frac{3\pi^2}{2m}n^{\frac{2}{3}}=T\rightarrow n^{\frac{2}{3}}=\frac{2mT}{3\pi^2}$$
+
+    Then we are left with:
+
+    $$n=\left( \frac{2mT}{3\pi^2} \right)^\frac{3}{2}$$
+
+    We then substitute $T=\frac{\tau}{\hbar^2}$ to get:
+
+    $$n=\left( \frac{2m\tau}{3\pi^2\hbar^2} \right)^{\frac{3}{2}}$$
+
+    We know that the quantum concentration may be written as $n_Q=\left(\dfrac{m\tau}{2\pi\hbar^2}\right)^{\frac{3}{2}}$, thus $n$ is a factor multiple of $n_Q$, so we can use:
+
+    $$\frac{n}{n_Q}=\left( \frac{4}{3\pi} \right)^{\frac{3}{2}}$$
+
+    And finally, we can confirm $n_0$, by expressing this as:
+
+    $$\boxed{n=\left( \frac{4}{3\pi} \right)^{\frac{3}{2}}n_Q}$$
+
+    \setcounter{enumi}{10}
 
   \item
 
