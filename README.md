@@ -22,6 +22,7 @@
 * [**Notes**](https://github.com/MDBrodskiy/Thermodynamics/tree/master/Notes/)
   * [**States of a Model System & Entropy and Temperature**](https://github.com/MDBrodskiy/Thermodynamics/tree/master/Notes/Section1.pdf)
   * [**Boltzmann Distribution and Helmholtz Free Energy**](https://github.com/MDBrodskiy/Thermodynamics/tree/master/Notes/Section2.pdf)
+  * [**Thermal Radiation and Planck Distribution**](https://github.com/MDBrodskiy/Thermodynamics/tree/master/Notes/Section3.pdf)
 * [**Homework**](https://github.com/MDBrodskiy/Thermodynamics/tree/master/Homework/)
   * [**Homework 1**](https://github.com/MDBrodskiy/Thermodynamics/tree/master/Homework/Homework1.pdf)
   * [**Homework 2**](https://github.com/MDBrodskiy/Thermodynamics/tree/master/Homework/Homework2.pdf)
