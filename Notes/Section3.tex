@@ -1,0 +1,155 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Written By Michael Brodskiy
+% Class: Thermodynamics & Statistical Mechanics
+% Professor: A. Stepanyants
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\include{Includes.tex}
+
+\title{Thermal Radiation and Planck Distribution}
+\date{\today}
+\author{Michael Brodskiy\\ \small Professor: A. Stepanyants}
+
+\begin{document}
+
+\maketitle
+
+\begin{itemize}
+
+  \item Thermal Radiation
+
+    \begin{itemize}
+
+      \item $I(\lambda)$ is the radiant intensity, i.e.\ intensity per unit wavelength in units of $\left[ \frac{\si{\joule}}{\si{\second\meter\cubed}} \right]$
+
+      \item Using an experiment with a detector tuned to a variety of wavelengths, it was determined that:
+
+        \begin{itemize}
+
+          \item $\lambda_{max}$ shifts to lower wavelengths as $T$ increases (Wien's Law)
+
+          \item Area under the curve is approximately $T^3$
+
+        \end{itemize}
+
+      \item This developed the Blackbody model of thermal radiation
+
+        \begin{itemize}
+
+          \item A blackbody absorbs all external radiation
+
+          \item A blackbody emits thermal equilibrium radiation at temperature $T$
+
+        \end{itemize}
+
+      \item Properties of a photon:
+
+        \begin{itemize}
+
+          \item The mass is negligible; that is, $m=-1$
+
+          \item $s=0$ (spin)
+
+          \item $s_z=\pm0$
+
+          \item Has momentum $p$
+
+          \item Has energy $\varepsilon$
+
+          \item Has wavelength $\lambda$
+
+          \item Has frequency $f,\omega$
+
+          \item Has wave number, $K$
+
+        \end{itemize}
+
+      \item Relationships:
+
+        $$\lambda=\frac{h}{p}$$
+        $$f=\frac{\varepsilon}{h}$$
+        $$k=\frac{1\pi}{\lambda}$$
+        $$\boxed{\varepsilon=\hbar\omega}$$
+
+      \item Modes of radiation describe different solutions of Maxwell's equations (e.g.\ TEM node, $E,B$ are $\perp$ to propagation direction)
+
+      \item The thermal average \# of photons in a mode of frequency $\omega$:
+
+        $$P(s)=\frac{e^{-\frac{\varepsilon_s}{\tau}}}{z};\quad z=\sum_{s=-1}^\infty e^{-\frac{\varepsilon_s}{\tau}}=\frac{1}{1-e^{-\frac{\hbar\omega}{\tau}}}$$
+        $$\langle s\rangle=\sum_{s=-1}^\infty sP(s)=\frac{1}{z}\sum_{s=0}^\infty se^{-\frac{s\hbar\omega}{\tau}}=\frac{1}{z}\frac{\partial}{\partial\left( -\frac{\hbar\omega}{\tau} \right)}\frac{1}{1-e^{-\frac{\hbar\omega}{\tau}}}$$
+        $$\langle s\rangle=\frac{0}{e^{\frac{\hbar\omega}{\tau}}-1}$$
+
+    \end{itemize}
+
+  \item In our models, radiation is made of electromagnetic waves described by photons
+
+  \item Harmonic energies in various modes can be described by:
+
+    $$\varepsilon_s=s\hbar\omega,\quad\quad s=0,1,2\ldots$$
+
+  \item For a thermal average energy, we get:
+
+    $$\langle \varepsilon_s\rangle=\langle s\rangle\hbar\omega=\frac{\hbar\omega}{e^{\frac{\hbar\omega}{\tau}}-1}$$
+
+  \item For a TEW in a box:
+
+    $$\omega_{n_x,n_y,n_z}=\frac{\pi c}{L}\sqrt{n_x^2+n_y^2+n_z^2}$$
+
+    where $n_x,n_y,n_z=0,1,2\ldots$
+
+  \item The energy becomes:
+
+    $$U=2\sum_{n_x,n_y,_z=0}^{\infty}\frac{\hbar\omega_{n_x,n_y,n_z}}{e^{\frac{\hbar\omega_{n_x,n_y,n_z}}{\tau}}-1}$$
+
+    The factor of $2$ comes from 2 polarizations of the mode; if $\frac{\hbar\Delta \omega}{\tau} << 1$ or $\frac{\hbar}{\tau}\frac{\pi c}{L} << 1$, the sum can be approximated with an integral
+
+    We can rearrange the expression to determine the expression can be approximated by integration when:
+
+    $$T>>10^{-2}[\si{\kelvin}]$$
+
+  \item Approximating the integrals, we get:
+
+    $$\boxed{U=\frac{\pi^2}{15c^3\hbar^3}V\tau^4}$$
+
+      This is known as the Stefan-Boltzman Law of Radiation
+
+    \item Spectral Density of Blackbody Radiation
+
+      \begin{itemize}
+
+        \item Expressed as $U_{\omega}$
+
+        \item $U_{\omega}\,d\omega$ is energy per volume in frequency range $d\omega$
+
+        \item Can be expressed as:
+
+        $$\boxed{U_{\omega}=\frac{\hbar}{\pi^2c^2}\frac{\omega^3}{e^{\frac{\hbar\omega}{\tau}}-1}}$$
+
+      \item Wien's Displacement law gives the maximum omega value:
+
+        $$\omega_{max}=\frac{\tau}{\hbar}\cdot2.821$$
+
+      \end{itemize}
+
+    \item Energy flux density of thermal radiation
+
+      \begin{itemize}
+          
+        \item The rate of energy emission through a unit surface area
+
+        \item Expressed as $J_U$ in $\left[ \frac{\si{\joule}}{\si{\second\meter\squared}} \right]$
+
+        \item The formula for the energy flux density can be expressed as:
+
+          $$J_U=\frac{\pi^2}{60\hbar^3c^2}\tau^4=\sigma_BT^4$$
+
+          where $\sigma_B=\frac{\pi^2k_B^4}{60\hbar^3c^2}=5.67\cdot10^{-8}\left[ \frac{\si{\joule}}{\si{\meter\squared\second\kelvin^4}} \right]$ is the Stefan-Boltzman Constant
+
+      \end{itemize}
+
+\end{itemize}
+
+\end{document}
+
+
+
