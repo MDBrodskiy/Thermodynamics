@@ -18,13 +18,71 @@
 
   \item
 
+    We can find the sum of all photons to be:
+
+    $$\sum\langle s_n\rangle=\sum\frac{1}{e^{\frac{\hbar\omega_n}{\tau}}-1}$$
+
+    We know that in a cavity of volume $V$, the edge length is $L$, which means $V=L^3$. From here, we know $\omega_n=\frac{n\pi c}{L}$. Now, if we were to assume that $n_x$, $n_y$, and $n_z$ are in a positive octant, we can get:
+
+    $$\sum_n\frac{1}{e^{\frac{\hbar n\pi c}{L\tau}}-1}=\frac{1}{4}\int_0^\infty\left( \frac{4\pi n^2}{e^{\frac{\hbar n\pi c}{L\tau}}-1} \right)\,dn$$
+    $$=\pi\int_0^\infty\left( \frac{4\pi n^2}{e^{\frac{\hbar n\pi c}{L\tau}}-1} \right)\,dn$$
+
+    If we perform a $u$-substitution, we obtain:
+
+    $$u=\frac{\hbar n\pi c}{L\tau}$$
+    $$du=\frac{\hbar \pi c}{L\tau}dn$$
+
+    Substituting this in, we get:
+
+    $$\pi\left(  \frac{L\tau}{\hbar \pi c}\right)^3\int_0^\infty\frac{u^2}{e^u-1}\,du$$
+
+    Using a numerical solver, we find:
+
+    $$\int_0^\infty\frac{u^2}{e^u-1}\,du=2.404$$
+
+    Thus, we get:
+
+    $$N=\frac{L^3\tau^3}{\pi^2\hbar^3c^3}(2.404)$$
+
+    We can simplify the $L^3$ to get:
+
+    $$\boxed{N=\frac{V\tau^3}{\pi^2\hbar^3c^3}(2.404)}$$
+
+    Finding $\frac{\sigma}{N}$, we find:
+
+    $$\frac{\sigma}{N}=\left( \frac{4\pi^2V\tau^3}{45\hbar^3c^3} \right)\left( \frac{\pi^2\hbar^3c^3}{V\tau^3(2.404)} \right)$$
+    $$=\frac{4\pi^4}{45}$$
+    $$=3.6017$$
+
   \item
 
     \begin{enumerate}
 
       \item 
 
+        To find the surface energy production rate, we need to simply multiply the density by the surface area. This gives us:
+
+        $$4\pi R^2\cdot C_s=4\pi(1.49\cdot10^{11})^2\cdot.136$$
+        $$=3.794\cdot10^{22}$$
+
+        We then need to convert the radius, which was in meters, to centimeters:
+
+        $$\text{Energy rate } = 3.794\cdot10^{22}\cdot\left( 10^2 \right)^2$$
+        $$\text{Energy rate } = 3.794\cdot10^{26}\left[ \frac{\si{\joule}}{\si{\second}} \right]$$
+        $$\boxed{\text{Energy rate } \approx 4\cdot10^{26}\left[ \si{\watt}\right]}$$
+
       \item 
+
+        We first find the energy emission per unit are of the sun itself, using the radius provided:
+
+        $$\frac{4\cdot10^{26}}{4\pi(7\cdot10^{10})^2}=6496.1\left[ \frac{\si{\watt}}{\si{\centi\meter\squared}} \right]$$
+
+        We know this value is equal to the Stefan-Boltzmann constant multiplied by the temperature to the power of four. From here, we can solve:
+
+        $$\frac{6496.1}{5.67\cdot10^{-12}}=T^4$$
+        $$T^4=1.1457\cdot10^{15}[\si{\kelvin}^4]$$
+        $$T=5,817.9[\si{\kelvin}]$$
+        $$\boxed{T\approx 6,000[\si{\kelvin}]}$$
 
     \end{enumerate}
 
@@ -36,11 +94,48 @@
 
       \item 
 
+        First we start off by finding the atomic mass difference when converting hydrogen to helium:
+
+        $$4(1.0078)-4.0026=.0286[\si{\amu}]$$
+
+        We then convert this value to kilograms:
+
+        $$.0286\cdot\left( \frac{1.6726\cdot10^{26}}{1.00727647} \right)=4.79\cdot10^{-29}[\si{\kilo\gram}]$$
+
+        We then plug this into Einstein's equation to find the energy:
+
+        $$4.79\cdot10^{-29}\cdot(3\cdot10^8)^2=4.27\cdot10^{-12}[\si{\joule}]$$
+
+        We then multiply this by the mass of the sun, divided by the quantity of $10\%$ of the hydrogen to find the available energy:
+
+        $$\boxed{E=(.1)(2\cdot10^{30})\left( \frac{1}{4\cdot 1.0078} \right)\left( \frac{1.00727647}{1.6726\cdot10^{-27}} \right)(4.27\cdot10^{-12})=1.277\cdot10^{44}[\si{\joule}]}$$
+
       \item 
+
+        We need to divide the amount from part (a), and divide it by the energy radiation rate:
+
+        $$\frac{1.277\cdot10^{44}}{4\cdot10^{26}}=3.1925\cdot10^{17}[\si{\second}]$$
+
+        We then convert seconds to years to find:
+
+        $$\boxed{2.875\cdot10^{18}\cdot(3600)^{-1}\cdot(24)^{-1}\cdot(365)^{-1}=1.012\cdot10^{10}[\text{yr}]}$$
 
     \end{enumerate}
 
   \item
+
+    Setting up a ratio, we can find that:
+
+    $$R^2_{sun}T^4_{sun}=R^2_{earth}T^4_{earth}$$
+
+    This gives us:
+
+    $$T_{earth}=T_{sun}\sqrt{\frac{R_{sun}}{R_{earth}}}$$
+
+    Plugging in our values, we get:
+
+    $$T_{earth}=5800\sqrt{\frac{7\cdot10^{10}}{1.5\cdot10^{13}}}$$
+    $$\boxed{T_{earth}=396.22[\si{\kelvin}]}$$
 
   \item
 
@@ -48,11 +143,73 @@
 
       \item 
 
-      \item 
+        We know that in a ``$j$-th'' mode, the total energy can be described as:
+
+        $$U=\sum_j \varepsilon_j$$
+
+        For a harmonic, we can find that $\varepsilon_j=s_j\hbar\omega_j$:
+
+        $$U=\sum_j s_j\hbar\omega_j$$
+
+        Then, we know:
+
+        $$P=-\frac{\partial U}{\partial V}$$
+
+        Combining the two, we see:
+
+        $$\boxed{P=-\sum_js_j\hbar\frac{\partial\omega_j}{\partial V}}$$
 
       \item 
 
+        Since we know:
+
+        $$\omega_j=\frac{j\pi c}{L}\text{ and }V=L^3$$
+
+        We can combine the two to find:
+
+        $$\omega_j=\frac{j\pi c}{\sqrt[3]{V}}$$
+
+        Then, we differentiate:
+
+        $$\frac{\partial \omega_j}{\partial V}=-\frac{1}{3}j\pi c V^{-\frac{4}{3}}$$
+
+        This can be simplified to find:
+
+        $$\boxed{\frac{\partial \omega_j}{\partial V}=-\frac{\omega_j}{3V}}$$
+
       \item 
+
+        Combining (a) and (b), we find:
+
+        $$P=\sum_j \frac{s_j\hbar\omega_j}{3V}$$
+
+        Which becomes:
+
+        $$\boxed{P=\frac{U}{3V}}$$
+
+      \item 
+
+        We may use the formula:
+
+        $$P=\frac{Nk_BT}{V}$$
+
+        This would yield:
+
+        $$P=\underbrace{\left( 6.022\cdot 10^{23} \right)\left( 10^2 \right)^3}_{\text{molecules per volume}}\underbrace{\left( 1.381\cdot10^{-23} \right)}_{\text{Boltzmann constant}}\underbrace{\left( 2\cdot10^7 \right)}_{\text{temperature}}=1.6633\cdot10^{14}\left[ \si{\pascal} \right]$$
+
+        Now, using the formula from (c)
+
+        $$P=\frac{3U}{V}$$
+        $$P=\frac{\pi^2\tau^4}{(3)(15)\hbar^3c^3}$$
+
+        To convert to temperatures, we use the multiply both sides by the Boltzmann constant:
+
+        $$\frac{\pi^2k_B^4T^4}{45\hbar^3c^3}=\frac{Nk_BT}{V}$$
+
+        Simplifying, we find:
+
+        $$T=\sqrt[3]{\frac{45\hbar^3c^3N}{\pi^2k_B^3V}}$$
+        $$\boxed{T=3.2\cdot10^7[\si{\kelvin}]}$$
 
     \end{enumerate}
 
