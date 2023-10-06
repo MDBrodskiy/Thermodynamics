@@ -1,0 +1,99 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Written By Michael Brodskiy
+% Class: Thermodynamics & Statistical Mechanics
+% Professor: A. Stepanyants
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\include{Includes.tex}
+
+\title{Chemical Potential and Gibbs Distribution}
+\date{\today}
+\author{Michael Brodskiy\\ \small Professor: A. Stepanyants}
+
+\begin{document}
+
+\maketitle
+
+\begin{itemize}
+
+  \item Chemical Potential, $\mu(\tau, V, N)$
+
+    \begin{itemize}
+
+      \item Given a reservoir, $R$ with fundamental temperature $\tau$, and two systems in contact, $S_1$ and $S_2$, with $\tau, V_1,N_1$ and $\tau,V_2,N_2$, respectively
+
+      \item $R$ is in thermal equilibrium with $S_1$ and $S_2$
+
+      \item $R$ is in mechanical equilibrium with $S_1$ and $S_2$
+
+      \item $S_1$ is in mechanical equilibrium with $S_2$, which means $V_1$ and $V_2$ are constant
+
+      \item $N_1$ and $N_2$ can change, but $N_1+N_2=N$ is constant
+
+      \item We find that the partial of $F$ with respect to $N$ plays an important role in this situation
+
+      \item We find that the chemical potential can be represented as:
+
+        $$\mu(\tau,V,N)\equiv\left( \frac{\partial F(\tau,V,N)}{\partial N} \right)_{\tau,V}$$
+
+        \begin{itemize}
+
+          \item In chemical equilibrium, $\mu_1=\mu_2$
+
+        \end{itemize}
+
+      \item We can find that, away from equilibrium:
+
+        $$dF_{S_1+S_2}=(\mu_1-\mu_2)dN_1$$
+
+      \item This implies that particles flow from greater energy to lower energy (this makes sense, as they would want to settle at minimal potential)
+
+    \end{itemize}
+
+  \item The chemical potential must be defined for all particle species:
+
+    $$\mu_i=\left(  \frac{\partial F(\tau,V,N_1,N_2,N_3)}{\partial N_i}\right)_{\tau\forall N_{k\neq i}}$$
+
+    \begin{itemize}
+
+      \item The chemical potential of an ideal gas then becomes:
+
+        $$F=-\tau N\left( \ln\left( \frac{n_Q}{n} \right)+1 \right)$$
+
+        \begin{itemize}
+
+          \item Note: we also know $\frac{n_Q}{n}=\frac{N}{V}$
+
+        \end{itemize}
+
+      \item By taking the partial with respect to $N$, we get:
+
+        $$\mu=-\tau\ln\left( \frac{n_Q}{n} \right)$$
+
+      \item From this, we can tell:
+
+        \begin{itemize}
+
+          \item $\mu<0$ because $n<<n_Q$ in classical regime
+
+          \item if $n$ increases, then $\mu$ increases
+
+        \end{itemize}
+
+      \item Using $F=U-\tau\sigma$, we can determine internal and external chemical potentials as:
+
+        $$\mu_{ext}=\left( \frac{\partial F_{ext}}{\partial N} \right)_{\tau,V}=\left( \frac{\partial U_{ext}}{\partial N} \right)_{\tau,V}=\frac{U_{ext}}{N}$$
+        $$\mu_{int}=\left( \frac{\partial F_{int}}{\partial N} \right)_{\tau,V}$$
+
+    \end{itemize}
+
+  \item We know that in chemical equilibrium, $\mu_{1—total}=\mu_{2—total}$, or, more generally:
+
+    $$\mu_{1—int}+\frac{U_{1—ext}}{N_1}=\mu_{2—int}+\frac{U_{2—ext}}{N_2}$$
+
+\end{itemize}
+
+\end{document}
+
+
+
