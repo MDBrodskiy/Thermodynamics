@@ -91,6 +91,73 @@
 
     $$\mu_{1—int}+\frac{U_{1—ext}}{N_1}=\mu_{2—int}+\frac{U_{2—ext}}{N_2}$$
 
+  \item Thermodynamic Relations
+
+    \begin{itemize}
+
+        $$\text{dependent thermodynamic functions}\to\left\{\begin{array}{l l l} \sigma&= &\sigma(\overbrace{U,V,N}^{\text{nat. ind. vars}})\\U&=&U(\,\,\,\,\sigma,V,N\,\,\,)\\F&=&F(\,\,\,\,\tau,V,N\,\,\,)\end{array}$$
+
+        \item The differentials for these may be written as:
+
+          $$d\sigma=\overbrace{\left(\frac{\partial \sigma}{\partial U}\right)_{V,N}}^{\frac{1}{\tau}}\,dU+\overbrace{\left( \frac{\partial \sigma}{\partial V} \right)_{U,N}}^{\frac{P}{\tau}}\,dV+\overbrace{\left( \frac{\partial \sigma}{\partial N} \right)_{U,V}}^{-\frac{\mu}{\tau}}\,dN$$
+          $$dU=\overbrace{\left( \frac{\partial U}{\partial \sigma} \right)_{V,N}}^{\tau}\,d\sigma+\overbrace{\left( \frac{\partial U}{\partial V} \right)_{\sigma,N}}^P\,dV+\overbrace{\left( \frac{\partial U}{\partial N} \right)_{\sigma,V}}^{\mu}\,dN$$
+          $$dF=\underbrace{\left( \frac{\partial F}{\partial \tau} \right)_{V,N}}_{?}\,d\tau+\underbrace{\left( \frac{\partial F}{\partial V} \right)_{\tau,N}}_{-P}\,dV+\underbrace{\left( \frac{\partial F}{\partial N} \right)_{\tau,V}}_{\mu}\,dN$$
+
+    \end{itemize}
+
+  \item Gibbs Distribution
+
+    \begin{itemize}
+
+      \item Given a reservoir, $R$, and system, $S$, we find:
+
+        \begin{itemize}
+
+          \item $R$ and $S$ are in thermal and chemical equilibrium
+
+          \item $R+S$ is closed
+
+          \item All volumes are fixed
+
+          \item $U_R+\varepsilon_S=U_o$ (constant)
+
+          \item $N_R+N=N_o$ (constant)
+
+            \begin{itemize}
+
+              \item Where $N$ is the number of particles of $S$, and $\varepsilon_S$ is the energy of $S$ in a quantum state $s$ of particles $N$
+
+            \end{itemize}
+
+          \item This means:
+
+            $$g_{R+S}=g_R(N_R,U_R)\cdot \overbrace{g_S(N, \varepsilon_S)}^{1}$$
+
+          \item Which would then give us the probability to find $S$ in a quantum state $S(N)$:
+
+            $$P(N,\varepsilon_S)\approx g_{R+S}=g_R(N_R,U_R)$$
+
+          \item Ultimately, we obtain the probability as:
+
+            $$P(N,\varepsilon_S)=e^{\sigma_R(N_o,U_o)+\left( -\frac{\mu}{\tau}\right)(-N)+\left( \frac{1}{\tau} \right)\left( -\varepsilon_S \right)}$$
+
+          \item $\varepsilon$ becomes the grand canonical partition function:
+
+            $$\sum_N\sum_{S(N)}P(N,\varepsilon_S)=1$$
+            $$\varepsilon(\mu,\tau,V)=\sum_N\sum_{S(N)} e^{\frac{\mu N-\varepsilon_S}{\tau}}$$
+
+            \begin{itemize}
+
+              \item Where $N$ is the number of all particles, and $S(N)$ are all quantum states for a given $N$
+
+            \end{itemize}
+
+            $$\langle N\rangle =\sum_N\sum_{S(N)}N\cdot P(N,\varepsilon_S)=\tau\left( \frac{\partial \ln(\varepsilon)}{\partial \mu} \right)_{\tau,V}$$
+
+        \end{itemize}
+
+    \end{itemize}
+
 \end{itemize}
 
 \end{document}
