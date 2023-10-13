@@ -1,0 +1,259 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Written By Michael Brodskiy
+% Class: Thermodynamics & Statistical Mechanics
+% Professor: A. Stepanyants
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\include{Includes.tex}
+
+\title{Homework 4}
+\date{October 14, 2023}
+\author{Michael Brodskiy\\ \small Professor: A. Stepanyants}
+
+\begin{document}
+
+\maketitle
+
+\begin{enumerate}
+
+  \item
+
+    First, we can describe the external chemical potential as:
+
+    $$\mu_{ext}=-\frac{1}{2}Mr^2\omega^2$$
+
+    Note, the sign is negative so at larger $r$ values, the chemical potential is lower. We can add the internal potential to find the total:
+
+    $$\mu_{tot}=\tau\ln\left( \frac{n(r)}{n_Q} \right)-\frac{1}{2}Mr^2\omega^2$$
+
+    For diffusion equilibrium, we know:
+
+    $$\mu_{tot}(r)=\mu_{tot}(0)$$
+
+    This lets us write:
+
+    $$\tau\ln\left( \frac{n(0)}{n_Q} \right)=\tau\ln\left( \frac{n(r)}{n_Q} \right)-\frac{1}{2}Mr^2\omega^2$$
+
+    We can subtract the $\ln$ term over:
+
+    $$\tau\ln\left( \frac{n(r)}{n_Q} \right)-\tau\ln\left( \frac{n(0)}{n_Q} \right)=\frac{1}{2}Mr^2\omega^2$$
+
+    Then we continue to simplify:
+
+    $$\tau\ln\left( \frac{n(r)}{n(0)} \right)=\frac{1}{2}Mr^2\omega^2$$
+
+    And finally, we get:
+
+    $$\boxed{n(r)=n(0)e^{\frac{Mr^2\omega^2}{2\tau}}}$$
+
+    \setcounter{enumi}{2}
+
+  \item
+
+    From (1), we know we can write:
+
+    $$n(h)=n(0)e^{-\beta Mgh}$$
+
+    We can calculate the total number of atoms as:
+
+    $$n(0)\int_0^\infty e^{-\beta Mgh}\,dh$$
+
+    The total potential energy can be calculated as:
+
+    $$Mgn(0)\int_0^\infty he^{-\beta Mgh}\,dh$$
+
+    We can then find the potential energy per atom:
+
+    $$U=\frac{Mg\displaystyle\int_0^\infty he^{-\beta Mgh}\,dh}{\displaystyle\int_0^\infty e^{-\beta Mgh}\,dh}$$
+
+    After calculating, we get:
+
+    $$U=k_BT$$
+
+    The heat capacity can be found as:
+
+    $$C=k_BT+\frac{3}{2}k_BT=\frac{5}{2}k_BT$$
+
+    Thus, the heat capacity is given by:
+
+    $$\boxed{C=\frac{5}{2}k_BT}$$
+
+  \item
+
+    We can find the difference in chemical potential as:
+
+    $$\mu_{cell}-\mu_{pond}=\tau\ln\left( \frac{n_{cell}}{n_{pond}} \right)$$
+
+    Thus, this gives us the potential drop:
+
+    $$\boxed{\Delta \mu=(8.617\cdot10^{-5})(300)\ln(10^4)\approx.24[\si{\eV}]}$$
+
+    \setcounter{enumi}{5}
+
+  \item
+
+    \begin{enumerate}
+
+      \item 
+
+        The grand partition function may be written as:
+
+        $$\text{\textrevepsilon}(\tau,\mu,V)=\sum_N\sum_{\varepsilon_S}\lambda^Ne^{-\frac{\varepsilon_S}{\tau}}$$
+
+        We can see that there are three states to account for:
+
+        \begin{center}
+          \begin{tabular}[H]{|c|c|}
+            \hline
+            $N$ & $\varepsilon_S$\\
+            \hline
+            0 & 0\\
+            \hline
+            1 & 0\\
+            \hline
+            1 & $\varepsilon$\\
+            \hline
+          \end{tabular}
+        \end{center}
+
+        This gives us:
+
+        $$\text{\textrevepsilon}(\tau,\mu,V)=\lambda^0e^0+\lambda^1e^0+\lambda^1e^{-\frac{\varepsilon}{\tau}}$$
+
+        This evaluates to:
+
+        $$\boxed{\text{\textrevepsilon}=1+\lambda+\lambda e^{-\frac{\varepsilon}{\tau}}}$$
+
+      \item 
+
+        From our formulas, we know:
+
+        $$\langle N\rangle=\sum_N\sum_{\varepsilon_S}N\cdot P(N,\varepsilon_S)$$
+
+        Evaluating each combination, we get:
+
+        $$\langle N\rangle=\frac{(0)\lambda^0e^0+(1)\lambda^1e^0+(1)\lambda^1e^{-\frac{\varepsilon}{\tau}}}{\text{\textrevepsilon}}$$
+
+        This finally evaluates to:
+
+        $$\boxed{\langle N\rangle=\frac{\lambda+\lambda e^{-\frac{\varepsilon}{\tau}}}{1+\lambda+\lambda e^{-\frac{\varepsilon}{\tau}}}}$$
+
+      \item 
+
+        For $\langle N(\varepsilon)\rangle$, we can write the formula as:
+
+        $$\langle N(\varepsilon)\rangle=\sum_N N\cdot\frac{\lambda^N e^{-\frac{\varepsilon}{\tau}}}{\text{\textrevepsilon}}$$
+
+        This only occurs at $N=1$, which gives us:
+
+        $$\langle N(\varepsilon)\rangle=\frac{\lambda e^{-\frac{\varepsilon}{\tau}}}{\text{\textrevepsilon}}$$
+
+        This can be expanded to:
+
+        $$\boxed{\frac{\lambda e^{-\frac{\varepsilon}{\tau}}}{1+\lambda+\lambda e^{-\frac{\varepsilon}{\tau}}}}$$
+
+      \item 
+
+        The thermal average energy can be evaluated as:
+
+        $$\langle \varepsilon_S\rangle=\sum_N\sum_{\varepsilon_S}\varepsilon_S\cdot P(N,\varepsilon_S)$$
+
+        Since $\varepsilon_S\neq0$ only for the last term, the last term is the only one remaining:
+
+        $$\boxed{\frac{\lambda \varepsilon e^{-\frac{\varepsilon}{\tau}}}{1+\lambda+\lambda e^{-\frac{\varepsilon}{\tau}}}}$$
+
+      \item 
+
+        In the given case, we can write the combinations as:
+
+        \begin{center}
+          \begin{tabular}[H]{|c|c|}
+            \hline
+            $N$ & $\varepsilon_S$\\
+            \hline
+            0 & 0\\
+            \hline
+            1 & 0\\
+            \hline
+            1 & $\varepsilon$\\
+            \hline
+            2 & $\varepsilon$\\
+            \hline
+          \end{tabular}
+        \end{center}
+
+        Thus, we can add one term to our initial partition function:
+
+        $$\text{\textrevepsilon}_{new}=\text{\textrevepsilon}_{init}+\lambda^2e^{-\frac{\varepsilon}{\tau}}$$
+
+        This gives us:
+
+        $$\boxed{\text{\textrevepsilon}=1+\lambda+\lambda e^{-\frac{\varepsilon}{\tau}}+\lambda^2 e^{-\frac{\varepsilon}{\tau}}=(1+\lambda)\left(1+\lambda e^{-\frac{\varepsilon}{\tau}}\right)}$$
+
+    \end{enumerate}
+
+    \setcounter{enumi}{7}
+
+  \item
+
+    \begin{enumerate}
+
+      \item 
+
+        First, we must find the partition function:
+
+        $$\text{\textrevepsilon}=1+\lambda e^{-\frac{\varepsilon_A}{\tau}}$$
+
+        From here, we can find the probability as:
+
+        $$P(\ce{O_2})=\frac{\lambda e^{-\frac{\varepsilon_A}{\tau}}}{1+\lambda e^{-\frac{\varepsilon_A}{\tau}}}$$
+
+        To simplify, we can write:
+
+        $$P(\ce{O_2})=\frac{1}{\frac{1}{\lambda}e^{\frac{\varepsilon_A}{\tau}}+1}$$
+
+        We can then substitute the values we know:
+
+        $$1=.9\left( \frac{1}{1\cdot10^{-5}}e^{\frac{\varepsilon_A}{\tau}}+1 \right)$$
+        $$.1=\frac{9}{1\cdot10^{-4}}e^{\frac{\varepsilon_A}{\tau}}$$
+
+        Then, we get:
+
+        $$\frac{\varepsilon_A}{\tau}=\ln\left( \frac{10^{-5}}{9} \right)$$
+        $$\varepsilon_A=k_B T\ln\left( \frac{10^{-5}}{9} \right)$$
+        $$\varepsilon_A=\left( 8.617\cdot10^{-5} \right)(312)\ln\left( \frac{10^{-5}}{9} \right)$$
+
+        Finally, we find:
+
+        $$\boxed{\varepsilon_A=-.3686\left[ \si{\eV}\text{ per }O_2 \right]}$$
+
+      \item 
+
+        Now with another particle, we can find the partition function is:
+
+        $$\text{\textrevepsilon}=1+\lambda_{O_2}e^{-\frac{\varepsilon_A}{\tau}}+\lambda_{CO}e^{-\frac{\varepsilon_B}{\tau}}$$
+
+        We can then write the probability of $O_2$ as:
+
+        $$P(O_2)=\frac{\lambda_{O_2}e^{-\frac{\varepsilon_A}{\tau}}}{1+\lambda_{O_2}e^{-\frac{\varepsilon_A}{\tau}}+\lambda_{CO}e^{-\frac{\varepsilon_B}{\tau}}}$$
+
+        Plugging in the values we know:
+
+        $$.1=\frac{\left( 10^{-5} \right)e^{-\frac{\varepsilon_A}{\tau}}}{1+\left( 10^{-5} \right)e^{-\frac{\varepsilon_A}{\tau}}+\left( 10^{-7} \right)e^{-\frac{\varepsilon_B}{\tau}}}$$
+        $$.9\left( 10^{-5} \right)e^{-\frac{\varepsilon_A}{\tau}}=.1+.1\left( 10^{-7} \right)e^{-\frac{\varepsilon_B}{\tau}}$$
+        $$9\left( 10^{-5} \right)e^{-\frac{\varepsilon_A}{\tau}}+1=\left( 10^{-7} \right)e^{-\frac{\varepsilon_B}{\tau}}$$
+        $$900e^{-\frac{\varepsilon_A}{\tau}}+10^7=e^{-\frac{\varepsilon_B}{\tau}}$$
+        $$-\frac{\varepsilon_B}{\tau}=\ln\left(900e^{-\frac{\varepsilon_A}{\tau}}+10^7\right)$$
+        $$\varepsilon_B=-k_BT\ln\left(900e^{-\frac{\varepsilon_A}{\tau}}+10^7\right)$$
+        $$\varepsilon_B=-\left( 8.617\cdot10^{-5} \right)(312)\ln\left(900e^{-\frac{-.3686}{.026885}}+10^7\right)$$
+
+        Finally, this yields:
+
+        $$\boxed{\varepsilon_B=-.5518[\si{\eV}\text{ per }CO]}$$
+
+    \end{enumerate}
+
+\end{enumerate}
+
+\end{document}
+
