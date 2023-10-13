@@ -1,0 +1,122 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Written By Michael Brodskiy
+% Class: Thermodynamics & Statistical Mechanics
+% Professor: A. Stepanyants
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\include{Includes.tex}
+
+\title{Fermi and Bose Gases}
+\date{\today}
+\author{Michael Brodskiy\\ \small Professor: A. Stepanyants}
+
+\begin{document}
+
+\maketitle
+
+\begin{itemize}
+
+  \item Gibbs Distribution
+
+    \begin{itemize}
+
+        $$P(N,\varepsilon_S)=\frac{e^{\frac{N\mu-\varepsilon_S}{\tau}}}{\text{\textrevepsilon}}$$
+
+      \item This is the probability to find $S$ in a quantum state $S(N)$ of $N$ particles and energy $\varepsilon_S$
+
+        $$\text{\textrevepsilon}(\tau,\mu,V)=\sum_N\sum_{\varepsilon_S}e^{\frac{N\mu-\varepsilon_S}{\tau}}$$
+
+    \end{itemize}
+
+  \item Activity
+
+    \begin{itemize}
+
+      \item We can define the activity as:
+
+        $$e^{\frac{\mu}{\tau}}=\lambda$$
+
+      \item This allows us to rewrite:
+
+        $$P(N,\varepsilon_S)=\frac{\lambda^Ne^{-\frac{\varepsilon_S}{\tau}}}{\text{\textrevepsilon}}$$
+        $$\text{\textrevepsilon}(\tau,\mu,V)=\sum_N\sum_{\varepsilon_S}\lambda^N e^{-\frac{\varepsilon_S}{\tau}}$$
+
+      \item Some important averages that follow from this are:
+
+        $$\langle N\rangle=\sum_N\sum_{\varepsilon_S}N\cdot P(N,\varepsilon_S)=\tau\left(\frac{\partial \ln(\text{\textrevepsilon})}{\partial \mu}\right)_{\tau,V}$$
+        $$\langle \varepsilon_S\rangle=\sum_N\sum_{\varepsilon_S}\varepsilon_S\cdot P(N,\varepsilon_S)=\tau^2\left(\frac{\partial \ln(\text{\textrevepsilon})}{\partial \tau}\right)_{\mu,V}+\tau\mu\left( \frac{\partial \ln(\text{\textrevepsilon})}{\partial \mu} \right)_{\tau,V}$$
+
+    \end{itemize}
+
+  \item Fermi and Bose Gases
+
+    \begin{itemize}
+
+      \item Such gases are non-interacting (mono-atomic particles of spin = 0)
+
+      \item Fermions: Half-integer spin particles, like protons, neutrons, electrons, positrons, and hydrogen
+
+      \item Bosons: Integer spin particles, like photons, phonons
+
+      \item Pauli Exclusion Principle: An orbital can only be occupied by 0 or 1 fermions of the same species
+
+    \end{itemize}
+
+  \item Fermi-Dirac Distribution
+
+    \begin{itemize}
+
+      \item A system, $S$, inside a reservoir, $R$, is filled with a gas of non-interacting fermions, and is in thermal and diffusive equilibrium
+
+      \item Orbital, $\varepsilon_n$, is in thermal and diffusive equilibrium with other orbitals
+
+    \end{itemize}
+
+  \item Gibbs Sum for Orbital $\varepsilon_n$
+
+    \begin{itemize}
+
+        $$\varepsilon_n=\lambda^0e^{-0/\tau}+\lambda^1e^{-\frac{\varepsilon_n}{\tau}}=1+\lambda e^{-\frac{\varepsilon_n}{\tau}}$$
+
+      \item The average quantity of gas particles, will be written as:
+
+        $$\langle N\rangle\equiv f(\varepsilon_n)=\frac{\lambda e^{-\frac{\varepsilon_n}{\tau}}}{\text{\textrevepsilon}_n}=\frac{1}{\frac{1}{\lambda}e^{\frac{\varepsilon_n}{\tau}}+1}$$
+
+      \item Inserting $\lambda$ in, we get the Fermi-Dirac Distribution:
+
+        $$f(\varepsilon_n)=\frac{1}{e^{\frac{\varepsilon_n-\mu}{\tau}}+1}$$
+
+      \item This gives us the average occupancy of an orbital $\varepsilon_n$, also known as the average number of particles, or the probability of occupancy
+
+      \item Since it is a probability, we know:
+
+        $$0\leq f(\varepsilon_n)\geq 1$$
+
+    \end{itemize}
+
+  \item Bose-Einstein Distribution
+
+    \begin{itemize}
+
+      \item For this distribution, we obtain a geometric series for the grand partition function:
+
+        $$\text{\textrevepsilon}_n=1+\lambda e^{-\frac{\varepsilon_n}{\tau}}+\left( \lambda e^{-\frac{\varepsilon_n}{\tau}} \right)+\ldots=\frac{1}{1-\lambda e^{-\frac{\varepsilon_n}{\tau}}}$$
+
+      \item Thus, we assume $\lambda e^{-\frac{\varepsilon_n}{\tau}}< 1\,\forall\,n$
+
+      \item Finally, we get:
+
+        $$f(\varepsilon_n)=\frac{1}{e^{\frac{\varepsilon_n-\mu}{\tau}}-1}$$
+
+      \item In the classical regime, $e^{\frac{\varepsilon_n-\mu}{\tau}}>>1\,\forall\,n$ and there is no difference between a Bose-Einstein and Fermi-Dirac distribution. The classical distribution function is:
+
+        $$f(\varepsilon_n)=e^{\frac{\mu-\varepsilon_n}{\tau}}<<1$$
+
+    \end{itemize}
+
+\end{itemize}
+
+\end{document}
+
+
+
