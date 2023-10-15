@@ -1,0 +1,276 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Written By Michael Brodskiy
+% Class: Thermodynamics & Statistical Mechanics
+% Professor: A. Stepanyants
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\include{Includes.tex}
+
+\title{Homework 5}
+\date{October 21, 2023}
+\author{Michael Brodskiy\\ \small Professor: A. Stepanyants}
+
+\begin{document}
+
+\maketitle
+
+\begin{enumerate}
+
+  \item
+
+    First and foremost, we know the formula:
+
+    $$f=\frac{1}{e^{\frac{\varepsilon-\mu}{\tau}}+1}$$
+
+    Thus, we can write:
+
+    $$-\frac{\partial f}{\partial \varepsilon}=-\frac{\partial}{\partial \varepsilon}\left( \frac{1}{e^{\frac{\varepsilon-\mu}{\tau}}+1} \right)$$
+    $$-\frac{\partial f}{\partial \varepsilon}=-\left( -\frac{1}{\tau \left(e^{\frac{\varepsilon-\mu}{\tau}}+1\right)^2} \cdot e^{\frac{\varepsilon-\mu}{\tau}}\right)$$
+    $$-\frac{\partial f}{\partial \varepsilon}=\frac{e^{\frac{\varepsilon-\mu}{\tau}}}{\tau \left(e^{\frac{\varepsilon-\mu}{\tau}}+1\right)^2}$$
+
+    We can then evaluate:
+
+    $$f_\varepsilon(\varepsilon=\mu)=\frac{e^0}{\tau\left( e^0+1 \right)^2}$$
+    $$\boxed{f_\varepsilon(\varepsilon=\mu)=\frac{1}{4\tau}}$$
+
+    \setcounter{enumi}{2}
+
+  \item
+
+    \begin{enumerate}
+
+      \item 
+
+        The partition function is given by the sum of energy values:
+
+        $$\text{\textrevepsilon}=1+\lambda e^{-\frac{\varepsilon}{\tau}}+\lambda^2e^{-\frac{2\varepsilon}{\tau}}$$
+
+        We can write the probability of occupation of an energy level as:
+
+        $$P(N)=\frac{e^{-\frac{N\varepsilon}{\tau}}}{\text{\textrevepsilon}}$$
+
+        We can then define the ensemble average occupancy:
+
+        $$\langle N\rangle=\frac{1}{\text{\textrevepsilon}}\left( 0P(0) + \lambda P(1) + 2\lambda^2 P(2) \right)$$
+        $$\langle N\rangle=\frac{1}{\text{\textrevepsilon}}\left(\lambda e^{-\frac{\varepsilon}{\tau}} + 2\lambda^2 e^{-\frac{2\varepsilon}{\tau}} \right)$$
+        $$\boxed{\langle N\rangle=\frac{1}{1+\lambda e^{-\frac{\varepsilon}{\tau}}+\lambda^2 e^{-\frac{2\varepsilon}{\tau}}}\left(\lambda e^{-\frac{\varepsilon}{\tau}} + 2\lambda^2 e^{-\frac{2\varepsilon}{\tau}} \right)}$$
+
+      \item 
+
+        In this situation, the partition function becomes:
+
+        $$\text{\textrevepsilon}=1+2\lambda e^{-\frac{\varepsilon}{\tau}}+\lambda^2 e^{-\frac{2\varepsilon}{\tau}}$$
+
+        Just like (a), the ensemble average occupancy can be defined in a similar way: 
+
+        $$\boxed{\langle N\rangle =\frac{2\lambda e^{-\frac{\varepsilon}{\tau}}+2\lambda^2e^{-\frac{2\varepsilon}{\tau}}}{1+2\lambda e^{-\frac{\varepsilon}{\tau}}+\lambda^2e^{-\frac{2\varepsilon}{\tau}}}}$$
+
+    \end{enumerate}
+
+    \setcounter{enumi}{5}
+
+  \item
+
+    Since we know the entropy is a function of volume and temperature, we write:
+
+    $$\sigma=\sigma(V,\tau)$$
+
+    which gives us:
+
+    $$d\sigma=\left( \frac{\partial \sigma}{\partial V} \right)_\tau\,dV+\left( \frac{\partial \sigma}{\partial \tau} \right)_V\,d\tau$$
+
+    Furthermore, from a modification of one of Maxwell's equations, we know:
+
+    $$\left( \frac{\partial \sigma}{\partial V} \right)_\tau=\left( \frac{\partial P}{\partial \tau} \right)_V$$
+
+    and we also know a relation for the specific heat at constant volume:
+
+    $$\tau\left( \frac{\partial \sigma}{\partial \tau} \right)_V=C_v$$
+
+    Plugging these into out equation, we get:
+
+    $$d\sigma=\left( \frac{\partial P}{\partial\tau} \right)_V\,dV+\frac{C_v}{\tau}\,d\tau$$
+
+    Then, assuming both $A$ and $B$ are ideal gasses, we can write:
+
+    $$PV=N\tau$$
+    $$\left( \frac{\partial P}{\partial \tau} \right)_v=\frac{N}{V}$$
+
+    Returning to our equation, we obtain:
+
+    $$d\sigma=\frac{N}{V}\,dV+\frac{C_v}{\tau}\,d\tau$$
+
+    Integrating both sides, we obtain:
+
+    $$\sigma=N\ln(V)+C_v\ln(\tau)$$
+
+    We can defined these separately for each species:
+
+    $$\sigma_A=N\ln(V)+C^A_v\ln(\tau)$$
+    $$\sigma_B=N\ln(V)+C^B_v\ln(\tau)$$
+
+    The difference in entropy may be written as:
+
+    $$\Delta\sigma=\sigma_{A+B}-(\sigma_A+\sigma_B)$$
+
+    We know:
+
+    $$\sigma_{A+B}=2N\ln(2V)+(C^A_v+C^B_v)\ln(\tau)$$
+
+    Which then gives:
+
+    $$\Delta\sigma=2N\ln(2V)+\cancel{(C^A_v+C^B_v)\ln(\tau)}-2N\ln(V)-\cancel{(C^A_v+C^B_v)\ln(\tau)}$$
+    $$\Delta\sigma=2N\ln(2V)-2N\ln(V)$$
+    $$\boxed{\Delta\sigma=2N\ln(2)}$$
+
+    Assuming the two are the same species, the volume occupied would become $2V$, since each is indistinguishable. Bringing us to the last step, we find:
+
+    $$\Delta\sigma=2N\ln(2V)-2N\ln(2V)$$
+
+    And, thus:
+
+    $$\boxed{\Delta\sigma_{A\equiv B}=0}$$
+
+    \setcounter{enumi}{11}
+
+  \item
+
+    \begin{enumerate}
+
+      \item 
+
+      \item 
+
+      \item 
+
+    \end{enumerate}
+
+  \item
+
+    \begin{enumerate}
+
+      \item 
+
+        We know the canonical partition function is:
+
+        $$Z_N=\frac{(n_QV)^N}{N!}$$
+
+        We know from the Gibbs sum that:
+
+        $$\text{\textrevepsilon}=\sum_{N=0}^\infty \lambda^NZ_N$$
+        $$\text{\textrevepsilon}=\sum_{N=0}^\infty \frac{\lambda^N(n_QV)^N}{N!}$$
+        $$\text{\textrevepsilon}=\sum_{N=0}^\infty \frac{(\lambda n_QV)^N}{N!}$$
+
+        Since this sum is of a known form, we can rewrite it as:
+
+        $$\boxed{\text{\textrevepsilon}=e^{\lambda n_Q V}}$$
+
+      \item 
+
+        We can write the probability as:
+
+        $$P(N)=\frac{\lambda^NZ_N}{\text{\textrevepsilon}}$$
+
+        Which becomes:
+
+        $$P(N)=\frac{(\lambda n_QV)^N}{N!e^{\lambda n_QV}}$$
+
+        We then need to find the average concentration:
+
+        $$\langle N\rangle=\frac{1}{\textrevepsilon}\sum_{N=0}^\infty N\lambda ^NZ_N$$
+        $$\langle N\rangle=\frac{1}{\textrevepsilon}\sum_{N=0}^\infty \frac{N(\lambda n_QV)^N}{N!}$$
+        $$\langle N\rangle=\frac{1}{\textrevepsilon}\sum_{N=0}^\infty \frac{(\lambda n_QV)^N}{(N-1)!}$$
+        $$\langle N\rangle=\frac{\lambda n_Q V}{\textrevepsilon}\underbrace{\sum_{N=0}^\infty \frac{(\lambda n_QV)^{N-1}}{(N-1)!}}_{\text{\textrevepsilon}}$$
+        $$\langle N\rangle=\lambda n_Q V$$
+
+        Now returning to our expression for probability, we can write it as:
+
+        $$P(N)=\frac{\langle N\rangle^N}{N!e^{\langle N\rangle}}$$
+
+        Bringing the exponential up, we get:
+
+        $$\boxed{P(N)=\frac{\langle N\rangle^Ne^{-\langle N\rangle}}{N!}}$$
+
+      \item 
+
+        We can write the first summation as:
+
+        $$\sum_{N=0}^\infty\frac{\langle N\rangle^Ne^{-\langle N\rangle}}{N!}$$
+
+        This can also be written as:
+
+        $$e^{-\langle N\rangle}\underbrace{\sum_{N=0}^\infty\frac{\langle N\rangle^N}{N!}}_{e^{\langle N\rangle}}$$
+
+        Which becomes:
+
+        $$\boxed{\sum_N P(N)=e^{-\langle N\rangle}e^{\langle N\rangle}=1}$$
+
+        We can write the second summation as:
+
+        $$\sum_{N=0}^\infty\frac{N\langle N\rangle^Ne^{-\langle N\rangle}}{N!}$$
+
+        This can be written as:
+
+        $$\sum_{N=0}^\infty\frac{\langle N\rangle^Ne^{-\langle N\rangle}}{(N-1)!}$$
+        $$\langle N\rangle e^{-\langle N\rangle}\sum_{N=0}^\infty\frac{\langle N\rangle^{N-1}}{(N-1)!}$$
+
+        This then becomes:
+
+        $$\boxed{\sum_N NP(N)=\langle N\rangle e^{-\langle N\rangle}e^{\langle N\rangle}=\langle N\rangle}$$
+
+    \end{enumerate}
+
+  \item
+
+    \begin{enumerate}
+
+      \item 
+
+        For this problem, we can simply use a formula:
+
+        $$Q=N\tau\ln\left( \frac{V_2}{V_1} \right)$$
+
+        This becomes:
+
+        $$Q=Nk_BT\ln\left( \frac{V_2}{V_1} \right)$$
+        $$Q=(1)(8.314)(300)\ln(2)$$
+
+        Which is:
+
+        $$\boxed{Q=1.729[\si{\kilo\joule}]}$$
+
+        For the second process, since the gas expands isentropically, there is no heat transfer between the gas and its surroundings.
+
+      \item 
+
+        We can write the ratio of temperatures as:
+
+        $$\frac{T_2}{T_1}=\left( \frac{V_1}{V_2} \right)^{\gamma-1}$$
+
+        With volumes:
+
+        $$V_1=2V_o$$
+        $$V_2=4V_o$$
+
+        $\gamma$ is the ratio of specific heats. We assume $\gamma=1.6\bar{6}$, as we are dealing with a monatomic gas, which yields:
+
+        $$T_2=(300)\left( \frac{1}{2} \right)^{\frac{2}{3}}$$
+        $$\boxed{T_2=189[\si{\kelvin}]}$$
+
+      \item 
+
+        We know that the change in entropy may be written as:
+
+        $$\Delta\sigma=nk_B\ln\left( \frac{V_2}{V_1} \right)$$
+        $$\Delta\sigma=nk_B\ln(2)$$
+
+        This gives us:
+
+        $$\boxed{\Delta\sigma=5.76\left[ \frac{\si{\joule}}{\si{\kelvin}} \right]}$$
+
+    \end{enumerate}
+
+\end{enumerate}
+
+\end{document}
+
