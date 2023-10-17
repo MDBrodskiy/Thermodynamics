@@ -1,0 +1,115 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Written By Michael Brodskiy
+% Class: Thermodynamics & Statistical Mechanics
+% Professor: A. Stepanyants
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[12pt]{article} 
+\usepackage{alphalph}
+\usepackage[utf8]{inputenc}
+\usepackage[russian,english]{babel}
+\usepackage{titling}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage{amssymb}
+\usepackage[super]{nth}
+\usepackage{everysel}
+\usepackage{ragged2e}
+\usepackage{geometry}
+\usepackage{multicol}
+\usepackage{fancyhdr}
+\usepackage{cancel}
+\usepackage{siunitx}
+\geometry{top=1.0in,bottom=1.0in,left=1.0in,right=1.0in}
+\newcommand{\subtitle}[1]{%
+  \posttitle{%
+    \par\end{center}
+    \begin{center}\large#1\end{center}
+    \vskip0.5em}%
+
+}
+\usepackage{hyperref}
+\hypersetup{
+colorlinks=true,
+linkcolor=blue,
+filecolor=magenta,      
+urlcolor=blue,
+citecolor=blue,
+}
+
+\urlstyle{same}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead[\textsc{Fall 2023}]{\textsc{Fall 2023}}
+\chead[\textit{Thermodynamics Midterm Equation Sheet}]{\textit{Thermodynamics Midterm Equation Sheet}}
+\rhead[\textsc{Phys-4305}]{\textsc{Phys-4305}}
+\cfoot[\thepage]{\thepage}
+
+\pagenumbering{gobble}
+\begin{document}
+
+\begin{multicols}{2}
+
+  \begin{equation*}
+    g(N,s)=\frac{N!}{\left(\frac{1}{2}N+s\right)\left( \frac{1}{2}N-s \right)}=\frac{N!}{N_{\uparrow}!N_{\downarrow}!}
+  \end{equation*}
+
+  \begin{equation*}
+    g(N,s)\approx \sqrt{\frac{2}{\pi N}}2^Ne^{-\frac{2s^2}{N}}
+  \end{equation*}
+
+\end{multicols}
+
+\vspace{-20pt}
+
+\begin{multicols}{2}
+
+  \begin{equation*}
+    U(s)=-2smB
+  \end{equation*}
+    
+  \begin{equation*}
+    2s=N_{\uparrow}-N_{\downarrow}
+  \end{equation*}
+
+\end{multicols}
+
+\vspace{-30pt}
+
+\begin{multicols}{2}
+
+  \begin{equation*}
+    \begin{split}
+    \sigma(N,s)&=\ln(g(N,s))\\
+    S&=k_B\sigma
+    \end{split}
+  \end{equation*}
+    
+  \begin{equation*}
+    \begin{split}
+      \frac{1}{\tau}&=\left( \frac{\partial \sigma}{\partial U} \right)_{N,V}\\
+      \tau&=k_BT
+    \end{split}
+  \end{equation*}
+
+\end{multicols}
+
+\vspace{-30pt}
+
+\begin{multicols}{2}
+
+  \begin{equation*}
+    \begin{split}
+      \text{\underline{Accessible States} } (s=s_1+s_2):\\
+      g(s)=\sum_s g_1(s_1)g_2(s-s_1)
+    \end{split}
+  \end{equation*}
+    
+  \begin{equation*}
+  \end{equation*}
+
+\end{multicols}
+
+\end{document}
+
