@@ -114,6 +114,184 @@
 
     \end{itemize}
 
+  \item Quantum Ideal Gas (Monatomic, $s=0$, no internal degrees of freedom)
+
+    \begin{itemize}
+
+      \item We can define the occupancy function as:
+
+        $$f(\varepsilon_n)=\left\{\begin{array}{l l}\dfrac{1}{e^{\frac{\varepsilon_n-\mu}{\tau}}+1} & \text{Fermi-Dirac Gas}\\\\\dfrac{1}{e^{\frac{\varepsilon_n-\mu}{\tau}}-1} & \text{Bose-Einstein Gas}\\\\e^{\frac{\mu-\varepsilon_n}{\tau}} & \text{Classical Limit}\end{array}$$
+
+    \end{itemize}
+
+  \item Ideal gas in the classical limit
+
+    \begin{itemize}
+
+      \item From above, we can describe the occupancy as:
+
+        $$f(\varepsilon_n)=e^{\frac{\mu-\varepsilon_n}{\tau}}=\lambda e^{-\frac{\varepsilon_n}{\tau}}<<1$$
+
+      \item We can then calculate the chemical potential, $\mu$:
+
+      $$N=\sum_nf(\varepsilon_n)=\lambda\sum_n e^{\frac{-\varepsilon_n}{\tau}}=\lambda \text{\textrevepsilon}_1$$
+      $$\text{\textrevepsilon}_1=n_QV,\quad \underbrace{n_Q=\left( \frac{M\tau}{2\pi\hbar^2} \right)^{\frac{3}{2}}}_{\text{quantum concentration}}$$
+
+    \item From here, we can simplify to get:
+
+      $$\mu=\tau\ln\left( \frac{n}{n_Q} \right)$$
+
+    \item We then calculate the Helmholtz free energy, $F$:
+
+      $$F=U-\tau\sigma$$
+      $$\mu=\left( \frac{\partial F}{\partial N} \right)_{\tau,V}$$
+      $$F(\tau,V,N)=\int_0^N\mu\,dN+C(\tau,V)$$
+
+      \begin{itemize}
+
+        \item We know $C(\tau,V)=0$ because $F(N=0)=0$
+
+      \end{itemize}
+
+    \item We can split up our expression for the chemical potential to obtain:
+
+      $$F(\tau,V,N)=\tau\int_0^N (\ln(N)-\ln(Vn_Q))\,dN$$
+      $$F=\tau\left( N\ln(N)-N \right)\Big|_0^N-N\ln(Vn_Q)\Big|_0^N$$
+      $$F=\tau\left( N\ln(N)-N-N\ln(Vn_Q) \right)$$
+      $$F=N\tau\left(\ln(\frac{n}{n_Q})-1 \right)$$
+      $$F=-N\tau\left(\ln(\frac{n_Q}{n})+1 \right)$$
+
+    \item Now, we can find the entropy, $\sigma$:
+
+      $$\sigma=-\left( \frac{\partial F}{\partial \tau} \right)_{V,N}$$
+      $$\sigma=N\left( \ln\left( \frac{n_Q}{n} \right)+\frac{5}{2} \right)$$
+
+    \item And then we find the internal energy:
+
+      $$U=F+\tau\sigma$$
+      $$U=\frac{3}{2}N\tau$$
+
+    \item Next, we can find pressure, $P$:
+
+      $$P=-\left( \frac{\partial F}{\partial V} \right)_{\tau,N}=\frac{N\tau}{V}$$
+
+    \item Heat capacity ($C$) in a reversible process:
+
+      \begin{itemize}
+
+        \item At constant volume:
+
+        $$C=\left( \frac{\partial Q}{\partial \tau} \right)_{V,N}$$
+        $$\delta Q=\Delta U+W\quad\quad\text{(\nth{1} law of thermodynamics)}$$
+        $$W=0\Rightarrow \delta Q=\Delta U=\frac{3}{2}N\Delta \tau$$
+        $$C_v=\frac{3}{2}N$$
+
+      \item At constant pressure:
+
+        $$C_p=\left( \frac{\partial Q}{\partial \tau} \right)_{P,N}$$
+        $$\delta Q=\frac{3}{2}N\Delta \tau+N\Delta\tau=\frac{5}{2}N\Delta\tau$$
+        $$C_p=\frac{5}{2}N$$
+
+        \begin{itemize}
+
+          \item This means, in general:
+
+            $$C_p=C_v+N$$
+
+        \end{itemize}
+
+      \item Note: When dealing with a reversible process, we use $d$ when writing a differential; if it is not, $\delta$ is generally written
+
+      \end{itemize}
+
+    \end{itemize}
+
+  \item Reversible Expansion at Constant $\tau$ (isothermal)
+
+    \begin{itemize}
+
+      \item Consider again an ideal gas, classical, monatomic, with spin as 0
+
+      \item Since $N\tau$ is constant, we can find:
+
+        $$P_1V_1=P_2V_2$$
+
+      \item The change in internal energy:
+
+        $$\Delta U=\frac{3}{2}N\tau-\frac{3}{2}N\tau=0$$
+
+      \item The change in entropy is:
+
+        $$\sigma=N\left( \ln\left( \frac{n_Q}{n} \right)+\frac{5}{2} \right)$$
+        $$\Delta \sigma=N\ln\left( \frac{V_2}{V_1} \right)$$
+
+      \item The work done by the system, $W$, is:
+
+        $$W=\int_{V_1}^{V_2}P\,dV=\int_{V_1}^{V_2}\frac{N\tau}{V}\,dV=N\tau\ln\left( \frac{V_2}{V_1} \right)$$\\
+
+        \begin{center}
+        or
+        \end{center}
+
+        $$\delta Q=\Delta U+W\rightarrow W=\delta Q$$
+        $$\delta Q=\tau\Delta \sigma\footnote{in a reversible process}$$
+        $$\delta Q\leq\tau\Delta \sigma\footnote{in general}$$
+        $$W=\tau N\ln\left( \frac{V_2}{V_1} \right)$$
+
+    \end{itemize}
+
+  \item Reversible Expansion at Constant $\sigma$ (isentropic)
+
+    \begin{itemize}
+
+      \item First and foremost, we know $\Delta \sigma=0$
+
+      \item The temperature can be found by:
+
+        $$\sigma=N\left( \ln\left( V\tau^{\frac{3}{2}} \right) +C\right)$$
+        $$\tau_2=\tau_1\left( \frac{V_1}{V_2} \right)^{\frac{2}{3}}$$
+
+      \item From the ideal gas formula, we can find:
+
+        $$P_2=\frac{N\tau_2}{V_2}=\frac{N}{V_2}\tau_1\left( \frac{V_1}{V_2} \right)^{\frac{2}{3}}=P_1\left( \frac{V_1}{V_2} \right)^{\frac{5}{3}}$$
+
+      \item The change in internal energy becomes:
+
+        $$\Delta U=\frac{3}{2}N(\tau_2-\tau_1)<0$$
+
+      \item Work done by system:
+
+        $$W=-\Delta U$$
+
+    \end{itemize}
+
+  \item Fast, sudden expansion into vacuum (irreversible)
+
+    \begin{itemize}
+
+      \item The particles have no time to react and do work on each other, so:
+
+        $$W=0$$
+
+      \item Heat has no time to enter the system:
+
+        $$\delta Q=0$$
+
+      \item This means:
+
+        $$\Delta U=0$$
+        $$\Delta \tau=0$$
+
+      \item The change in entropy would be:
+
+        $$\Delta \sigma=N\ln\left( \frac{V_2}{V_1} \right)$$
+
+      \item For an irreversible process, we find:
+
+        $$\delta Q\leq\tau\Delta\sigma$$
+
+    \end{itemize}
+
 \end{itemize}
 
 \end{document}
