@@ -6,6 +6,7 @@
 
 \documentclass[12pt]{article} 
 \usepackage{alphalph}
+\usepackage{tipa}
 \usepackage[utf8]{inputenc}
 \usepackage[russian,english]{babel}
 \usepackage{titling}
@@ -48,6 +49,7 @@ citecolor=blue,
 
 \pagenumbering{gobble}
 \begin{document}
+
 
 \begin{multicols}{2}
 
@@ -107,9 +109,304 @@ citecolor=blue,
   \end{equation*}
     
   \begin{equation*}
+    \begin{split}
+      \text{System/Reservoir State Probability:}\\
+      P(\varepsilon_s)=\frac{1}{z}e^{-\frac{\varepsilon_s}{\tau}}
+    \end{split}
   \end{equation*}
 
 \end{multicols}
+
+\vspace{-30pt}
+
+\begin{multicols}{2}
+
+  \begin{equation*}
+    z=\sum_s e^{-\frac{\varepsilon_s}{\tau}}
+  \end{equation*}
+    
+  \begin{equation*}
+    P=-\left( \frac{\partial U}{\partial V} \right)_\sigma=\tau\left( \frac{\partial\sigma}{\partial V} \right)_U=-\left( \frac{\partial F}{\partial V} \right)_\tau
+  \end{equation*}
+
+\end{multicols}
+
+\vspace{-30pt}
+
+\begin{multicols}{2}
+
+  \begin{equation*}
+    F=U-\tau\sigma\quad\text{min. in eq. with const } \tau,V
+  \end{equation*}
+
+  \begin{equation*}
+    F=-\tau\ln(z)\quad\text{ to derive }P,\sigma
+  \end{equation*}
+
+\end{multicols}
+
+\vspace{5pt}
+
+\hline
+
+\begin{center}
+  \underline{Ideal Monatomic Gas}
+\end{center}
+
+\vspace{-40pt}
+
+\begin{multicols}{2}
+
+  \begin{equation*}
+    \text{Given $N$ atoms: }z_N=\frac{(n_QV)^N}{N!}
+  \end{equation*}
+
+  \begin{equation*}
+    \text{If }n=\frac{N}{V}<<n_Q,\quad n_Q=\left(\frac{M\tau}{2\pi\hbar^2}\right)^{\frac{3}{2}}
+  \end{equation*}
+
+\end{multicols}
+
+\vspace{-25pt}
+
+\begin{multicols}{3}
+
+  \begin{equation*}
+    PV=N\tau
+  \end{equation*}
+
+  \begin{equation*}
+    \sigma=N\left[ \ln\left( \frac{n_Q}{n} \right)+\frac{5}{2} \right]
+  \end{equation*}
+
+  \begin{equation*}
+    C_V=\frac{3}{2}N
+  \end{equation*}
+
+\end{multicols}
+
+\hline
+
+\vspace{5pt}
+
+\begin{flushleft}
+A process is reversible if the system remains infinitesimally close to the equilibrium state at all times during the process.
+\end{flushleft}
+
+\vspace{-30pt}
+
+\begin{multicols}{2}
+
+  \begin{equation*}
+    \text{Average in Mode at freq. $\omega$: }\langle s\rangle=\frac{1}{e^{\frac{\hbar\omega}{\tau}}-1}
+  \end{equation*}
+
+  \begin{equation*}
+    \text{Energy Density at $\tau$: }\langle s\rangle=\frac{U}{V}=\frac{\pi^2}{15\hbar^3c^3}\tau^4
+  \end{equation*}
+
+\end{multicols}
+
+\vspace{-30pt}
+
+\begin{multicols}{2}
+
+  \begin{equation*}
+    \text{Radiant energy per vol: }U_\omega=\frac{\hbar}{\pi^2c^3}\frac{\omega^3}{e^{\frac{\hbar\omega}{\tau}}-1}
+  \end{equation*}
+
+  \begin{equation*}
+    \text{Flux Density: }J_U=\sigma_BT^4,\,\sigma_B=\frac{\pi^2kB^4}{60\hbar^3c^2}
+  \end{equation*}
+
+\end{multicols}
+
+\vspace{-20pt}
+
+$$\text{Heat Capacity of Dielectric Solid: } C_V=\frac{12\pi^4Nk_B}{5}\left( \frac{T}{\theta} \right)^3\rightarrow\theta=\left( \frac{\hbar\omega}{k_B} \right)\left( \frac{6\pi^2N}{V} \right)^{\frac{1}{3}}$$
+
+\begin{multicols}{2}
+
+  \begin{equation*}
+    \mu=\left( \frac{\partial F}{\partial N} \right)_{\tau,V}=\left( \frac{\partial U}{\partial N} \right)_{\sigma,V}=-\tau\left( \frac{\partial\sigma}{\partial N} \right)_{U,V}
+  \end{equation*}
+
+  \begin{equation*}
+    \text{In diffusive equilibrium if: }\mu_1=\mu_2
+  \end{equation*}
+
+\end{multicols}
+
+\begin{multicols}{2}
+
+  \begin{equation*}
+    \begin{split}
+    \mu&=\mu_{int}+\mu_{ext}\\
+    \mu_{int}&=\tau\ln\left( \frac{n}{n_Q} \right)\\
+    \mu_{ext}&=\frac{U_{ext}}{N}
+    \end{split}
+  \end{equation*}
+
+  \begin{equation*}
+    \begin{split}
+      \text{Gibbs Factor: }P(N,\varepsilon_s)=\frac{e^{\frac{N\mu-\varepsilon_s}{\tau}}}{\text{\textrevepsilon}}\\
+      \text{Prob. chem. potential $\mu$ and temp $\tau$}\\
+      \text{has $N$ particles in q.s. $s$ of energy $\varepsilon_s$}
+    \end{split}
+  \end{equation*}
+
+\end{multicols}
+
+\vspace{-20pt}
+
+\begin{multicols}{2}
+
+  \begin{equation*}
+    \text{\textrevepsilon}=\sum_N\sum_{s} e^{\frac{N\mu-\varepsilon_s}{\tau}}
+  \end{equation*}
+
+  \begin{equation*}
+    \lambda=e^{\frac{\mu}{\tau}}\rightarrow\text{\textrevepsilon}=\sum\lambda^Ne^{-\frac{\varepsilon_s}{\tau}}
+  \end{equation*}
+
+\end{multicols}
+
+\begin{multicols}{2}
+
+  \begin{equation*}
+    \text{Therm. Average: }\langle N\rangle=\lambda\frac{\partial}{\partial \lambda}\ln(\text{\textrevepsilon})
+  \end{equation*}
+
+  \begin{equation*}
+    \text{Quant. Particle in Box: }\varepsilon=\frac{\hbar^2\pi^2}{2mL^2}(n_x^2+n_y^2+n_z^2)
+  \end{equation*}
+
+\end{multicols}
+
+\begin{multicols}{2}
+
+  \begin{equation*}
+    U=\tau^2\left( \frac{\partial\,\ln(z)}{\partial\tau} \right)_V
+  \end{equation*}
+
+  \begin{equation*}
+    W=PA\Delta x=P\Delta V
+  \end{equation*}
+
+\end{multicols}
+
+\begin{multicols}{2}
+
+  \begin{equation*}
+    \tau\,d\sigma=dU+P\,dV
+  \end{equation*}
+
+  \begin{equation*}
+    \int_{-\infty}^\infty e^{-\alpha^2n^2}\,dn=\frac{\sqrt{\pi}}{2\alpha}
+  \end{equation*}
+
+\end{multicols}
+
+\vspace{-30pt}
+
+\begin{multicols}{2}
+
+  \begin{equation*}
+    \sigma=-\left( \frac{\partial F}{\partial \tau} \right)_{V,N}
+  \end{equation*}
+
+  \begin{equation*}
+    \langle N\rangle=\sum_N\sum_sN\cdotP(N,\varepsilon_s)=\tau\left( \frac{\partial \ln(\text{\textrevepsilon})}{\partial\mu} \right)_{\tau,V}
+  \end{equation*}
+
+\end{multicols}
+
+\begin{multicols}{2}
+
+  \begin{equation*}
+    \langle \varepsilon_s\rangle=\sum_N\sum_s\varepsilon_s\cdotP(N,\varepsilon_s)=\tau^2\left( \frac{\partial \ln(\text{\textrevepsilon})}{\partial\tau} \right)_{\mu,V}+\tau\mu\left( \frac{\partial\ln(\text{\textrevepsilon})}{\partial\mu} \right)_{\tau,V}
+  \end{equation*}
+
+
+  \begin{equation*}
+  \hspace{60pt}
+    f(\varepsilon_n) \text{ avg. occupancy}
+  \end{equation*}
+
+\end{multicols}
+
+\vspace{-25pt}
+
+\begin{multicols}{3}
+
+  \begin{equation*}
+    \begin{split}
+    \text{\underline{Bose-Einstein:}}\\
+    f(\varepsilon_n)=\frac{1}{e^{\frac{\varepsilon_n-\mu}{\tau}}-1}
+    \end{split}
+  \end{equation*}
+
+  \begin{equation*}
+    \begin{split}
+    \text{\underline{Fermi-Dirac:}}\\
+    f(\varepsilon_n)=\frac{1}{e^{\frac{\varepsilon_n-\mu}{\tau}}+1}
+    \end{split}
+  \end{equation*}
+
+  \begin{equation*}
+    \begin{split}
+    \text{\underline{Classical Limit:}}\\
+    f(\varepsilon_n)=e^{\frac{\mu-\varepsilon_n}{\tau}}
+    \end{split}
+  \end{equation*}
+
+\end{multicols}
+
+\vspace{10pt}
+
+\begin{center}
+\begin{tabular}[H]{|c|c|c|c|c|}
+  \hline
+  & $\Delta U$ & $\Delta\sigma$ & $W$ & $Q$\\
+  \hline
+Rev. Isothermal & 0 & $N\ln\left( \frac{V_2}{V_1} \right)$ & $-N\tau\ln\left( \frac{V_2}{V_1} \right) \right)$ & $N\tau\ln\left( \frac{V_2}{V_1} \right)$\\
+  \hline
+Rev. Isentropic  & $-\frac{3}{2}N\tau_1\left[ 1-\left( \frac{V_1}{V_2} \right)^{\frac{2}{3}} \right]$ & 0 & $-\frac{3}{2}N\tau_1\left[ 1-\left( \frac{V_1}{V_2} \right)^{\frac{2}{3}} \right]$ & 0\\
+  \hline
+  Irrev. Expansion  & 0 & $N\ln\left( \frac{V_2}{V_1} \right) & 0 & 0\\
+  \hline
+\end{tabular}
+\end{center}
+
+\noindent\fbox{%
+    \parbox{\textwidth}{%
+
+      \vspace{-10pt}
+
+  \begin{center}
+    \underline{Constants}
+  \end{center}
+
+  \vspace{-30pt}
+
+  \begin{multicols}{3}
+
+    \begin{equation*}
+      k_B=1.381\cdot10^{-23}\left[ \frac{\si{\joule}}{\si{\kelvin}} \right]
+    \end{equation*}
+
+    \begin{equation*}
+      \sigma_B=5.67\cdot10^{-8}\left[ \frac{\si{\joule}}{\si{\meter\squared\second\kelvin^4}} \right]
+    \end{equation*}
+
+    \begin{equation*}
+      c=3\cdot10^8\left[ \frac{\si{\meter}}{\si{\second}} \right]
+    \end{equation*}
+
+  \end{multicols}
+
+    }%
+}
 
 \end{document}
 
