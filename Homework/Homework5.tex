@@ -45,15 +45,12 @@
 
         $$\text{\textrevepsilon}=1+\lambda e^{-\frac{\varepsilon}{\tau}}+\lambda^2e^{-\frac{2\varepsilon}{\tau}}$$
 
-        We can write the probability of occupation of an energy level as:
-
-        $$P(N)=\frac{e^{-\frac{N\varepsilon}{\tau}}}{\text{\textrevepsilon}}$$
-
         We can then define the ensemble average occupancy:
 
-        $$\langle N\rangle=\frac{1}{\text{\textrevepsilon}}\left( 0P(0) + \lambda P(1) + 2\lambda^2 P(2) \right)$$
-        $$\langle N\rangle=\frac{1}{\text{\textrevepsilon}}\left(\lambda e^{-\frac{\varepsilon}{\tau}} + 2\lambda^2 e^{-\frac{2\varepsilon}{\tau}} \right)$$
-        $$\boxed{\langle N\rangle=\frac{1}{1+\lambda e^{-\frac{\varepsilon}{\tau}}+\lambda^2 e^{-\frac{2\varepsilon}{\tau}}}\left(\lambda e^{-\frac{\varepsilon}{\tau}} + 2\lambda^2 e^{-\frac{2\varepsilon}{\tau}} \right)}$$
+        $$\langle N\rangle=\lambda\frac{\partial}{\partial \lambda}(\ln(\text{\textrevepsilon}))$$
+        $$\langle N\rangle=\frac{\lambda}{\text{\textrevepsilon}}\left( e^{-\frac{\varepsilon}{\tau}} + 2\lambda e^{-\frac{2\varepsilon}{\tau}} \right)$$
+        $$\langle N\rangle=\frac{1}{1+\lambda e^{-\frac{\varepsilon}{\tau}}+\lambda^2 e^{-\frac{2\varepsilon}{\tau}}}\left(\lambda e^{-\frac{\varepsilon}{\tau}} + 2\lambda^2 e^{-\frac{2\varepsilon}{\tau}} \right)$$
+        $$\boxed{\langle N\rangle=\frac{\left(\lambda e^{-\frac{\varepsilon}{\tau}} + 2\lambda^2 e^{-\frac{2\varepsilon}{\tau}} \right)}{1+\lambda e^{-\frac{\varepsilon}{\tau}}+\lambda^2 e^{-\frac{2\varepsilon}{\tau}}}}$$
 
       \item 
 
@@ -63,6 +60,9 @@
 
         Just like (a), the ensemble average occupancy can be defined in a similar way: 
 
+        $$\langle N\rangle =\lambda\frac{\partial}{\partial \lambda}(\ln(\text{\textrevepsilon}))$$
+        $$\langle N\rangle =\frac{\lambda}{\text{\textrevepsilon}}\frac{\partial}{\partial \lambda}(\text{\textrevepsilon})$$
+        $$\langle N\rangle =\frac{\lambda}{\text{\textrevepsilon}}\left(  2e^{-\frac{\varepsilon}{\tau}}+2\lambda e^{-\frac{2\varepsilon}{\tau}}\right)$
         $$\boxed{\langle N\rangle =\frac{2\lambda e^{-\frac{\varepsilon}{\tau}}+2\lambda^2e^{-\frac{2\varepsilon}{\tau}}}{1+2\lambda e^{-\frac{\varepsilon}{\tau}}+\lambda^2e^{-\frac{2\varepsilon}{\tau}}}}$$
 
     \end{enumerate}
@@ -139,9 +139,60 @@
 
       \item 
 
-      \item 
+        We can begin by defining the partition function as:
+
+        $$z_1=\sum e^{-\frac{\varepsilon}{\tau}}=\int D(\varepsilon)e^{-\frac{\varepsilon}{\tau}}\,d\varepsilon$$
+
+        In two dimensions, the energy density is:
+
+        $$D(\varepsilon)\,d\varepsilon=\frac{Ap}{2\pi\hbar^2}\,dp=\frac{A}{\pi\hbar^2}\,d\left( \frac{p^2}{2} \right)=\frac{AM}{\pi\hbar^2}\,d\left( \frac{p^2}{2M} \right)=\frac{AM}{\pi\hbar^2}\,d\left( \varepsilon\right)$$
+
+        Thus, the partition function becomes:
+
+        $$z_1=\frac{L^2M}{\pi\hbar^2}\int_0^\infty e^{-\frac{\varepsilon}{\tau}}\,d\varepsilon=\frac{L^2M\tau}{\pi\hbar^2}$$
+
+        We can then write:
+
+        $$N=z_1\lambda$$
+        $$N=\frac{L^2M\tau}{\pi\hbar^2}e^{\frac{\mu}{\tau}}$$
+        $$\frac{\mu}{\tau}=\ln\left( \frac{N\pi\hbar^2}{L^2M\tau} \right)$$
+        $$\boxed{\mu=\tau\ln\left( \frac{N\pi\hbar^2}{L^2M\tau} \right)}$$
 
       \item 
+
+        We can sum all of the unidimensional components to get:
+
+        $$U=\frac{1}{2}N\tau+\frac{1}{2}N\tau$$
+
+        $$\boxed{U=N\tau}$$
+
+      \item 
+
+        We can begin by finding the free energy:
+
+        $$F=-\tau\ln(z)$$
+
+        We know the partition function may be written as:
+
+        $$z=\frac{z_1^N}{N!}$$
+
+        Substituting $z$ into the free energy formula, we get:
+
+        $$F=-N\tau\ln\left( \frac{N\pi \hbar^2}{L^2M\tau}\right)+N\tau\ln(N)-N\tau=-N\tau\left(\ln\left( \frac{N\pi \hbar^2}{L^2M\tau}\right)+1\right)$$
+
+        We know:
+
+        $$\sigma=-\left( \frac{\partial F}{\partial \tau} \right)_{V,N}$$
+
+        Which gives us:
+
+        $$\sigma=\frac{\partial}{\partial\tau}\left( N\tau\left[\ln\left( \frac{\pi N\hbar^2}{L^2M\tau} \right) +1\right]\right)$$
+        $$\sigma=N\ln\left( \frac{\pi N\hbar^2}{L^2M\tau} \right)+N-\tau\frac{\partial}{\partial\tau}\left( \ln\left( \frac{\pi N\hbar^2}{L^2M\tau} \right) \right)$$
+        $$\sigma=N\ln\left( \frac{\pi N\hbar^2}{L^2M\tau} \right)+N+\underbrace{\frac{\tau^2ML^2}{2\pi \hbar^2}\frac{\partial}{\partial\tau}\left( \frac{\pi N\hbar^2}{L^2M\tau} \right)}_{N}$$
+
+        We end up with an expression similar to the Sackur-Tetrode equation:
+
+        $$\boxed{\sigma=N\left[\ln\left( \frac{\pi\hbar^2}{L^2M\tau} \right)+2\right]}$$
 
     \end{enumerate}
 
@@ -261,12 +312,13 @@
 
         We know that the change in entropy may be written as:
 
-        $$\Delta\sigma=nk_B\ln\left( \frac{V_2}{V_1} \right)$$
-        $$\Delta\sigma=nk_B\ln(2)$$
+        $$\Delta\sigma=N\ln\left( \frac{V_2}{V_1} \right)$$
+        $$\Delta\sigma=N\ln(2)$$
+        $$\Delta\sigma=(6.022\cdot10^{23})\ln(2)$$
 
         This gives us:
 
-        $$\boxed{\Delta\sigma=5.76\left[ \frac{\si{\joule}}{\si{\kelvin}} \right]}$$
+        $$\boxed{\Delta\sigma=4.17\cdot10^{23}}$$
 
     \end{enumerate}
 
