@@ -1,0 +1,84 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Written By Michael Brodskiy
+% Class: Thermodynamics & Statistical Mechanics
+% Professor: A. Stepanyants
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\include{Includes.tex}
+
+\title{Fermi and Bose Gases}
+\date{\today}
+\author{Michael Brodskiy\\ \small Professor: A. Stepanyants}
+
+\begin{document}
+
+\maketitle
+
+\begin{itemize}
+
+  \item Fermi and Bose Gases
+
+    \begin{itemize}
+
+      \item Some important quantities we have already discussed are:
+
+        $$n_Q=\left( \frac{M\tau}{2\pi\hbar^2} \right)^{\frac{3}{2}}$$
+
+      \item The quantum concentration
+
+        $$f(\varepsilon,\mu,\tau)=\frac{1}{e^{\frac{\varepsilon-\mu}{\tau}}\pm1}$$
+
+      \item Occupancy of orbitals (plus one for Fermi-Bose, minus one for Bose-Einstein)
+
+      \item The following relations are important:
+
+        $$n<<n_Q\quad\text{ Classical Regime }\quad\tau>>\tau_o$$
+        $$n=n_Q\quad\text{ Quantum Gas (regime) }\quad\tau=\tau_o$$
+        $$n>>n_Q\quad\text{ Degenerate Gas (regime) }\quad\tau<<\tau_o$$
+
+      \item We may write:
+
+        $$\tau_o=\frac{2\pi\hbar^2}{M}n^{\frac{2}{3}}$$
+
+    \end{itemize}
+
+  \item Classical Gas
+
+    \begin{itemize}
+
+      \item We know the following for a classical gas:
+
+        $$\mu=\tau\ln\left( \frac{n}{n_Q} \right)$$
+        $$U=\frac{3}{2}N\tau$$
+        $$\sigma=N\left[ \ln\left( \frac{n_Q}{n} \right)+\frac{5}{2} \right]$$
+        $$C_V=\frac{3}{2}N$$
+
+    \end{itemize}
+
+  \item Energy Density
+
+    \begin{itemize}
+
+      \item The density of states (orbitals) may be written as:
+
+        $$D(\varepsilon)=\frac{V}{2\pi^2}\left( \frac{2M}{\hbar^2} \right)^{\frac{3}{2}}\sqrt{\varepsilon}$$
+
+      \item $D(\varepsilon)\,d\varepsilon$ is the \# of orbitals with energies in range $[\varepsilon,\varepsilon+d\,varepsilon]$
+
+      \item Some quantities that may be derived from this include:
+
+        $$N=\int_0^\infty d\varepsilon D(\varepsilon)f(\varepsilon,\mu,\tau)$$
+        $$U=\int_0^\infty d\varepsilon D(\varepsilon)f(\varepsilon,\mu,\tau)\varepsilon$$
+
+      \item Fermi Energy/Temperature may be defined as:
+
+        $$\varepsilon_F=\left( 3\pi^2 \right)^{\frac{2}{3}}\frac{\hbar^2}{2M}\left( \frac{N}{V} \right)^{\frac{2}{3}}\equiv\tau_F$$
+
+    \end{itemize}
+
+\end{itemize}
+
+\end{document}
+
+
+
