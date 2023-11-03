@@ -1,0 +1,135 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Written By Michael Brodskiy
+% Class: Thermodynamics & Statistical Mechanics
+% Professor: A. Stepanyants
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\include{Includes.tex}
+
+\title{Homework 6}
+\date{November 4, 2023}
+\author{Michael Brodskiy\\ \small Professor: A. Stepanyants}
+
+\begin{document}
+
+\maketitle
+
+\begin{enumerate}
+
+    \setcounter{enumi}{1}
+
+  \item
+
+    \begin{enumerate}
+
+      \item 
+
+        We can find the density of states $d\varepsilon$ as:
+
+        $$D(\varepsilon)\,d\varepsilon=\frac{V\varepsilon^2}{\pi^2\hbar^3c^3}\,d\varepsilon$$
+
+        We can then find:
+
+        $$N=\int_0^{\varepsilon_F}\frac{V\varepsilon^2}{\pi^2\hbar^3c^3}\,d\varepsilon$$
+        $$N=\frac{V\varepsilon_F^3}{3\pi^2\hbar^3c^3}$$
+        $$N(3\pi^2\hbar^3c^3)=V\varepsilon_F^3$$
+        $$\varepsilon_F^3=\frac{N}{V}(3\pi^2\hbar^3c^3)$$
+        $$\varepsilon_F^3=3n(\pi^2\hbar^3c^3)$$
+        $$\varepsilon_F^3=\frac{3n}{\pi}(\pi\hbar c)^3$$
+
+        And finally:
+
+        $$\boxed{\varepsilon_F=\left(\frac{3n}{\pi}\right)^{\frac{1}{3}}(\pi\hbar c)}$$
+
+      \item 
+
+        The energy can be defined in a similar manner:
+
+        $$U=\int_0^{\varepsilon_F}\varepsilon D(\varepsilon)\,d\varepsilon$$
+
+        Which gives us:
+
+        $$U=\int_0^{\varepsilon_F}\frac{V\varepsilon^3}{\pi^2\hbar^3c^3}\,d\varepsilon$$
+        $$U=\frac{V\varepsilon_F^4}{4\pi^2\hbar^3c^3}$$
+        $$U=\left(\frac{V\varepsilon_F^3}{3\pi^2\hbar^3c^3}\right)\frac{3}{4}\varepsilon_F$$
+
+        And finally:
+
+        $$\boxed{U_o=\frac{3}{4}N\varepsilon_F}$$
+
+    \end{enumerate}
+
+  \item
+
+    \begin{enumerate}
+
+      \item 
+
+        We know that the ground state energy may be expressed as:
+
+        $$U_o=\frac{3N\hbar^2}{10M}\left(\frac{3\pi^2N}{V}\right)^{\frac{2}{3}}$$
+
+        We also know the relation:
+
+        $$P=-\frac{\partial U}{\partial V}$$
+
+        This gives us:
+
+        $$P=-\left( -\frac{2}{3}\frac{3\hbar^2(3\pi^2)^{\frac{2}{3}}}{10M}\left(\frac{N}{V}\right)^{\frac{5}{3}} \right)$$
+        $$P=\frac{\hbar^2(3\pi^2)^{\frac{2}{3}}}{5M}\left(\frac{N}{V}\right)^{\frac{5}{3}}$$
+        $$\boxed{P=\frac{(3\pi^2)^{\frac{2}{3}}}{5}\frac{\hbar^2}{M}\left(\frac{N}{V}\right)^{\frac{5}{3}}}$$
+
+      \item 
+
+        We can define:
+
+        $$\delta\sigma(\tau)=\int\frac{1}{\tau}\,dU$$
+
+        We know the heat capacity of an electron gas as:
+
+        $$C_V=\frac{1}{2}\pi^2N\left( \frac{\tau}{\tau_F} \right)$$
+
+        We know the heat capacity is equal to $\frac{\partial U}{\partial \tau}$, which allows us to write:
+
+        $$\sigma(\tau)=\int_0^\tau \frac{1}{\tau}C_v\,d\tau$$
+        $$\sigma(\tau)=\int_0^\tau \frac{1}{2}\pi^2N\frac{1}{\tau_F}\,d\tau$$
+        $$\boxed{\sigma(\tau)=\frac{1}{2}\pi^2N\frac{\tau}{\tau_F}}$$
+
+      Notice: $\sigma=C_V$
+
+    \end{enumerate}
+
+    \setcounter{enumi}{4}
+
+  \item
+
+    \begin{enumerate}
+
+      \item 
+
+      \item 
+
+    \end{enumerate}
+
+  \item
+
+    \begin{enumerate}
+
+      \item 
+
+      \item 
+
+      \item 
+
+      \item 
+
+      \item 
+
+    \end{enumerate}
+
+  \item
+
+\end{enumerate}
+
+\end{document}
+
