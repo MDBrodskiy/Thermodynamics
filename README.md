@@ -26,6 +26,7 @@
   * [**Chemical Potential and Gibbs Distribution**](https://github.com/MDBrodskiy/Thermodynamics/tree/master/Notes/Section4.pdf)
   * [**Ideal Gas**](https://github.com/MDBrodskiy/Thermodynamics/tree/master/Notes/Section5.pdf)
   * [**Fermi and Bose Gases**](https://github.com/MDBrodskiy/Thermodynamics/tree/master/Notes/Section6.pdf)
+  * [**Heat and Work**](https://github.com/MDBrodskiy/Thermodynamics/tree/master/Notes/Section7.pdf)
 * [**Homework**](https://github.com/MDBrodskiy/Thermodynamics/tree/master/Homework/)
   * [**Homework 1**](https://github.com/MDBrodskiy/Thermodynamics/tree/master/Homework/Homework1.pdf)
   * [**Homework 2**](https://github.com/MDBrodskiy/Thermodynamics/tree/master/Homework/Homework2.pdf)
