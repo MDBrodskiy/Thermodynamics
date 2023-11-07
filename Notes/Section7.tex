@@ -1,0 +1,197 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Written By Michael Brodskiy
+% Class: Thermodynamics & Statistical Mechanics
+% Professor: A. Stepanyants
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\include{Includes.tex}
+
+\title{Heat and Work}
+\date{\today}
+\author{Michael Brodskiy\\ \small Professor: A. Stepanyants}
+
+\begin{document}
+
+\maketitle
+
+\begin{itemize}
+
+  \item Heat ($Q$) and Work ($W$)
+
+    \begin{itemize}
+
+      \item $Q$ is the energy transferred \underline{to} $S$ through thermal contact with $R$
+
+      \item $W$ is work done by/on $S$ through change in volume or external fields
+
+    \end{itemize}
+
+  \item \nth{1} Law of Thermodynamics
+
+    $$\delta Q = dU+ \delta W$$
+
+    \begin{itemize}
+
+      \item $\delta$ is the inexact differential
+
+      \item This means that:
+
+        $$\oint df=0\text{ or }\int_1^2 df=\int_1^2 df$$
+
+        \begin{itemize}
+
+          \item $df$ is independent of path
+
+        \end{itemize}
+
+        $$\oint\partial f\neq0\text{ and }\int_1^2\partial f\text{ is path dependent}$$
+
+      \item Note it \textit{may} equal 0, but does not have to
+
+    \end{itemize}
+
+  \item $U,\sigma$ are state functions, as they depend on state variables only ($\tau,V,N,\ldots$)
+
+    \begin{itemize}
+
+      \item $Q,W$ are not state functions (\textit{i}.\textit{e}.\ they are dependent on path)
+
+    \end{itemize}
+
+  \item Let us consider a reversible process — a process that does not increase the total entropy of $S+R$
+
+    $$\delta Q_{rev}=\tau d\sigma$$
+
+    \begin{itemize}
+
+      \item In general:
+
+        $$\delta Q\leq \tau d\sigma$$
+
+      \item $Q$ is low quality energy; adding $\delta Q$ to $S$ increases its entropy by $\delta Q/\tau$
+
+      \item $W$ is high quality energy
+
+      \item Heat engines convert heat to work
+
+        \begin{itemize}
+
+          \item Steam engine
+            
+          \item Internal combustion
+
+          \item Power plant
+
+        \end{itemize}
+
+    \end{itemize}
+
+  \item Carnot efficiency $\eta_c$, is the ratio o work generate by $S$ to heat added to $S$ in a reversible process
+
+    $$\eta_c=\left( \frac{W}{Q_h} \right)_{rev}$$
+
+    \begin{itemize}
+
+      \item This can be rewritten in many forms, including:
+
+        $$\eta_c=\frac{Q_h-Q_l}{Q_h}=1-\frac{Q_l}{Q_h}=1-\frac{\tau_l}{\tau_h}$$
+
+      \item The actual efficiency is:
+
+        $$\eta\leq\eta_c$$
+
+      \item This can be obtained by assuming $\sigma_h\leq\sigma_l$
+
+    \end{itemize}
+
+  \item Refrigerators use work to move heat
+
+    \begin{itemize}
+
+      \item The Carnot efficiency for a refrigerator is:
+
+        $$\gamma_c=\left( \frac{Q_l}{W} \right)_{rev}$$
+
+      \item This can be expressed in more useful terms for us as:
+
+        $$\gamma_c=\frac{\tau_l}{\tau_h-\tau_l}$$
+
+      \item Similar to heat engines, we can say:
+
+        $$\gamma\leq\gamma_c$$
+
+    \end{itemize}
+
+  \item Carnot Cycle
+
+    \begin{figure}[H]
+      \centering
+      \include{Figures/CCycle}
+      \caption{The Carnot Cycle}
+      \label{fig:1}
+    \end{figure}
+
+    \begin{itemize}
+
+      \item $1\to2$
+
+        \begin{itemize}
+
+          \item $Q_{12}=\tau_h(\sigma_h-\sigma_l)>0$
+
+          \item $W_{12}=\tau_h(\sigma_h-\sigma_l)-(U_2-U_1)$
+
+        \end{itemize}
+
+      \item $2\to3$
+
+        \begin{itemize}
+
+          \item $Q_{23}=0$
+
+          \item $W_{23}=-(U_3-U_2)$
+
+        \end{itemize}
+
+      \item $3\to4$
+
+        \begin{itemize}
+
+          \item $Q_{34}=\tau_l(\sigma_l-\sigma_h)<0$
+
+          \item $W_{34}=\tau_l(\sigma_l-\sigma_h)-(U_4-U_3)$
+
+        \end{itemize}
+
+      \item $4\to1$
+
+        \begin{itemize}
+
+          \item $Q_{41}=0$
+
+          \item $W_{41}=-(U_1-U_4)$
+
+        \end{itemize}
+
+      \item Total
+
+        \begin{itemize}
+
+          \item Work: $$(\tau_h-\tau_l)(\sigma_h-\sigma_l)>0$$
+
+          \item Heat: $$(\tau_h-\tau_l)(\sigma_h-\sigma_l)>0$$
+
+        \end{itemize}
+
+      \item The efficiency may be defined as:
+
+        $$\eta=\frac{W_{tot}}{Q_{rec}}=1-\frac{\tau_l}{\tau_h}$$
+
+    \end{itemize}
+
+\end{itemize}
+
+\end{document}
+
+
+
