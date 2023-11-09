@@ -1,0 +1,139 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Written By Michael Brodskiy
+% Class: Thermodynamics & Statistical Mechanics
+% Professor: A. Stepanyants
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\include{Includes.tex}
+
+\title{Homework 7}
+\date{November 15, 2023}
+\author{Michael Brodskiy\\ \small Professor: A. Stepanyants}
+
+\begin{document}
+
+\maketitle
+
+\begin{enumerate}
+
+  \item
+
+    \begin{enumerate}
+
+      \item 
+
+        First and foremost, we know:
+
+        $$Q_h=Q_l+W$$
+        $$W=Q_l-Q_h$$
+
+        Per reversible conditions:
+
+        $$\sigma_h=\sigma_l$$
+        $$\frac{Q_h}{\tau_h}=\frac{Q_l}{\tau_l}$$
+        $$Q_h=\frac{\tau_hQ_l}{\tau_l}$$
+
+        Thus, we can combine to write:
+
+        $$W=Q_h-\frac{\tau_l}{\tau_h}Q_h$$
+        $$W=Q_h\left( 1-\frac{\tau_l}{\tau_h}\right)$$
+        $$W=Q_h\left( \frac{\tau_h-\tau_l}{\tau_h}\right)$$
+
+        And finally:
+
+        $$\boxed{\frac{W}{Q_h}=\frac{\tau_h-\tau_l}{\tau_h}}$$
+
+        If the heat pump is not reversible, we know the efficiency is:
+
+        $$\frac{W}{Q_h}<\frac{\tau_h-\tau_l}{\tau_h}$$
+
+      \item 
+
+      \item 
+
+    \end{enumerate}
+
+  \item
+
+    \begin{enumerate}
+
+      \item 
+
+      \item 
+
+    \end{enumerate}
+
+  \item
+
+    \begin{enumerate}
+
+      \item 
+        
+      \item 
+        
+      \item 
+        
+      \item 
+        
+    \end{enumerate}
+
+    \setcounter{enumi}{4}
+
+  \item
+
+    First and foremost, we may write:
+
+    $$W=(\tau_h-\tau_l)\sigma_l$$
+
+    Given the assumption that the process is reversible, we may write:
+
+    $$\sigma_l=\frac{Q_l}{\tau_l}$$
+
+    This gives us:
+
+    $$W=\left( \frac{\tau_h}{\tau_l}-1 \right)Q_l$$
+
+    We can apply the given parameters to find:
+
+    $$W=\left( \frac{500}{20}-1 \right)1500$$
+    $$\boxed{W=36[\si{\giga\watt}]}$$
+
+    Given improvements, we can write:
+
+    $$W=\left( \frac{600}{20}-1 \right)1500$$
+    $$\boxed{W=43.5[\si{\giga\watt}]}$$
+
+    Clearly, there is nearly a 20\% increase in the ability to produce energy
+
+  \item
+
+    \begin{enumerate}
+
+      \item 
+
+      \item 
+
+    \end{enumerate}
+
+  \item
+
+    We know from (1) that:
+
+    $$\frac{W}{Q_l}=\left( \frac{\tau_h}{\tau_l}-1 \right)$$
+
+    And also that:
+
+    $$W+Q_l=Q_h$$
+
+    We can express the work done by the light bulb as $W=Q_l$. The total work of the two processes needs to equal zero, which allows us to write:
+
+    $$\left( \frac{\tau_h}{\tau_l}=1 \right)Q_l-Q_l=0$$
+
+    This simplifies to:
+
+    $$\tau_h=2\tau_l$$
+
+\end{enumerate}
+
+\end{document}
+
