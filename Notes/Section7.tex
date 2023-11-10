@@ -189,6 +189,121 @@
 
     \end{itemize}
 
+  \item Subtle difference between isentropic and adiabatic (same if reversible): isentropic means constant entropy, adiabatic means no heat added to the system
+
+  \item Carnot Cycle for an Ideal Gas (Spin 0, monatomic)
+
+    \begin{figure}[H]
+      \centering
+      \include{Figures/IdealCCycle}
+      \caption{$PV$ Diagram for Ideal Gas Carnot Cycle}
+      \label{fig:2}
+    \end{figure}
+
+    \begin{itemize}
+
+      \item Process $1\to2$ (Isothermal Expansion)
+
+        \begin{itemize}
+
+          \item $Q_{12}=\tau_h(\sigma_2-\sigma_1)=\tau_hN\ln\left( \frac{V_2}{V_1} \right)>0$
+
+          \item $W_{12}=Q_{12}$ (from the $\delta Q=dU + \delta W$)
+
+        \end{itemize}
+
+      \item Process $2\to3$ (Isentropic/Adiabatic\footnote{Note; we may use either because the process is reversible} Expansion)
+
+        \begin{itemize}
+
+          \item $Q_{23}=0$
+
+          \item $W_{23}=-\Delta U=-(U_3-U_2)=\frac{3N}{2}(\tau_h-\tau_l) >0$
+
+        \end{itemize}
+
+      \item Process $3\to4$ (Isothermal Contraction)
+
+        \begin{itemize}
+
+          \item $Q_{34}=\tau_lN\ln\left( \frac{V_4}{V_3} \right)=\tau_lN\ln\left( \frac{V_1}{V_2} \right)<0$
+
+          \item $W_{34}=Q_{34}$
+
+        \end{itemize}
+
+      \item Process $4\to1$ (Isentropic Contraction)
+
+        \begin{itemize}
+
+          \item $Q_{41}=0$
+
+          \item $W_{41}=-\Delta U=-\left( U_1-U_4 \right)-\frac{3N}{2}\left( \tau_l-\tau_h \right)<0$
+
+        \end{itemize}
+
+    \end{itemize}
+
+  \item Work done by a reversible proess:
+
+    $$\delta W=\tau\,d\sigma-dU$$
+
+    \begin{itemize}
+
+      \item Isothermal Process
+
+        \begin{itemize}
+
+            $$\delta W=-d(U-\tau\sigma)$$
+            $$F=U-\tau\sigma$$
+
+          \item This gives us:
+
+            $$\delta W=-dF$$
+            $$W=-\Delta F$$
+
+          \item The work done by $S$ in a reversible, isothermal process is $-\Delta F$; $W<-\Delta F$ if the process is irreversible
+
+          \item Thus, we can say the maximum work done by $S$ in any process at constant temperature is $\Delta F$
+
+        \end{itemize}
+
+      \item Isobaric Process
+
+        \begin{itemize}
+
+          \item The Work done by $S$ on the the environment is $P\,dV$, which is not very useful
+
+          \item The effective work can be written:
+
+            $$\delta W'=\tau\,d\sigma-dU-P\,dV$$
+
+            \begin{itemize}
+
+              \item Under constant temperature:
+
+                $$\delta W'=-d\left( U+PV-\tau\sigma \right)$$
+
+              \item We can introduce another quantity, $G$, the Gibbs free energy, such that:
+
+                $$\delta W'=-dG$$
+                $$W'=-\Delta G$$
+
+              \item Similar statements for the Gibbs free energy can be made: $W_{eff}=-\Delta G$ for a reversible process, and $W_{eff}<-\Delta G$ for an irreversible process
+
+              \item The enthalpy is $H=U+PV$
+
+              \item Considering a case where $\delta W'=0$ (no effective work is done):
+
+                $$\delta Q=d(U+PV)$$
+                $$Q=\Delta H$$
+
+            \end{itemize}
+
+        \end{itemize}
+
+    \end{itemize}
+
 \end{itemize}
 
 \end{document}
