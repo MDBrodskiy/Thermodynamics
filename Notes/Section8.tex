@@ -1,0 +1,116 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Written By Michael Brodskiy
+% Class: Thermodynamics & Statistical Mechanics
+% Professor: A. Stepanyants
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\include{Includes.tex}
+
+\title{Gibbs Free Energy and Chemical Reactions}
+\date{\today}
+\author{Michael Brodskiy\\ \small Professor: A. Stepanyants}
+
+\begin{document}
+
+\maketitle
+
+\begin{itemize}
+
+  \item The Gibbs free energy is a function of $\tau$, $P$, and $N\to G(\tau,P,N)$
+
+  \item If $S$ is brought in thermal and mechanical contact with large $R$ (at constant $P$ and $\tau$), then $G_s$ will decrease and $S$ will come to an equilibrium state in which $G_s$ is minimal
+
+    \begin{enumerate}
+
+      \item Maximum effective work done by the system in a reversible process is equal to -$\Delta G$
+
+      \item $G=U+PV-\tau\sigma$
+
+        $$dG=dU+P\,dV+V\,dP-\tau\,d\sigma-\sigma\,d\tau$$
+
+        \begin{itemize}
+
+          \item From the first law for a reversible process:
+
+            $$dG=\mu\,dN+v\,dP-\sigma\,d\tau$$
+
+        \end{itemize}
+
+      \item From this, we can find:
+
+        $$G(N,P,\tau)\to\left\{\begin{array}{l} \left( \dfrac{\partial G}{\partial N} \right)_{P,\tau}=\mu\\\left( \dfrac{\partial G}{\partial P} \right)_{N,\tau}=V\\ \left( \dfrac{\partial G}{\partial \tau}\right)_{N,P}=-\sigma\end{array}$$
+
+        \item $U=U(\sigma,V,N)=Nf\left( \frac{\sigma}{N},\frac{V}{N} \right)$ — this is an extensive function
+
+          $$G(N,P,\tau)=N\mu(P,\tau)$$
+
+          \begin{itemize}
+
+            \item We can see that $\mu$ is the Gibbs free energy per particle
+
+          \end{itemize}
+
+        \item For an ideal gas ($S=0$, monatomic) we know that $\mu\tau\ln\left( n/n_Q \right)$; this can be rewritten as:
+
+          $$\mu(P,\tau)=\tau\ln\left( \frac{P}{\tau n_Q} \right)$$
+          $$G(N,P,\tau)=N\tau\ln\left( \frac{P}{\tau n_Q} \right)$$
+
+    \end{enumerate}
+
+  \item Chemical reactions at $\tau,P$ — constant
+
+    \begin{center}
+      \ce{v_1A_1 + v_2A_2 + $\ldots$ + v_lA_l=0}
+    \end{center}
+
+    \begin{itemize}
+
+      \item Where $v_i$ are the reaction coefficients
+
+      \item $A_i$ are the reaction species
+
+    \end{itemize}
+
+  \item Example:
+
+    \begin{center}
+      \ce{2H2 + O2 <-> 2H2O}
+      \ce{2H2 + O2 - 2H2O = 0}
+    \end{center}
+
+    \begin{itemize}
+
+      \item We can find $v_1=2$, $v_2=1$, $v_3=-2$ and $A_1=\ce{H2}$, $A_2=\ce{O2}$, $A_3=\ce{H2O}$
+
+    \end{itemize}
+
+  \item In equilibrium, $G(N,P,\tau)$ will be at its minimum and $dG=0$
+
+    $$dG=\sum_{i=1}^l\mu_i\,dN_i=0$$
+    $$dN_i=-\Delta N v_i=0\quad\text{in equilibrium}$$
+    $$\Delta G=-\Delta N\sum_{i=1}^l\mu_iv_i$$
+
+  \item Moving away from equilibrium:
+
+    $$\Delta G=-\Delta N\sum\mu_iv_i<0\quad\text{(\nth{2} law)}$$
+
+  \item If $\sum\mu_iv_i>0$, then $\Delta N>0$, and the reaction will move to the right
+
+  \item Ideal Gas with internal degrees of freedom
+
+    \begin{itemize}
+
+      \item Spin ($S$)
+
+      \item Vibrations
+
+      \item Rotations
+
+    \end{itemize}
+
+\end{itemize}
+
+\end{document}
+
+
+
