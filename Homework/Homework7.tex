@@ -49,7 +49,39 @@
 
       \item 
 
+        We can write:
+
+        $$W=(\tau_{hh}-\tau_l)\left( \frac{Q_{hh}}{\tau_{hh}}-\frac{Q_l}{\tau_l} \right)$$
+
+        We know that the work generated is used as $Q_h$ in the heat pump:
+
+        $$Q_h=(\tau_{hh}-\tau_l)\left( \frac{Q_{hh}}{\tau_{hh}}-\frac{Q_l}{\tau_l} \right)$$
+
+        We can then rearrange to find the desired ratio:
+
+        $$\frac{Q_h}{\tau_{hh}-\tau_l}=\frac{Q_{hh}\tau_l-Q_l\tau_{hh}}{\tau_{hh}\tau_l}$$
+        $$\frac{\tau_{hh}\tau_l}{\tau_{hh}-\tau_l}=\frac{Q_{hh}\tau_l-Q_l\tau_{hh}}{Q_h}$$
+
+        We know $Q_l=\frac{\tau_l}{\tau_h}Q_h$, which gives us:
+
+        $$\frac{\tau_{hh}\tau_l}{\tau_{hh}-\tau_l}=\frac{Q_{hh}\tau_l}{Q_h}-\frac{\tau_l\tau_{hh}}{\tau_h}$$
+        $$\boxed{\frac{Q_{hh}}{Q_h}=\frac{\tau_{hh}}{\tau_{hh}-\tau_l}+\frac{\tau_{hh}}{\tau_h}}$$
+
+        Using the given values, we obtain:
+
+        $$\frac{Q_{hh}}{Q_h}=\frac{600}{600-270}+2$$
+        $$\boxed{\frac{Q_{hh}}{Q_h}=3.82}$$
+
       \item 
+
+        For this problem, we essentially need to draw a ``double Carnot engine,'' with the output work of one ($W$) being the $Q_h$ of the second:
+
+        \begin{figure}[H]
+          \centering
+          \include{Figures/7-1c}
+          \caption{Carnot Engine Feeding a Heat Pump}
+          \label{fig:1}
+        \end{figure}
 
     \end{enumerate}
 
@@ -111,7 +143,56 @@
 
       \item 
 
+        First and foremost, we may write:
+
+        $$W=\left( 1-\frac{\tau_l}{\tau_h} \right)Q_h=\left( \frac{\tau_h}{\tau_l}-1 \right)Q_l$$
+
+        Given that:
+
+        $$\frac{dW}{dt}=P$$
+
+        We may obtain:
+
+        $$P=\left( \frac{\tau_h}{\tau_l}-1 \right)\frac{dQ_l}{dt}$$
+
+        From the problem, we may substitute:
+
+        $$P=A\left( \frac{\tau_h}{\tau_l}-1 \right)(\tau_h-\tau_l)$$
+
+        Multiplying both sides by $\tau_l$ and dividing by $A$, we get:
+
+        $$\frac{P\tau_l}{A}=(\tau_h-\tau_l)^2$$
+        $$\frac{P\tau_l}{A}=\tau_h^2-2\tau_h\tau_l+\tau_l^2$$
+
+        We can then move all terms to one side:
+
+        $$\frac{P\tau_l}{A}+2\tau_h\tau_l-\tau_l^2-\tau_h^2=0$$
+        $$\left(\frac{P}{A}+2\tau_h\right)\tau_l-\tau_l^2-\tau_h^2=0$$
+
+        Employing the quadratic equation, we obtain:
+
+        $$\tau_l^2-\left( \frac{P}{A}+2\tau_h \right)\tau_l+\tau_h=0\to \left\{\begin{array}{l} a=1\\b=-\left( \frac{P}{A}+2\tau_h \right)\\c=\tau_h^2\end{array}$$
+        $$\tau_l=\frac{1}{2}\left( \frac{P}{A}+2\tau_h-\sqrt{\left( \frac{P}{A}+2\tau_h \right)^2-4\tau_h^2}\right)\text{\footnote{Note: we can forego the solution with a positive determinant, as that would make $\tau_l>\tau_h$}}$$
+
+        Distributing, we finally obtain:
+
+        $$\tau_l=\frac{P}{2A}+\tau_h-\left[ \left( \frac{P}{2A}+\tau_h \right)^2-\tau_h^2 \right]^{\frac{1}{2}}$$
+
+        The Boltzmann factor cancels out, leaving us with:
+
+        $$\boxed{T_l=\left(T_h+\frac{P}{2A}\right)-\left[ \left( T_h+\frac{P}{2A} \right)^2-T_h^2 \right]^{\frac{1}{2}}}$$
+
       \item 
+
+        We can rearrange one of the formulas obtained in (a) to write:
+
+        $$A=\frac{PT_l}{\left( T_h-T_l \right)^2}$$
+
+        This gives us:
+
+        $$A=\frac{(2\cdot10^3)(290)}{(20)^2}$$
+        $$A=\frac{(580\cdot10^3)}{400}$$
+        $$\boxed{A=1450\left[ \frac{\si{\watt}}{\si{\kelvin}} \right]}$$
 
     \end{enumerate}
 
@@ -127,11 +208,19 @@
 
     We can express the work done by the light bulb as $W=Q_l$. The total work of the two processes needs to equal zero, which allows us to write:
 
-    $$\left( \frac{\tau_h}{\tau_l}=1 \right)Q_l-Q_l=0$$
+    $$\left( \frac{\tau_h}{\tau_l}-1 \right)Q_l-Q_l=0$$
 
     This simplifies to:
 
     $$\tau_h=2\tau_l$$
+
+    Room temperature implies $27[\si{\celsius}]\to300[\si{\kelvin}]$
+
+    Thus, the Carnot refrigerator, at peak efficiency, may cool to:
+
+    $$\boxed{\tau_l=\frac{300}{2}=150[\si{\kelvin}]}$$
+
+    Thus, the refrigerator should be able to cool below room temperature.
 
 \end{enumerate}
 
