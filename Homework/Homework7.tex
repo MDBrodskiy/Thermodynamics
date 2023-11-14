@@ -91,7 +91,42 @@
 
       \item 
 
+        Similar to Figure \ref{fig:1}, we must have the pilot flame feed into the refrigerator:
+
+        \begin{figure}[H]
+          \centering
+          \include{Figures/7-2a}
+          \caption{Pilot Flame Feeding a Refrigerator}
+          \label{fig:2}
+        \end{figure}
+
       \item 
+
+        First, we assume that this is a reversible refrigerator. This gives us:
+
+        $$\frac{Q_{hh}}{\tau_{hh}}+\frac{Q_l}{\tau_l}-\frac{Q_h}{\tau_h}=0$$
+
+        Furthermore, we know:
+
+        $$Q_h=Q_l+Q_{hh}$$
+
+        This gives us:
+
+        $$\frac{Q_{hh}}{\tau_{hh}}+\frac{Q_l}{\tau_l}=\frac{Q_l+Q_{hh}}{\tau_h}$$
+
+        We can rearrange:
+
+        $$\frac{\tau_lQ_{hh}+Q_l\tau_{hh}}{\tau_l\tau_{hh}}=\frac{Q_l+Q_{hh}}{\tau_h}$$
+        $$\tau_h(\tau_lQ_{hh}+Q_l\tau_{hh})=(Q_l+Q_{hh})(\tau_l\tau_{hh})$$
+        $$\tau_h\tau_lQ_{hh}+Q_l\tau_{hh}\tau_h=\tau_l\tau_{hh}Q_l+\tau_l\tau_{hh}Q_{hh}$$
+
+        We then separate $Q_{hh}$ and $Q_l$ to different sides:
+
+        $$(\tau_h\tau_l-\tau_l\tau_{hh})Q_{hh}=(\tau_l\tau_{hh}-\tau_{hh}\tau_h)Q_l$$
+
+        This then gives us:
+
+        $$\boxed{\frac{Q_l}{Q_{hh}}=\frac{\tau_h\tau_l-\tau_l\tau_{hh}}{\tau_l\tau_{hh}-\tau_{hh}\tau_h}}$$
 
     \end{enumerate}
 
@@ -100,12 +135,110 @@
     \begin{enumerate}
 
       \item 
+
+        The processes from stages $2\to3$ and $4\to1$ are both isentropic, indicating constant $\sigma$. This, in tandem with the fact that, for photons, $\sigma\propto V\tau^3$, allows us to write:
+
+        $$V_2\tau_h^3=V_3\tau_l^3\quad\text{ and }\quad V_1\tau_h^3=V_4\tau_l^3$$
+        $$\boxed{V_3=\left( \frac{\tau_h}{\tau_l} \right)^3V_2\quad\text{ and }\quad V_4=\left( \frac{\tau_h}{\tau_l} \right)^3V_1}$$
         
       \item 
+
+        As with our ideal gas, we can derive the heat and work in a similar manner. First and foremost:
+
+        $$Q_h=\tau_h\left( \sigma_2-\sigma_1\right)$$
+
+        For a photon gas, we know:
+
+        $$\sigma=\frac{4\pi^2V\tau^3}{45h^3c^3}$$
+
+        This gives us:
+
+        $$Q_h=\frac{4\pi^2\tau_h^4}{45h^3c^3}(V_2-V_1)$$
+
+        Then, we need to employ the equation $Q_h=\Delta U+W$. We begin by finding $\Delta U$:
+
+        $$U=\frac{\pi^2V\tau^4}{15h^3c^3}$$
+        $$\Delta U=\frac{\pi^2\tau_h^4}{15h^3c^3}(V_2-V_1)$$
+
+        We can see that the dependency on the volume makes it so that $\Delta U\neq0$, unlike an ideal gas. As such we may say that $\boxed{Q_h\neq W}$. We can also find the actual value of $W$ as:
+
+        $$Q_h-\Delta U=\frac{\pi^2\tau_h^4}{45h^3c^3}(V_2-V_1)$$
+
+        Thus, we can see:
+
+        $$\boxed{\frac{4\pi^2\tau_h^4}{45h^3c^3}(V_2-V_1)\neq\frac{\pi^2\tau_h^4}{45h^3c^3}(V_2-V_1)}$$
         
       \item 
+
+        For the isentropic processes, we know:
+
+        $$Q=0$$
+
+        This allows us to write:
+
+        $$\Delta U+W=0$$
+        $$W=-\Delta U$$
+
+        For process $2\to3$, we may write:
+
+        $$W=-(U_3-U_2)$$
+        $$W=-\frac{\pi^2}{15h^3c^3}(V_3\tau_l^4-V_2\tau_h^4)$$
+
+        For process $4\to1$, we may write:
+
+        $$W=-(U_1-U_4)$$
+        $$W=-\frac{\pi^2}{15h^3c^3}(V_1\tau_h^4-V_4\tau_l^4)$$
+
+        Employing our results from part (a), we may write:
+
+        $$W_{23}=-\frac{\pi^2}{15h^3c^3}(V_2\tau_l\tau_h^3-V_2\tau_h^4)$$
+        $$W_{41}=-\frac{\pi^2}{15h^3c^3}(V_1\tau_h^4-V_1\tau_h^3\tau_l)$$
+
+        These are equivalent to:
+
+        $$W_{23}=\frac{\pi^2V_2\tau_h^3}{15h^3c^3}(\tau_h-\tau_l)$$
+        $$W_{41}=\frac{\pi^2V_1\tau_h^3}{15h^3c^3}(\tau_l-\tau_h)$$
+
+        Thus, we can see that, though similar, unlike an ideal gas, $\boxed{W_{23}\neq W_{41}}$
         
       \item 
+
+        Using our results from (b) and (c), we can write:
+
+        $$W_{12}=\frac{\pi^2\tau_h^4}{45h^3c^3}(V_2-V_1)$$
+        $$W_{23}=\frac{\pi^2V_2\tau_h^3}{15h^3c^3}(\tau_h-\tau_l)$$
+        $$W_{34}=\frac{\pi^2\tau_l^4}{45h^3c^3}(V_4-V_3)$$
+        $$W_{41}=\frac{\pi^2V_1\tau_h^3}{15h^3c^3}(\tau_l-\tau_h)$$
+
+        For $W_{34}$, we can employ the identities found in (a):
+
+        $$W_{34}=\frac{\pi^2\tau_l\tau_h^3}{45h^3c^3}(V_1-V_2)$$
+
+        Now, we can sum:
+
+        $$W_{tot}=\frac{\pi^2\tau_h^4}{45h^3c^3}(V_2-V_1)+\frac{\pi^2V_2\tau_h^3}{15h^3c^3}(\tau_h-\tau_l)+\frac{\pi^2\tau_l\tau_h^3}{45h^3c^3}(V_1-V_2)+\frac{\pi^2V_1\tau_h^3}{15h^3c^3}(\tau_l-\tau_h)$$
+
+        We can factor out the coefficients:
+
+        $$W_{tot}=\frac{\pi^2\tau_h^3}{45h^3c^3}\left(\tau_h(V_2-V_1)+3V_2(\tau_h-\tau_l)+\tau_l(V_1-V_2)+3V_1(\tau_l-\tau_h)\right)$$
+
+        We may continue by summing similar terms:
+
+        $$W_{tot}=\frac{\pi^2\tau_h^3}{45h^3c^3}\left((\tau_h-\tau_l)(V_2-V_1)+3(V_2-V_1)(\tau_h-\tau_l)\right)$$
+
+        Continuing simplification, we get:
+
+        $$\boxed{W_{tot}=\frac{4\pi^2\tau_h^3}{45h^3c^3}(\tau_h-\tau_l)(V_2-V_1)}$$
+
+        We know that the Carnot Energy efficiency formula may be expressed as:
+
+        $$\eta_c=\frac{W_{tot}}{Q_{rec}}$$
+
+        Dividing the above answer by the heat from part (b), we get:
+
+        $$\boxed{\eta_c=\frac{(\tau_h-\tau_l)}{\tau_h}=\left( 1-\frac{\tau_l}{\tau_h} \right)}$$
+
+        As can be seen, the efficiency formula remains the same
         
     \end{enumerate}
 
@@ -172,9 +305,9 @@
         Employing the quadratic equation, we obtain:
 
         $$\tau_l^2-\left( \frac{P}{A}+2\tau_h \right)\tau_l+\tau_h=0\to \left\{\begin{array}{l} a=1\\b=-\left( \frac{P}{A}+2\tau_h \right)\\c=\tau_h^2\end{array}$$
-        $$\tau_l=\frac{1}{2}\left( \frac{P}{A}+2\tau_h-\sqrt{\left( \frac{P}{A}+2\tau_h \right)^2-4\tau_h^2}\right)\text{\footnote{Note: we can forego the solution with a positive determinant, as that would make $\tau_l>\tau_h$}}$$
+        $$\tau_l=\frac{1}{2}\left( \frac{P}{A}+2\tau_h-\sqrt{\left( \frac{P}{A}+2\tau_h \right)^2-4\tau_h^2}\right)$$
 
-        Distributing, we finally obtain:
+        Note: we can forego the solution with a positive determinant, as that would make $\tau_l>\tau_h$. Distributing, we finally obtain:
 
         $$\tau_l=\frac{P}{2A}+\tau_h-\left[ \left( \frac{P}{2A}+\tau_h \right)^2-\tau_h^2 \right]^{\frac{1}{2}}$$
 
