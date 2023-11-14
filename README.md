@@ -27,6 +27,7 @@
   * [**Ideal Gas**](https://github.com/MDBrodskiy/Thermodynamics/tree/master/Notes/Section5.pdf)
   * [**Fermi and Bose Gases**](https://github.com/MDBrodskiy/Thermodynamics/tree/master/Notes/Section6.pdf)
   * [**Heat and Work**](https://github.com/MDBrodskiy/Thermodynamics/tree/master/Notes/Section7.pdf)
+  * [**Gibbs Free Energy and Chemical Reactions**](https://github.com/MDBrodskiy/Thermodynamics/tree/master/Notes/Section8.pdf)
 * [**Homework**](https://github.com/MDBrodskiy/Thermodynamics/tree/master/Homework/)
   * [**Homework 1**](https://github.com/MDBrodskiy/Thermodynamics/tree/master/Homework/Homework1.pdf)
   * [**Homework 2**](https://github.com/MDBrodskiy/Thermodynamics/tree/master/Homework/Homework2.pdf)
