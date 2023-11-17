@@ -106,6 +106,79 @@
 
       \item Rotations
 
+      \item For this particle, we may write:
+
+        $$\varepsilon_{n,1}=\varepsilon_n+\varepsilon_{int}$$
+
+        \begin{itemize}
+
+          \item Where $\varepsilon_n$ is the translational energy and $\varepsilon_{int}$ is the rotational and vibrational energy
+
+          \item In the classical limit, we may write:
+
+            $$\text{\textrevepsilon}_n=1+\sum_i e^{\frac{\mu-\varepsilon_{int}}{\tau}}$$
+            $$\text{\textrevepsilon}_n=1+\lambda e^{\frac{-\varepsilon_n}{\tau}}\underbrace{\sum_ie^{-\frac{\varepsilon_{int}}{\tau}}}_{z_{int}}$$
+            $$\text{\textrevepsilon}_n=1+\lambda e^{-\frac{\varepsilon_n}{\tau}}$$
+            $$N=\lambda z_{int}z_1$$
+            $$\mu=\tau\ln\left( \frac{n}{n_Qz_{int}} \right)$$
+
+        \end{itemize}
+
+      \item Rotational degrees may be accounted for as:
+
+        $$\varepsilon_{int}^l=\frac{\hbar^2}{2I}l(l+1)$$
+
+        \begin{itemize}
+
+          \item Where $l$ is the angular momentum quantum number, and $I$ is the rotational moment of inertia about the center of mass
+
+        \end{itemize}
+
+      \item Vibrational degrees may be accounted for as:
+
+        $$\varepsilon_{int}^n=\hbar\omega\left( n+\frac{1}{2} \right)$$
+
+        \begin{itemize}
+
+          \item Where $n$ is the quantum number, and $\omega=\sqrt{\dfrac{k(m_1+m_2)}{m_1m_2}}$
+
+        \end{itemize}
+
+      \item We may introduce a dummy variable to the chemical potential defined above to get:
+
+        $$\mu=\tau\left( \ln\left( \frac{n}{n_o} \right)-\ln\left( \frac{n_Qz_{int}}{n_o} \right) \right)$$
+        $$\mu=\tau\ln\left( \frac{n}{n_o} \right)+\mu^o(\tau)$$
+
+      \item $n_o$ is the reference concentration. For reactions in aqueous solutions:
+
+        $$n_o=1M=1\left[ \frac{\si{\mole}}{\si{\liter}} \right]$$
+
+        \begin{itemize}
+
+          \item For gasses, $n_o=\frac{1}{22}M$
+
+          \item $\mu^o(\tau)$ is the standard chemical potential, and it depends on $\tau$ and $|n_o$
+
+        \end{itemize}
+
+    \end{itemize}
+
+  \item The Law of Mass Action may be written as:
+
+    $$\prod_{i=1}^l[A_i]^{-v_i}=e^{-\frac{\Delta G^{\circ}}{\tau}}=K_{eq}$$
+    
+    \begin{itemize}
+
+      \item This gives us the key-equilibrium constant for a certain reaction
+
+      \item For example, for the following reaction, we could find $K_{eq}$:
+
+        \begin{center}
+          \ce{H2O - H+ - OH- <=> 0}
+        \end{center}
+
+        $$K_{eq}=\frac{\ce{[H+][OH^-]}}{\ce{[H2O]}}$$
+
     \end{itemize}
 
 \end{itemize}
