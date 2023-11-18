@@ -1,0 +1,113 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Written By Michael Brodskiy
+% Class: Thermodynamics & Statistical Mechanics
+% Professor: A. Stepanyants
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\include{Includes.tex}
+
+\title{Homework 8}
+\date{November 22, 2023}
+\author{Michael Brodskiy\\ \small Professor: A. Stepanyants}
+
+\begin{document}
+
+\maketitle
+
+\begin{enumerate}
+
+  \item
+
+    \begin{enumerate}
+
+      \item 
+
+        We begin by implementing the definition of the Gibb's Free Energy:
+
+        $$G=U-\tau\sigma+PV$$
+
+        According to this, we know:
+
+        $$\left( \frac{\partial G}{\partial \tau} \right)_{N,P}=-\sigma\quad\text{and}\quad\left( \frac{\partial G}{\partial P} \right)_\tau=V$$
+
+        From here, we can obtain the first Maxwell relation since the order of partial differentiation should not matter. This gives us:
+
+        $$\left( \frac{\partial ^2G}{\partial P\partial \tau} \right)_{\tau}=-\left(\frac{\partial \sigma}{\partial P}\right)_\tau\quad\text{and}\quad \left( \frac{\partial^2 G}{\partial\tau\partial P} \right)_P=\left( \frac{\partial V}{\partial \tau} \right)_P$$
+
+        Setting the two together, we get:
+
+        $$\boxed{\left(  \frac{\partial V}{\partial \tau}\right)_P=-\left( \frac{\partial\sigma}{\partial P} \right)_\tau}$$
+
+        We repeat similar steps for the other Maxwell relations:
+
+        $$\left( \frac{\partial G}{\partial N} \right)_P=\mu\quad\text{and}\quad\left( \frac{\partial G}{\partial V} \right)_\tau=V$$
+
+        Now we differentiate once again:
+
+        $$\left( \frac{\partial^2G}{\partial P\partial N} \right)_N=\left( \frac{\partial\mu}{\partial P} \right)_N\quad\text{and}\quad\left( \frac{\partial^2G}{\partial N\partial P} \right)_P=\left( \frac{\partial V}{\partial N} \right)_P$$
+
+        Setting these together:
+
+        $$\boxed{\left(  \frac{\partial V}{\partial N}\right)_P=\left( \frac{\partial\mu}{\partial P} \right)_N}$$
+
+        Finally, we can write:
+
+        $$\left( \frac{\partial^2G}{\partial \tau\partial N} \right)_N=\left( \frac{\partial\mu}{\partial \tau} \right)_N\quad\text{and}\quad\left( \frac{\partial^2G}{\partial N\partial \tau} \right)_\tau=-\left( \frac{\partial \sigma}{\partial N} \right)_\tau$$
+
+        And then we obtain the final relation:
+
+        $$\boxed{\left( \frac{\partial\mu}{\partial\tau} \right)_N=-\left( \frac{\partial\sigma}{\partial N} \right)_\tau}$$
+
+      \item 
+
+        First, we know:
+
+        $$\alpha=\frac{1}{V}\left( \frac{\partial V}{\partial\tau} \right)_P$$
+
+        From above, we may write:
+
+        $$\alpha=-\frac{1}{V}\left( \frac{\partial \sigma}{\partial P} \right)_\tau$$
+
+        By the third law of thermodynamics, we know that, as $\tau\to0$, $\sigma\to0$. Thus, we know that:
+
+        $$\boxed{\alpha=-\frac{1}{V}\underbrace{\left( \frac{\partial \sigma}{\partial P} \right)_\tau}_0}$$
+        $$\alpha=0\,\text{ as $\tau\to0$}$$
+
+    \end{enumerate}
+
+  \item
+
+    \begin{enumerate}
+
+      \item 
+
+        From the law of mass action, we may write:
+
+        $$\frac{[\ce{e^-}][\ce{H^+}]}{[\ce{H}]}=\prod_jn_{Qj}^{v_j}e^{-\frac{v_jF_{j,int}}{\tau}}$$
+
+        From the product, we may write:
+
+        $$K(\tau)=(n_{\ce{e^-}})e^{-\frac{F_{\ce{e^-},int}}{\tau}}\cdot(n_{\ce{H^+}})e^{-\frac{F_{\ce{H^+},int}}{\tau}}\cdot (n_{\ce{H}})^{-1}e^{\frac{F_{\ce{H},int}}{\tau}}$$
+
+        We know that:
+
+        $$F_{\ce{e^-},int}+F_{\ce{H^+},int}-F_{\ce{H},int}=I$$
+
+        Summing the exponentials, we get:
+
+        $$K(\tau)=\frac{(n_{\ce{e^-}})(n_{\ce{H^+}})}{(n_{\ce{H}})}e^{-\frac{I}{\tau}}$$
+
+        Since $n_{\ce{e^-}}\approx n_Q$, and $n_{\ce{H^+}}\approx n_{\ce{H}}$, we can finally obtain:
+
+        $$\boxed{\frac{[\ce{e^-}][\ce{H^+ }]}{[\ce{H}]}=n_Qe^{-\frac{I}{\tau}}}$$
+
+      \item 
+
+    \end{enumerate}
+
+  \item
+
+\end{enumerate}
+
+\end{document}
+
