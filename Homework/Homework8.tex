@@ -103,9 +103,82 @@
 
       \item 
 
+        First and foremost, we are given:
+
+        $$[\ce{e^-}]=\left( [\ce{H}]n_Qe^{-\frac{I}{\tau}} \right)^{\frac{1}{2}}$$
+
+        Since $H_{exc}$ is the first excited state, and $H$ is the ground state, we may write:
+
+        $$\varepsilon_{H_{exc}}-\varepsilon_{H}=\frac{3}{4}I$$
+
+        This gives us:
+
+        $$\frac{[\ce{H_{exc}}]}{[\ce{H}]}=e^{-\frac{3I}{4\tau}}$$
+
+        This, however is not entirely correct. We must also account for the quadruple-degeneracy (one 2$s$ orbital and three $2p$ orbitals) of the excited state:
+
+        $$\frac{[\ce{H_{exc}}]}{[\ce{H}]}=4e^{-\frac{3I}{4\tau}}$$
+
+        This means:
+
+        $$[\ce{H_{exc}}]=4[\ce{H}]e^{-\frac{3I}{4\tau}}$$
+
+        Now we can calculate and compare $[\ce{e^-}]$ and $[\ce{H_{exc}}]$ (note that, for working with $\si{\eV}$, $k_B=8.617\cdot10^{-5}[\si{\eV}/\si{\kelvin}]$):
+
+        $$[\ce{e^-}]=\left( [\ce{H}]n_Qe^{-\frac{I}{\tau}} \right)^{\frac{1}{2}}$$
+        $$[\ce{e^-}]=\left( 10^{23}n_Qe^{-\frac{13.6}{5000k_B}} \right)^{\frac{1}{2}}$$
+        $$[\ce{e^-}]=44221.8\sqrt{n_Q}\left[ \frac{1}{\si{\milli\liter}} \right]$$
+
+        \begin{center}
+          and
+        \end{center}
+
+        $$[\ce{H_{exc}}]=4[\ce{H}]e^{-\frac{3I}{4\tau}}$$
+        $$[\ce{H_{exc}}]=4\cdot10^{23}\cdote^{-\frac{3(13.6)}{4(5000)(8.617\cdot10^{-5})}}$$
+        $$[\ce{H_{exc}}]=2.092\cdot10^{13}\left[ \frac{1}{\si{\milli\liter}} \right]$$
+
+        Comparing the two, we find that the concentration of electrons relative to excited hydrogen is:
+
+        $$\frac{[\ce{e^-}]}{[\ce{H_{exc}}]}=\frac{44221.8\sqrt{n_Q}}{2.092\cdot10^{13}}$$
+        $$\boxed{\frac{[\ce{e^-}]}{[\ce{H_{exc}}]}=2.114\cdot10^{-9}\sqrt{n_Q}}$$
+
+        There are a factor of $2.114\cdot10^{-9}\sqrt{n_Q}$ more electrons than excited hydrogen atoms.
+
     \end{enumerate}
 
   \item
+
+    Employing the law of mass action, we can write:
+
+    $$\frac{[\ce{e^-}][\ce{d^+}]}{[\ce{d}]}=n_Qe^{-\frac{I^*}{\tau}}$$
+
+    To find $I^*$, we may write:
+
+    $$I^*=\frac{I\left( \frac{m^*}{m} \right)}{\varepsilon^2}$$
+    $$I^*=\frac{(13.6)(.3)}{\varepsilon^2}$$
+    $$I^*=.03[\si{\eV}]$$
+
+    We can also redefine the concentration as:
+
+    $$n_Q=\left( 2.415\cdot10^{15} \right)\left[ \frac{m^*}{m}\cdot T \right]^{1.5}$$
+    $$n_Q=\left( 2.415\cdot10^{15} \right)\left[ 30 \right]^{1.5}$$
+    $$n_Q=3.97\cdot10^{17}\left[ \frac{1}{\si{\milli\liter}} \right]$$
+
+    Given this, we may find:
+
+    $$K=1.22\cdot10^{16}\left[ \frac{1}{\si{\milli\liter}} \right]$$
+
+    Though we are given that there are $10^{17}$ donors, we can find $[\ce{d}]$ by using:
+
+    $$[\ce{d}]=10^{17}-[\ce{d^+}]=10^{17}-[\ce{e^-}]$$
+
+    Solving, we find:
+
+    $$[\ce{e^-}]=\left[ \left( \frac{K}{2} \right)^2+K(10^{17}) \right]^{\frac{1}{2}}-\left( \frac{K}{2} \right)$$
+    $$[\ce{e^-}]=\left[ \left( \frac{1.22\cdot10^{16}}{2} \right)^2+(1.22\cdot10^{16})(10^{17}) \right]^{\frac{1}{2}}-\left( \frac{1.22\cdot10^{16}}{2} \right)$$
+    $$[\ce{e^-}]=2.94\cdot10^{16}\left[ \frac{1}{\si{\milli\liter}} \right]$$
+
+    Thus, by the ratio of electrons to donors, we see that there is a 29.4\% ionization.
 
 \end{enumerate}
 
