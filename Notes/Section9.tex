@@ -1,0 +1,129 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Written By Michael Brodskiy
+% Class: Thermodynamics & Statistical Mechanics
+% Professor: A. Stepanyants
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\include{Includes.tex}
+
+\title{Phase Transitions}
+\date{\today}
+\author{Michael Brodskiy\\ \small Professor: A. Stepanyants}
+
+\begin{document}
+
+\maketitle
+
+\begin{itemize}
+
+  \item First-Order Phase Transitions
+
+    \begin{itemize}
+
+      \item Three Phases: Solid, Liquid, Gas (Vapor)
+
+      \item Liquid and Gas/Vapor are known as fluids
+
+      \item From liquid to gas, solid to gas, and solid to liquid, the process would be isothermal
+
+      \item Phase Changes:
+
+        \begin{itemize}
+
+          \item Solid to Liquid $\to$ Melting
+
+          \item Liquid to Solid $\to$ Crystalization
+
+          \item Solid to Gas $\to$ Sublimation
+
+          \item Gas to Solid $\to$ Deposition
+
+          \item Liquid to Gas $\to$ Boiling
+
+          \item Gas to Liquid $\to$ Condensation
+
+        \end{itemize}
+
+    \end{itemize}
+
+  \item Coexistence of two phases ($l$ and $g$)
+
+    $$G=G_l+G_g=N_l\mu_l(P,\tau)+N_g\mu_g(P,\tau)$$
+    $$N_g+N_l=N\quad\text{(constant)}$$
+
+    \begin{itemize}
+
+      \item This expression may be rewritten as:
+
+        $$G=N_l(\mu_l-\mu_g)+N\mu_g$$
+
+      \item If $l$ and $g$ coexist, then:
+
+        \begin{itemize}
+
+          \item $\tau_l=\tau_g$ (thermal equilibrium)
+
+          \item $P_l=P_g$ (mechanical equilibrium)
+
+          \item $\mu_l=\mu_g$ (chemical equilibrium)
+
+        \end{itemize}
+
+      \item Thus, for coexistence of $l$ and $g$, we may write:
+
+        $$\mu_l(\tau,P)=\mu_g(\tau,P)$$
+
+      \item The pressure differential with respect to $\tau$ may be written as:
+
+        $$\frac{dP}{d\tau}=\frac{\left( \frac{\partial\mu_l}{\partial\tau} \right)_P-\left( \frac{\partial\mu_g}{\partial\tau} \right)_P}{\left( \frac{\partial\mu_g}{\partial\tau} \right)_\tau-\left( \frac{\partial\mu_l}{\partial\tau} \right)_\tau}$$
+
+      \item Furthermore, implementing pressure and volume per molecules ($s$ and $v$), we may write:
+
+        $$\frac{dP}{dt}=\frac{s_g-s_l}{v_g-v_l}$$
+
+    \end{itemize}
+
+  \item We can recall that, in a reversible process:
+
+    $$\delta Q=\tau\,d\sigma$$
+    $$\Delta Q=\tau\Delta\sigma$$
+    $$\Delta Q=\tau(s_g-s_l)$$
+
+    \begin{itemize}
+
+      \item Thus, we may described the heat gained from moving 1 molecule from $g$ to $l$
+
+      \item This $\Delta Q$ term is referred to as $L$, or the latent heat of vaporization per molecule
+
+    \end{itemize}
+
+  \item This leads us to the Clausius-Clapeyron Equation:
+
+    $$\frac{dP}{d\tau}=\frac{L}{\tau(v_g-v_l)}$$
+
+    \begin{itemize}
+
+      \item This is used in liquid-gas coexistence
+
+      \item We assume the gas is ideal
+
+      \item We also assume $v_l<<v_g$
+
+      \item Also, $L$ is assumed to be constant
+
+      \item In assuming this, we may write:
+
+        $$\frac{dP}{d\tau}=\frac{LP}{\tau^2}$$
+
+      \item Solving this, we get:
+
+        $$P(\tau)=P_oe^{-\frac{L}{\tau}}$$
+
+    \end{itemize}
+
+\end{itemize}
+
+\end{document}
+
+
+
