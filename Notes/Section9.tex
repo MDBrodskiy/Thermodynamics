@@ -121,6 +121,79 @@
 
     \end{itemize}
 
+  \item Van der Waals Equation of state
+
+    \begin{itemize}
+
+      \item As a reminder, the free energy for an ideal gas is:
+
+        $$F_{ideal}=-N\tau\left( \ln\left( \frac{n_Q}{n} \right)+1 \right)$$
+        $$P=-\left( \frac{\partial F}{\partial V} \right)_{\tau,N}\to PV=N\tau$$
+
+      \item In the above, $V$ must be replaced with $V-bN$, where $b$ is the volume of a single molecule, and $N$ is the total number of molecules
+
+      \item To find the interaction between particles, we use a mean field approximation
+
+        $$\Delta U=\frac{1}{2}\sum_{i\neq j=1}^N\phi(|\bar{r}_i-\bar{r}_j|)=\frac{1}{2}(N^2-N)\langle\phi(r)\rangle$$
+
+      \item Assume that the molecules are uniformly distributed in the accessible volume, $V-bn$, and average overall the positions of all molecules
+
+      \item We can approximate it to:
+
+        $$\frac{1}{2}(N^2-N)\int_V\frac{\phi(r)}{V-bN}\,d^3r$$
+        $$\Delta U=-\frac{N^2a}{V},\quad a>0$$
+
+      \item from here, we can write the free energy:
+
+        $$F_{VdW}=-N\tau\left( \ln\left( \frac{n_Q(V-bN)}{N} \right)+1 \right)-\frac{N^2a}{V},\quad a,b>0$$
+        $$P=\frac{\tau N}{V-bN}-\frac{N^2a}{V^2}$$
+
+      \item The equation of state may be simplified as:
+
+        $$\left( P+\frac{N^2a}{V} \right)(V-bN)=N\tau$$
+
+        \begin{itemize}
+
+          \item The term dependent on $a$ is the reduction in pressure due to attractive interactions between molecules
+
+          \item The term dependent on $b$ is the excluded volume due to molecule volume
+
+        \end{itemize}
+
+      \item Critical points may be defined as:
+
+        $$\tau_c=\frac{8a}{27b}$$
+        $$P_c=\frac{a}{27b^2}$$
+        $$V_c=3Nb$$
+
+      \item The Gibbs Free Energy for this Van der Waals gas is:
+
+        $$G=F+PV=F+P(V-bN)$$
+        $$G=-N\tau\ln\left( \frac{n_Q(V-bN)}{N} \right)-\frac{2N^2a}{V}$$
+
+      \item We find the following relations:
+
+        $$\left( \frac{\partial G}{\partial P} \right)_{\tau,N}=\frac{V}{N}$$
+        $$\left( \frac{\partial G}{\partial \tau} \right)_{P,N}=-\frac{\sigma}{N}=-S$$
+
+    \end{itemize}
+
+  \item Ferromagnetism
+
+    \begin{itemize}
+
+      \item There are $N$ magnetic moments $\mu$ in a binary-spin system. From this, we get:
+
+        $$U=-\muB$$
+
+      \item Assume that $M$ is the magnetization of the volume — net magnetic moment per volume
+
+        $$B_E=\lambda M$$
+
+      \item Is the effective magnetic field due to $M$ (mean field approximation)
+
+    \end{itemize}
+
 \end{itemize}
 
 \end{document}
