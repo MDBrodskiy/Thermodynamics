@@ -38,6 +38,7 @@
   * [**Homework 6**](https://github.com/MDBrodskiy/Thermodynamics/tree/master/Homework/Homework6.pdf)
   * [**Homework 7**](https://github.com/MDBrodskiy/Thermodynamics/tree/master/Homework/Homework7.pdf)
   * [**Homework 8**](https://github.com/MDBrodskiy/Thermodynamics/tree/master/Homework/Homework8.pdf)
+  * [**Homework 9**](https://github.com/MDBrodskiy/Thermodynamics/tree/master/Homework/Homework9.pdf)
 * [**Exams**](https://github.com/MDBrodskiy/Thermodynamics/tree/master/Exams/)
     * [**Midterm Equation Sheet**](https://github.com/MDBrodskiy/Thermodynamics/tree/master/Exams/MidtermEquationSheet.pdf)
 
