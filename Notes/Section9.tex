@@ -192,6 +192,131 @@
 
       \item Is the effective magnetic field due to $M$ (mean field approximation)
 
+        $$\bar{M}=\frac{1}{V}\sum_{i=1}^N\bar{\mu}_i$$
+
+      \item The magnetization may be defined as:
+
+        $$M=\mu n\tanh\left( \frac{\mu\lambda M}{\tau} \right)$$
+
+        \begin{itemize}
+
+          \item If $\tau>\tau_c\to M=0$
+
+          \item If $\tau<\tau_c\to M=0$ (unstable) or $M\neq 0$ (stable) ferromagnetic
+
+          \item We can define the critical value as $\tau_c=n\mu^2\lambda$ (this value is known as the Curie temperature, and is an example of a \nth{2} order phase transition)
+
+        \end{itemize}
+
+    \end{itemize}
+
+  \item Kinetic Theory
+
+    \begin{itemize}
+
+      \item Ideal Gas Law
+
+        \begin{itemize}
+
+          \item The average force due to a particle on a wall can be written as:
+
+            $$F_{ix}=\frac{2mv_x}{\Delta t}$$
+
+          \item The pressure can then be expressed as:
+
+            $$P=\frac{N}{A}\langle F_{ix}\rangle$$
+
+          \item The time between collisions may be expressed as:
+
+            $$\Delta t=\frac{2 L_x}{v_x}$$
+
+          \item Combining these three, we get:
+
+            $$P=\frac{Nm}{AL_x}\langle v_x^2\rangle$$
+
+          \item If we assume isotropt, we can get:
+
+            $$PV=\frac{2}{3}U$$
+
+          \item As we know from statistical physics, we can write:
+
+            $$U=\frac{3}{2}N\tau$$
+
+          \item This brings us back to the ideal gas law:
+
+            $$PV=N\tau$$
+
+        \end{itemize}
+
+    \end{itemize}
+
+  \item Important Topics
+
+    \begin{itemize}
+
+      \item Ideal Gas
+
+        $$P=n\tau$$
+        $$\mu=\tau\ln\left( \frac{n}{n_Q} \right),\quad n_Q=\left( \frac{m\tau}{2\pi\hbar^2} \right)^{\frac{3}{2}}$$
+        $$U=\frac{3}{2}N\tau$$
+        $$\sigma=N\left( \ln\left( \frac{n_Q}{n} \right)+\frac{5}{2} \right)$$
+        $$F=-N\tau\left( \ln\left( \frac{n_Q}{n} \right)+1 \right)$$
+
+      \item Calculating Partition Function
+
+        $$z=\sum_{\text{q states}}e^{-\frac{\varepsilon_n}{\tau}}$$
+        $$z_N=\frac{z_1^N}{N!}\text{ or }z_1^N\text{ omit the $N!$ if particles are distinguishable}$$
+        $$z\to F=-\tau\ln(z)$$
+        $$F\to P\text{ or }\mu\text{ or }U$$
+        $$P=-\left( \frac{\partial F}{\partial V} \right)_{\tau,N}$$
+        $$\mu=\left( \frac{\partial F}{\partial N} \right)_{\tau,V}$$
+        $$U=\tau^2\left( \frac{\partial \ln(z)}{\partial \tau} \right)_{N,V}$$
+        $$\sigma=\frac{U-F}{\tau}$$
+
+      \item Gibbs Sum
+
+        $$\text{\textrevepsilon}(\mu,\tau,N)=\sum_{N=0}^\infty\sum_{S(N)}\lambda^Ne^{-\frac{\varepsilon_s(N)}{\tau}}$$
+
+      \item Cycles for an Ideal Gas (Carnot)
+
+        \begin{itemize}
+
+          \item Calculate $Q$, $W$, for each part of cycle
+
+          \item Caulculate efficiency, $\eta=\frac{W_{tot}}{Q_{in}}$
+
+        \end{itemize}
+
+      \item First Order Phase Transitions
+
+        \begin{itemize}
+
+          \item Working with the coexistence curve (Clayperon-Clausius)
+
+            $$\frac{dP}{dt}$$
+
+        \end{itemize}
+
+      \item Chemical Reactions
+
+        \begin{itemize}
+
+          \item Calculate $\ce{pH}$
+
+            $$\ce{pH}=-\log_{10}\left( \left[ \ce{H+} \right] \right)$$
+
+          \item Mass action law
+
+        \end{itemize}
+
+      \item Thermal Radiation
+
+      \item Thermodynamic Identities
+
+      \item Fermi and Bose Gasses
+
+      \item Van der Waal's Gas
+
     \end{itemize}
 
 \end{itemize}
