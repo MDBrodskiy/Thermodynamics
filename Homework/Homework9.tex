@@ -22,15 +22,130 @@
 
       \item 
 
-      \item 
+        We know the entropy may be written as:
+
+        $$\sigma=-\left( \frac{\partial F}{\partial \tau} \right)_V$$
+
+        The free energy of the Van der Waal's gas may be observed as:
+
+        $$F_{VdW}=-N\tau\left( \ln\left( \frac{n_Q(V-bN)}{N} \right)+1 \right)-\frac{N^2a}{V}$$
+        $$F_{VdW}=-N\tau\ln\left( \frac{n_Q(V-bN)}{N} \right)-N\tau-\frac{N^2a}{V}$$
+
+        We know that the concentration may be expressed as:
+
+        $$n_Q=\left( \frac{M\tau}{2\pi\hbar^2} \right)^{\frac{3}{2}}$$
+
+        For ease of calculation, let us redefine the quantum concentration as:
+
+        $$n_Q=\gamma\left(\tau\right)^{\frac{3}{2}},\quad\text{where }\gamma=\left( \frac{M}{2\pi\hbar^2} \right)^{\frac{3}{2}}$$
+
+        Also, let us redefine:
+
+        $$(V-bN)\to V'$$
+
+        This gives us:
+
+        $$F_{VdW}=-N\tau\ln\left( \frac{\gamma\tau^{\frac{3}{2}}V'}{N} \right)-N\tau-\frac{N^2a}{V}$$
+
+        Taking the partial with respect to $\tau$, we find:
+
+        $$\frac{\partial F}{\partial \tau}=-N\ln\left( \frac{\gamma\tau^{\frac{3}{2}}V'}{N} \right)-N-\frac{3}{2}N$$
+
+        We then take the negative of this to find:
+
+        $$\sigma=N\left( \ln\left( \frac{\gamma\tau^{\frac{3}{2}}V'}{N} \right)+\frac{5}{2} \right)$$
+        $$\boxed{\sigma=N\left( \ln\left( \frac{n_Q(V-bN)}{N} \right)+\frac{5}{2} \right)}$$
 
       \item 
+
+        The energy may be written as:
+
+        $$U=F+\tau\sigma$$
+
+        This gives us:
+
+        $$U=-N\tau\ln\left( \frac{n_Q(V-bN)}{N} \right)-N\tau-\frac{N^2a}{V}+N\tau\left( \ln\left( \frac{n_Q(V-bN)}{N} \right)+\frac{5}{2} \right)$$
+        $$U=\cancel{-N\tau\ln\left( \frac{n_Q(V-bN)}{N} \right)}-N\tau-\frac{N^2a}{V}+\cancel{N\tau\ln\left( \frac{n_Q(V-bN)}{N} \right)}+\frac{5}{2}N\tau$$
+        $$U=-N\tau-\frac{N^2a}{V}+\frac{5}{2}N\tau$$
+
+        And finally:
+
+        $$\boxed{U=\frac{3}{2}N\tau-\frac{N^2a}{V}}$$
+
+      \item 
+
+        First and foremost, we may define the pressure as:
+
+        $$P=-\left( \frac{\partial F}{\partial V} \right)_{\tau,N}$$
+
+        This gives us:
+
+        $$-\left( \frac{\partial F}{\partial V} \right)_{\tau,N}=\frac{N\tau}{V-bN}-\frac{N^2a}{V^2}$$
+
+        Plugging this into $H=U+PV$, we get:
+
+        $$H(\tau, P, V)=\frac{3}{2}N\tau-\frac{N^2a}{V}+\frac{N\tau V}{V-bN}-\frac{N^2a}{V}$$
+        $$H(\tau, P, V)=\frac{3}{2}N\tau-\frac{2N^2a}{V}+\frac{N\tau V}{V-bN}$$
+
+        We then take the appropriate partial differentials to find:
+
+        $$\boxed{H(\tau, V)=\frac{5}{2}N\tau+\frac{N^2b\tau}{V}-\frac{2N^2a}{V}}$$
+        $$\boxed{H(\tau, P)=\frac{5}{2}N\tau+NbP-\frac{2NaP}{\tau}}$$
 
     \end{enumerate}
 
   \item
 
+    We may use the vapor pressure equation, obtained from the Clausius-Clapeyron equation, is:
+
+    $$\frac{1}{P}\frac{\partial P}{\partial T}=\frac{L}{k_BT^2}$$
+    $$\frac{\partial P}{\partial T}=\frac{PL}{k_BT^2}$$
+    $$\frac{\partial T}{\partial P}=\frac{k_BT^2}{PL}$$
+
+    Substituting the values we know, we get:
+
+    $$\frac{\partial T}{\partial P}=\frac{\left( 8.314 \right)\left( 100 + 273 \right)^2}{(1)(2260)}$$
+    $$\frac{\partial T}{\partial P}=511.82\left[ \frac{\si{\gram\kelvin}}{\text{mol atm}} \right]$$
+
+    For water, we know:
+
+    $$m_{\ce{H2O}}=18.015\left[ \frac{\si{\gram}}{\text{mol}} \right]$$
+
+    Thus, we get:
+
+    $$\frac{\partial T}{\partial P}=511.82\left[ \frac{\si{\gram\kelvin}}{\text{mol atm}} \right]\cdot\frac{1}{18.015}\left[ \frac{\text{mol}}{\si{\gram}} \right]$$
+
+    This gives us:
+
+    $$\boxed{\frac{\partial T}{\partial P}=28.411\left[ \frac{\si{\kelvin}}{\text{atm}} \right]}$$
+
   \item
+
+    Using the same equation from (2), we get:
+
+    $$\frac{1}{P}\frac{\partial P}{\partial T}=\frac{L}{k_B T^2}$$
+
+    We rearrange to get:
+
+    $$L=\frac{k_BT^2}{P}\frac{\partial P}{\partial T}$$
+    $$L=k_B\frac{\partial P}{P}\frac{T^2}{\partial T}$$
+    $$L=k_B(\partial \ln(P))\left(\frac{1}{\partial T^{-1}}\right)$$
+
+    We can approximate the differentials as:
+
+    $$\partial\ln(P)\approx \Delta \ln(P)$$
+    $$\partial\ln(P)\approx \ln\left( \frac{4.58}{3.88} \right)$$
+    $$\partial\ln(P)\approx .1659$$
+
+    We then approximate the temperature differential as:
+
+    $$\partial \frac{1}{T}\approx\frac{1}{271}-\frac{1}{273}$$
+    $$\partial \frac{1}{T}\approx 2.7\cdot10^{-5}\left[ \frac{1}{\si{\kelvin}} \right]$$
+
+    Plugging this in, we get:
+
+    $$L=(8.314)\left( \frac{.1659}{2.7\cdot10^{-5}} \right)$$
+    $$\boxed{L=5.1\cdot10^4\left[ \frac{\si{\joule}}{\si{\mole}} \right]}$$
 
 \end{enumerate}
 
