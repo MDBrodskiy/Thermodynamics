@@ -41,6 +41,7 @@
   * [**Homework 9**](https://github.com/MDBrodskiy/Thermodynamics/tree/master/Homework/Homework9.pdf)
 * [**Exams**](https://github.com/MDBrodskiy/Thermodynamics/tree/master/Exams/)
     * [**Midterm Equation Sheet**](https://github.com/MDBrodskiy/Thermodynamics/tree/master/Exams/MidtermEquationSheet.pdf)
+    * [**Final Equation Sheet**](https://github.com/MDBrodskiy/Thermodynamics/tree/master/Exams/FinalEquationSheet.pdf)
 
 <!--
   * [**Chapter 1**](#Notes/Chapter\ 1)
