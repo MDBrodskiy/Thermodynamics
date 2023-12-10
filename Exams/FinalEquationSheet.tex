@@ -34,7 +34,7 @@
 \usepackage{tabularx}
 \usepackage{extarrows}
 \usepackage{booktabs}
-\
+\usepackage{float}
 \usepackage{mhchem}
 \geometry{top=1.0in,bottom=1.0in,left=1.0in,right=1.0in}
 \newcommand{\subtitle}[1]{%
@@ -586,6 +586,8 @@ Rev. Isentropic  & $-\frac{3}{2}N\tau_1\left[ 1-\left( \frac{V_1}{V_2} \right)^{
 
 \end{multicols}
 
+\vspace{-35pt}
+
 \begin{multicols}{2}
 
   \begin{equation*}
@@ -719,9 +721,19 @@ Rev. Isentropic  & $-\frac{3}{2}N\tau_1\left[ 1-\left( \frac{V_1}{V_2} \right)^{
 
   \centering
 
-    \includegraphics[width=.35\textwidth]{Figures/CCycle.png}
+  \begin{figure}[H]
+    \centering
+    \include{Figures/CCycle.tex}
+    \caption{Carnot Cycle}
+    \label{fig:1}
+  \end{figure}
 
-    \includegraphics[width=.35\textwidth]{Figures/IdealCCycle.png}
+  \begin{figure}[H]
+    \centering
+    \include{Figures/IdealCCycle.tex}
+    \caption{Ideal Gas Carnot Cycle ($PV$)}
+    \label{fig:2}
+  \end{figure}
 
 \end{multicols}
 
